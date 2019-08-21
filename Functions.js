@@ -25,19 +25,15 @@ function rareTest(x) {
 	let rare = 0;
 	let check = true;
 	if (x <= 75) {
-		/*while (check) {
+		while (check) {
 			rare = rareRun[(rng(73)-1)];
 			let check = rare.type.includes("Planeswalker");
-		}*/
-		rare = rareRun[(rng(73)-1)];
-		alert(rare.type.includes("Planeswalker"));
+		}
 	} else if (x > 75) {
-		/*while (check) {
+		while (check) {
 			rare = rareRun[(rng(73)-1)];
 			let check = !(rare.type.includes("Planeswalker"));
-		}*/
-		rare = rareRun[(rng(73)-1)];
-		alert(rare.type.includes("Planeswalker"));
+		}
 	}
 	show_image(rare.img, 265, 370);
 }
