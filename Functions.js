@@ -22,21 +22,23 @@ function show_image(src, width, height) {
 //Decides if a pack will have an Uncommon Planeswalker, 2 As and a B, or 2 Bs and an A
 
 function uncommonDeterminant() {
-	if ((rng(100) < 75) && (rng(100) > 50)){
+	let numDet = rng(100);
+	
+	if ((numDet < 75) && (numDet > 50)){
 		show_image(uncommonRunA[rng(54)-1].img, 265, 370);
 		show_image(uncommonRunB[rng(66)-1].img, 265, 370);
 		show_image(uncommonRunPW[rng(20)-1].img, 265, 370);
-	} else if ((rng(100) < 75) && (rng(100) <= 50)){
+	} else if ((numDet < 75) && (numDet <= 50)){
 		let B = rng(66)-1;
 		show_image(uncommonRunB[B].img, 265, 370);
 		show_image(uncommonRunB[(B == 65 ? 0 : B+1)].img, 265, 370);
 		show_image(uncommonRunPW[rng(20)-1].img, 265, 370);
-	} else if ((rng(100) >= 75) && (rng(100) > 50)){
+	} else if ((numDet >= 75) && (numDet > 50)){
 		let A = rng(54)-1;
 		show_image(uncommonRunA[A].img, 265, 370);
 		show_image(uncommonRunA[(A == 53 ? 0 : A+1)].img, 265, 370);
 		show_image(uncommonRunB[rng(66)-1].img, 265, 370);
-	} else if ((rng(100) >= 75) && (rng(100) <= 50)){
+	} else if ((numDet >= 75) && (numDet <= 50)){
 		let B = rng(66)-1;
 		show_image(uncommonRunA[rng(53)-1].img, 265, 370);
 		show_image(uncommonRunB[B].img, 265, 370);
