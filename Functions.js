@@ -72,19 +72,19 @@ function makePack() {
 		let C1 = rng(55)-1; //Determines the first card selected
 		show_image(commonRunC1[C1].img, 265, 370);
 
-		let C2 = (C1 === 55) ? 0 : C1 + 1;
+		let C2 = (C1 === 54) ? 0 : C1 + 1;
 		show_image(commonRunC1[C2].img, 265, 370);
 
-		let C3 = (C2 === 55) ? 0 : C2 + 1;
+		let C3 = (C2 === 54) ? 0 : C2 + 1;
 		show_image(commonRunC1[C3].img, 265, 370);
 
-		let C4 = (C3 === 55) ? 0 : C3 + 1;
+		let C4 = (C3 === 54) ? 0 : C3 + 1;
 		show_image(commonRunC1[C4].img, 265, 370);
 
-		let C5 = (C4 === 55) ? 0 : C4 + 1;
+		let C5 = (C4 === 54) ? 0 : C4 + 1;
 		show_image(commonRunC1[C5].img, 265, 370);
 
-		let C6 = (C5 === 55) ? 0 : C5 + 1;
+		let C6 = (C5 === 54) ? 0 : C5 + 1;
 		show_image(commonRunC1[C6].img, 265, 370);
 
 	} else if (packNum === 2) {
@@ -107,16 +107,16 @@ function makePack() {
 		let C1 = rng(55)-1; //Determines the first card selected
 		show_image(commonRunC1[C1].img, 265, 370);
 
-		let C2 = (C1 === 55) ? 0 : C1 + 1;
+		let C2 = (C1 === 54) ? 0 : C1 + 1;
 		show_image(commonRunC1[C2].img, 265, 370);
 
-		let C3 = (C2 === 55) ? 0 : C2 + 1;
+		let C3 = (C2 === 54) ? 0 : C2 + 1;
 		show_image(commonRunC1[C3].img, 265, 370);
 
-		let C4 = (C3 === 55) ? 0 : C3 + 1;
+		let C4 = (C3 === 54) ? 0 : C3 + 1;
 		show_image(commonRunC1[C4].img, 265, 370);
 
-		let C5 = (C4 === 55) ? 0 : C4 + 1;
+		let C5 = (C4 === 54) ? 0 : C4 + 1;
 		show_image(commonRunC1[C5].img, 265, 370);
 
 	} else if (packNum === 3) {
@@ -142,13 +142,13 @@ function makePack() {
 		let C1 = rng(55)-1; //Determines the first card selected
 		show_image(commonRunC2[C1].img, 265, 370);
 
-		let C2 = (C1 === 55) ? 0 : C1 + 1;
+		let C2 = (C1 === 54) ? 0 : C1 + 1;
 		show_image(commonRunC2[C2].img, 265, 370);
 
-		let C3 = (C2 === 55) ? 0 : C2 + 1;
+		let C3 = (C2 === 54) ? 0 : C2 + 1;
 		show_image(commonRunC2[C3].img, 265, 370);
 
-		let C4 = (C3 === 55) ? 0 : C3 + 1;
+		let C4 = (C3 === 54) ? 0 : C3 + 1;
 		show_image(commonRunC2[C4].img, 265, 370);
 
 	} else if (packNum === 4) {
@@ -197,7 +197,7 @@ function makePack() {
 		let A4 = (A3 === 65) ? 0 : A3 + 1;
 		show_image(commonRunA[A4].img, 265, 370);
 
-		let B1 = rng(66); //Determines the first card selected
+		let B1 = rng(66)-1; //Determines the first card selected
 		show_image(commonRunB[B1].img, 265, 370);
 
 		let B2 = (B1 === 65) ? 0 : B1 + 1;
@@ -212,7 +212,7 @@ function makePack() {
 		let C1 = rng(55)-1; //Determines the first card selected
 		show_image(commonRunC2[C1].img, 265, 370);
 
-		let C2 = (C1 === 55) ? 0 : C1 + 1;
+		let C2 = (C1 === 54) ? 0 : C1 + 1;
 		show_image(commonRunC2[C2].img, 265, 370);
 
 	}
