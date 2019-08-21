@@ -52,8 +52,7 @@ function makePack() {
 	
 	uncommonDeterminant();
 	
-	//let packNum = rng(5);
-	let packNum = 1;
+	let packNum = rng(5);
 
 	if (packNum === 1) {
 
