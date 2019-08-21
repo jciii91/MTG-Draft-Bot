@@ -22,18 +22,20 @@ function show_image(src, width, height) {
 //Checks if there will be an Uncommon Planeswalker, ensures that there will not be 2 PWs in a pack
 
 function rareTest(x) {
-	let rare = undefined;
+	let rare = 0;
 	let check = true;
 	if (x <= 75) {
-		while (check) {
+		/*while (check) {
 			rare = rareRun[(rng(73)-1)];
 			let check = rare.type.includes("Planeswalker");
-		}
+		}*/
+		alert("No rare PW");
 	} else if (x > 75) {
-		while (check) {
+		/*while (check) {
 			rare = rareRun[(rng(73)-1)];
 			let check = !(rare.type.includes("Planeswalker"));
-		}
+		}*/
+		alert("Rare PW");
 	}
 	show_image(rare.img, 265, 370);
 }
