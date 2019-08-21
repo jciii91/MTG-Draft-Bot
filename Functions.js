@@ -21,7 +21,7 @@ function show_image(src, width, height) {
 //Rare/Mythic Planeswalker Test Function
 //Checks if there will be an Uncommon Planeswalker, ensures that there will not be 2 PWs in a pack
 
-/*function rareTest(x) {
+function rareTest(x) {
 	let rare = undefined;
 	if (x <= 75) {
 		do {
@@ -35,7 +35,7 @@ function show_image(src, width, height) {
 		} while(!check.includes("Planeswalker"));
 	}
 	show_image(rare.img, 265, 370);
-}*/
+}
 
 //Uncommon and Rare/Mythic Determinant
 //Decides if a pack will have an Uncommon Planeswalker, 2 As and a B, or 2 Bs and an A
