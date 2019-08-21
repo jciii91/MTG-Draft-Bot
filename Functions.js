@@ -18,27 +18,43 @@ function show_image(src, width, height) {
     document.body.appendChild(img);
 }
 
-//Uncommon Determinant
+//Rare/Mythic Planeswalker Test Function
+//Checks if there will be an Uncommon Planeswalker, ensures that there will not be 2 PWs in a pack
+
+function rareTest(x) {
+	if (x <= 75) {
+		//insert while loop to reroll card until IT IS NOT a PW
+	} else if (x > 75) {
+		//insert while loop to reroll card until IT IS a PW
+	}
+}
+
+//Uncommon and Rare/Mythic Determinant
 //Decides if a pack will have an Uncommon Planeswalker, 2 As and a B, or 2 Bs and an A
+//If an Uncommon planeswalker appears, ensures the rare/mythic is not a Planeswalker
 
 function uncommonDeterminant() {
 	let numDet = rng(100);
 	
-	if ((numDet < 75) && (numDet > 50)){
+	if ((numDet <= 75) && (numDet > 50)){
+		//rareTest(numDet);
 		show_image(uncommonRunA[rng(54)-1].img, 265, 370);
 		show_image(uncommonRunB[rng(66)-1].img, 265, 370);
 		show_image(uncommonRunPW[rng(20)-1].img, 265, 370);
-	} else if ((numDet < 75) && (numDet <= 50)){
+	} else if ((numDet <= 75) && (numDet <= 50)){
+		//rareTest(numDet);
 		let B = rng(66)-1;
 		show_image(uncommonRunB[B].img, 265, 370);
 		show_image(uncommonRunB[(B == 65 ? 0 : B+1)].img, 265, 370);
 		show_image(uncommonRunPW[rng(20)-1].img, 265, 370);
-	} else if ((numDet >= 75) && (numDet > 50)){
+	} else if ((numDet > 75) && (numDet > 50)){
+		//rareTest(numDet);
 		let A = rng(54)-1;
 		show_image(uncommonRunA[A].img, 265, 370);
 		show_image(uncommonRunA[(A == 53 ? 0 : A+1)].img, 265, 370);
 		show_image(uncommonRunB[rng(66)-1].img, 265, 370);
-	} else if ((numDet >= 75) && (numDet <= 50)){
+	} else if ((numDet > 75) && (numDet <= 50)){
+		//rareTest(numDet);
 		let B = rng(66)-1;
 		show_image(uncommonRunA[rng(53)-1].img, 265, 370);
 		show_image(uncommonRunB[B].img, 265, 370);
