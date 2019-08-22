@@ -47,24 +47,24 @@ function uncommonDeterminant() {
 	let numDet2 = rng(100);
 	
 	if ((numDet1 <= 75) && (numDet2 > 50)){
-		rareTest(numDet);
+		rareTest(numDet1);
 		show_image(uncommonRunA[rng(54)-1].img, 265, 370);
 		show_image(uncommonRunB[rng(66)-1].img, 265, 370);
 		show_image(uncommonRunPW[rng(20)-1].img, 265, 370);
 	} else if ((numDet1 <= 75) && (numDet2 <= 50)){
-		rareTest(numDet);
+		rareTest(numDet1);
 		let B = rng(66)-1;
 		show_image(uncommonRunB[B].img, 265, 370);
 		show_image(uncommonRunB[(B == 65 ? 0 : B+1)].img, 265, 370);
 		show_image(uncommonRunPW[rng(20)-1].img, 265, 370);
 	} else if ((numDet1 > 75) && (numDet2 > 50)){
-		rareTest(numDet);
+		rareTest(numDet1);
 		let A = rng(54)-1;
 		show_image(uncommonRunA[A].img, 265, 370);
 		show_image(uncommonRunA[(A == 53 ? 0 : A+1)].img, 265, 370);
 		show_image(uncommonRunB[rng(66)-1].img, 265, 370);
 	} else if ((numDet1 > 75) && (numDet2 <= 50)){
-		rareTest(numDet);
+		rareTest(numDet1);
 		let B = rng(66)-1;
 		show_image(uncommonRunA[rng(53)-1].img, 265, 370);
 		show_image(uncommonRunB[B].img, 265, 370);
