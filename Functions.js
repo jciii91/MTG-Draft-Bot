@@ -13,6 +13,7 @@ function show_image(src, width, height) {
     img.src = src;
     img.width = width;
     img.height = height;
+    img.title = "Card";
 
     // This next line will just add it to the <body> tag
     document.body.appendChild(img);
