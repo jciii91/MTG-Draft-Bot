@@ -23,9 +23,7 @@ function show_image(src, width, height, ID) {
 //Temporary solution until mouse events are figured out
 
 function selectCard() {
-	alert("It works.");
-	let element = document.body.getElementById("card1");
-	element.body.removeChild(element);
+	alert(document.body.getElementById("card1"));
 }
 
 //Rare/Mythic Planeswalker Test Function
