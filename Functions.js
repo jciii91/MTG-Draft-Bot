@@ -8,11 +8,12 @@ function rng(max) {
 
 //Image display
 
-function show_image(src, width, height) {
+function show_image(src, width, height, ID) {
     var img = document.createElement("img");
     img.src = src;
     img.width = width;
     img.height = height;
+    img.id = ID;
 
     // This next line will just add it to the <body> tag
     document.body.appendChild(img);
@@ -23,6 +24,7 @@ function show_image(src, width, height) {
 
 function selectCard() {
 	alert("It works.");
+	
 }
 
 //Rare/Mythic Planeswalker Test Function
@@ -42,7 +44,7 @@ function rareTest(x) {
 			check = !(rare.type.includes("Planeswalker"));
 		}
 	}
-	show_image(rare.img, 265, 370);
+	show_image(rare.img, 265, 370, "card1");
 }
 
 //Uncommon and Rare/Mythic Determinant
