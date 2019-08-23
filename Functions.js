@@ -18,6 +18,13 @@ function show_image(src, width, height) {
     document.body.appendChild(img);
 }
 
+//Select Button Function
+//Temporary solution until mouse events are figured out
+
+function selectCard() {
+	alert("It works.");
+}
+
 //Rare/Mythic Planeswalker Test Function
 //Checks if there will be an Uncommon Planeswalker, ensures that there will not be 2 PWs in a pack
 
