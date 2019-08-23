@@ -24,7 +24,8 @@ function show_image(src, width, height, ID) {
 
 function selectCard() {
 	alert("It works.");
-	
+	let element = document.body.getElementById("card1");
+	element.body.removeChild(element);
 }
 
 //Rare/Mythic Planeswalker Test Function
