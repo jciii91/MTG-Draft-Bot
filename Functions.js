@@ -35,6 +35,7 @@ function rareTest(x) {
 			check = !(rare.type.includes("Planeswalker"));
 		}
 	}
+	show_image(rare.img);
 	return rare;
 }
 
@@ -48,27 +49,23 @@ function uncommonDeterminant() {
 	
 	if ((numDet1 <= 75) && (numDet2 > 50)){
 		pack[0] = rareTest(numDet1);
-		show_image(pack[0].img, 0);
 		pack[1] = uncommonRunA[rng(54)-1];
 		pack[2] = uncommonRunB[rng(66)-1];
 		pack[3] = uncommonRunPW[rng(20)-1];
 	} else if ((numDet1 <= 75) && (numDet2 <= 50)){
 		pack[0] = rareTest(numDet1);
-		show_image(pack[0].img, 0);
 		let B = rng(66)-1;
 		pack[1] = uncommonRunB[B];
 		pack[2] = uncommonRunB[(B == 65 ? 0 : B+1)];
 		pack[3] = uncommonRunPW[rng(20)-1];
 	} else if ((numDet1 > 75) && (numDet2 > 50)){
 		pack[0] = rareTest(numDet1);
-		show_image(pack[0].img, 0);
 		let A = rng(54)-1;
 		pack[1] = uncommonRunA[A];
 		pack[2] = uncommonRunA[(A == 53 ? 0 : A+1)];
 		pack[3] = uncommonRunB[rng(66)-1];
 	} else if ((numDet1 > 75) && (numDet2 <= 50)){
 		pack[0] = rareTest(numDet1);
-		show_image(pack[0].img, 0);
 		let B = rng(66)-1;
 		pack[1] = uncommonRunA[rng(53)-1];
 		pack[2] = uncommonRunB[B];
