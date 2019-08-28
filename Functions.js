@@ -243,5 +243,5 @@ function makePack() {
 		pack[13] = commonRunC2[C2];
 
 	}
-	return pack;
+	show_image(pack[0].img, 0);
 }
