@@ -35,7 +35,8 @@ function rareTest(x) {
 			check = !(rare.type.includes("Planeswalker"));
 		}
 	}
-	show_image(rare.img, 265, 370);
+	pack[0] = rare;
+	show_image(pack[0].img, 265, 370);
 }
 
 //Uncommon and Rare/Mythic Determinant
@@ -75,6 +76,7 @@ function uncommonDeterminant() {
 //Pack generator
 
 function makePack() {
+	let pack = new Array();
 	
 	uncommonDeterminant();
 	
