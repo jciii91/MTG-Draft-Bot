@@ -1,3 +1,6 @@
+//Global Variable Declarations
+let pack = new Array();
+
 //Random number generator
 
 function rng(max) {
@@ -76,8 +79,6 @@ function uncommonDeterminant() {
 //Pack generator
 
 function makePack() {
-	let pack = new Array();
-	
 	uncommonDeterminant();
 	
 	let packNum = rng(5);
