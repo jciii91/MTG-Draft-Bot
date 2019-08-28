@@ -80,10 +80,6 @@ function uncommonDeterminant() {
 
 function makePack() {
 	uncommonDeterminant();
-	show_image(pack[0].img, 0);
-	show_image(pack[1].img, 1);
-	show_image(pack[2].img, 2);
-	show_image(pack[3].img, 3);
 	
 	let packNum = rng(5);
 
