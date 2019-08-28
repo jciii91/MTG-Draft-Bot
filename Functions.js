@@ -8,12 +8,11 @@ function rng(max) {
 
 //Image display
 
-function show_image(src, num) {
+function show_image(src) {
     var img = document.createElement("img");
     img.src = src;
     img.width = 265;
     img.height = 370;
-    img.id = "card"+num;
 
     // This next line will just add it to the <body> tag
     document.body.appendChild(img);
@@ -36,7 +35,7 @@ function rareTest(x) {
 			check = !(rare.type.includes("Planeswalker"));
 		}
 	}
-	pack[0] = rare;
+	return rare;
 }
 
 //Uncommon and Rare/Mythic Determinant
@@ -48,24 +47,24 @@ function uncommonDeterminant() {
 	let numDet2 = rng(100);
 	
 	if ((numDet1 <= 75) && (numDet2 > 50)){
-		rareTest(numDet1);
+		pack[0] = rareTest(numDet1);
 		pack[1] = uncommonRunA[rng(54)-1];
 		pack[2] = uncommonRunB[rng(66)-1];
 		pack[3] = uncommonRunPW[rng(20)-1];
 	} else if ((numDet1 <= 75) && (numDet2 <= 50)){
-		rareTest(numDet1);
+		pack[0] = rareTest(numDet1);
 		let B = rng(66)-1;
 		pack[1] = uncommonRunB[B];
 		pack[2] = uncommonRunB[(B == 65 ? 0 : B+1)];
 		pack[3] = uncommonRunPW[rng(20)-1];
 	} else if ((numDet1 > 75) && (numDet2 > 50)){
-		rareTest(numDet1);
+		pack[0] = rareTest(numDet1);
 		let A = rng(54)-1;
 		pack[1] = uncommonRunA[A];
 		pack[2] = uncommonRunA[(A == 53 ? 0 : A+1)];
 		pack[3] = uncommonRunB[rng(66)-1];
 	} else if ((numDet1 > 75) && (numDet2 <= 50)){
-		rareTest(numDet1);
+		pack[0] = rareTest(numDet1);
 		let B = rng(66)-1;
 		pack[1] = uncommonRunA[rng(53)-1];
 		pack[2] = uncommonRunB[B];
