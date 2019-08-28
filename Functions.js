@@ -11,11 +11,12 @@ function rng(max) {
 
 //Image display
 
-function show_image(src, width, height) {
+function show_image(src, num) {
     var img = document.createElement("img");
     img.src = src;
-    img.width = width;
-    img.height = height;
+    img.width = 265;
+    img.height = 370;
+    img.id = num;
 
     // This next line will just add it to the <body> tag
     document.body.appendChild(img);
@@ -38,8 +39,7 @@ function rareTest(x) {
 			check = !(rare.type.includes("Planeswalker"));
 		}
 	}
-	pack[0] = rare;
-	show_image(pack[0].img, 265, 370);
+	return rare;
 }
 
 //Uncommon and Rare/Mythic Determinant
@@ -51,28 +51,28 @@ function uncommonDeterminant() {
 	let numDet2 = rng(100);
 	
 	if ((numDet1 <= 75) && (numDet2 > 50)){
-		rareTest(numDet1);
-		show_image(uncommonRunA[rng(54)-1].img, 265, 370);
-		show_image(uncommonRunB[rng(66)-1].img, 265, 370);
-		show_image(uncommonRunPW[rng(20)-1].img, 265, 370);
+		pack[0] = rareTest(numDet1);
+		pack[1] = uncommonRunA[rng(54)-1];
+		pack[2] = uncommonRunB[rng(66)-1];
+		pack[3] = uncommonRunPW[rng(20)-1];
 	} else if ((numDet1 <= 75) && (numDet2 <= 50)){
-		rareTest(numDet1);
+		pack[0] = rareTest(numDet1);
 		let B = rng(66)-1;
-		show_image(uncommonRunB[B].img, 265, 370);
-		show_image(uncommonRunB[(B == 65 ? 0 : B+1)].img, 265, 370);
-		show_image(uncommonRunPW[rng(20)-1].img, 265, 370);
+		pack[1] = uncommonRunB[B];
+		pack[2] = uncommonRunB[(B == 65 ? 0 : B+1)];
+		pack[3] = uncommonRunPW[rng(20)-1];
 	} else if ((numDet1 > 75) && (numDet2 > 50)){
-		rareTest(numDet1);
+		pack[0] = rareTest(numDet1);
 		let A = rng(54)-1;
-		show_image(uncommonRunA[A].img, 265, 370);
-		show_image(uncommonRunA[(A == 53 ? 0 : A+1)].img, 265, 370);
-		show_image(uncommonRunB[rng(66)-1].img, 265, 370);
+		pack[1] = uncommonRunA[A];
+		pack[2] = uncommonRunA[(A == 53 ? 0 : A+1)];
+		pack[3] = uncommonRunB[rng(66)-1];
 	} else if ((numDet1 > 75) && (numDet2 <= 50)){
-		rareTest(numDet1);
+		pack[0] = rareTest(numDet1);
 		let B = rng(66)-1;
-		show_image(uncommonRunA[rng(53)-1].img, 265, 370);
-		show_image(uncommonRunB[B].img, 265, 370);
-		show_image(uncommonRunB[(B == 65 ? 0 : B+1)].img, 265, 370);
+		pack[1] = uncommonRunA[rng(53)-1];
+		pack[2] = uncommonRunB[B];
+		pack[3] = uncommonRunB[(B == 65 ? 0 : B+1)];
 	}
 }
 
@@ -80,6 +80,10 @@ function uncommonDeterminant() {
 
 function makePack() {
 	uncommonDeterminant();
+	show_image(pack[0].img, 0);
+	show_image(pack[1].img, 1);
+	show_image(pack[2].img, 2);
+	show_image(pack[3].img, 3);
 	
 	let packNum = rng(5);
 
