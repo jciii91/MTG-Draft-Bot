@@ -70,12 +70,12 @@ function show_image(src, num) {
 	pack = pack1;
 	for (i=0; i<=pack.length; i++) {
 		show_image(pack[i].img,i);
-	}
+	}*/
 	makePack();
 	for (i=0; i<=pack.length; i++) {
 		show_image(pack[i].img,i);
 	}
-}*/
+}
 
 function rareTest(x) {
 	let rare = 0;
