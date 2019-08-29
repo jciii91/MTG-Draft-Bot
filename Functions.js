@@ -1,16 +1,16 @@
 //Global Variable Declarations
 let pack = new Array(); //Current pack seen on screen
 let userCardPool = new Array();
-let packArray = new Array(); //Holds the 8 packs, index rotates through for initial pack construction and passing during draft
-let pickNum = 0; //Counter to flag when each round ends
-let pack1 = new Array();
-let pack2 = new Array();
-let pack3 = new Array();
-let pack4 = new Array();
-let pack4 = new Array();
-let pack6 = new Array();
-let pack7 = new Array();
-let pack8 = new Array();
+let packPool = new Array(); //Holds the 8 packs, index rotates through for initial pack construction and passing during draft
+let pickCounter = 0; //Counter to flag when each round ends
+let packOne = new Array();
+let packTwo = new Array();
+let packThree = new Array();
+let packFour = new Array();
+let packFive = new Array();
+let packSix = new Array();
+let packSeven = new Array();
+let packEight = new Array();
 
 //Random number generator
 
