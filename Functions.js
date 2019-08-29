@@ -1,7 +1,7 @@
 //Global Variable Declarations
 let pack = new Array(); //Current pack seen on screen
 let userCardPool = new Array();
-let packArray = new Array(); //Holds the 8 packs, index rotates through for initial pack construction and passing during draft
+/*let packArray = new Array(); //Holds the 8 packs, index rotates through for initial pack construction and passing during draft
 let pickNum = 0; //Counter to flag when each round ends
 let pack1 = new Array();
 let pack2 = new Array();
@@ -10,7 +10,7 @@ let pack4 = new Array();
 let pack4 = new Array();
 let pack6 = new Array();
 let pack7 = new Array();
-let pack8 = new Array();
+let pack8 = new Array();*/
 
 //Random number generator
 
@@ -22,7 +22,7 @@ function rng(max) {
 
 //Card selector
 
-function pickCard(cardID) {
+/*function pickCard(cardID) {
 	let x = parseFloat(cardID[4]+cardID[5]);
 	userCardPool.push(pack[x]);
 	while (getElementById("currentPack").hasChildNodes()) {   
@@ -32,7 +32,7 @@ function pickCard(cardID) {
 	for (i=0; i<=pack.length; i++) {
 		show_image(pack[i].img,i);
 	}
-}
+}*/
 
 //Image display
 
@@ -54,7 +54,7 @@ function show_image(src, num) {
 //Start Draft
 //Create 8 packs, display first pack
 
-function startDraft() {
+/*function startDraft() {
 	/*for (i=0; i<=7; i++) {
 		makePack();
 		packArray[i] = pack;
@@ -75,7 +75,7 @@ function startDraft() {
 	for (i=0; i<=pack.length; i++) {
 		show_image(pack[i].img,i);
 	}
-}
+}*/
 
 function rareTest(x) {
 	let rare = 0;
