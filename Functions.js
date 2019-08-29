@@ -15,8 +15,8 @@ function rng(max) {
 function pickCard(cardID) {
 	let x = parseFloat(cardID[4]+cardID[5]);
 	userCardPool.push(pack[x]);
-	for (i=0; i<=userCardPool.length; i++) {
-		alert(userCardPool[i]);
+	for (i=0; i<userCardPool.length; i++) {
+		alert(userCardPool[i].name);
 	}
 }
 
