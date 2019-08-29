@@ -9,6 +9,13 @@ function rng(max) {
   return Math.floor(rand);
 }
 
+//Card selector
+
+function pickCard(cardID) {
+	let x = parseFloat(cardID[4]+cardID[5]);
+	alert(pack[x].name);
+}
+
 //Image display
 
 function show_image(src, num) {
@@ -16,7 +23,8 @@ function show_image(src, num) {
     img.src = src;
     img.width = 265;
     img.height = 370;
-    img.id = num;
+    img.id = "card" + num;
+    img.onclick = pickCard(id);
 
     // This next line will just add it to the <body> tag
     document.getElementById("currentPack").appendChild(img);
