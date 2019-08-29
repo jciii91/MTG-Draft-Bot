@@ -54,7 +54,7 @@ function show_image(src, num) {
 //Start Draft
 //Create 8 packs, display first pack
 
-/*function startDraft() {
+function startDraft() {
 	/*for (i=0; i<=7; i++) {
 		makePack();
 		packArray[i] = pack;
