@@ -24,7 +24,7 @@ function show_image(src, num) {
     img.width = 265;
     img.height = 370;
     img.id = "card" + num;
-    //img.onclick = pickCard(id);
+    img.onclick = pickCard(img.id);
 
     // This next line will just add it to the <body> tag
     document.getElementById("currentPack").appendChild(img);
