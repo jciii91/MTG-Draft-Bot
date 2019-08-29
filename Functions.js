@@ -19,7 +19,7 @@ function show_image(src, num) {
     img.id = num;
 
     // This next line will just add it to the <body> tag
-    document.body.appendChild(img);
+    document.getElementById("currentPack").appendChild(img);
 }
 
 //Rare/Mythic Planeswalker Test Function
