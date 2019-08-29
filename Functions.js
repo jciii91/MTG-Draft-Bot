@@ -59,15 +59,15 @@ function startDraft() {
 		makePack();
 		packArray[i] = pack;
 	}
-	pack1 = packArray[0];
-	pack2 = packArray[1];
-	pack3 = packArray[2];
-	pack4 = packArray[3];
-	pack5 = packArray[4];
-	pack6 = packArray[5];
-	pack7 = packArray[6];
-	pack8 = packArray[7];
-	pack = pack1;
+	packOne = packArray[0];
+	packTwo = packArray[1];
+	packThree = packArray[2];
+	packFour = packArray[3];
+	packFive = packArray[4];
+	packSix = packArray[5];
+	packSeven = packArray[6];
+	packEight = packArray[7];
+	pack = packOne;
 	for (i=0; i<=pack.length; i++) {
 		show_image(pack[i].img,i);
 	}
