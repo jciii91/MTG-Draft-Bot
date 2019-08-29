@@ -1,6 +1,16 @@
 //Global Variable Declarations
-let pack = new Array();
+let pack = new Array(); //Current pack seen on screen
 let userCardPool = new Array();
+let packArray = new Array(); //Holds the 8 packs, index rotates through for initial pack construction and passing during draft
+let pickNum = 0; //Counter to flag when each round ends
+let pack1 = new Array();
+let pack2 = new Array();
+let pack3 = new Array();
+let pack4 = new Array();
+let pack4 = new Array();
+let pack6 = new Array();
+let pack7 = new Array();
+let pack8 = new Array();
 
 //Random number generator
 
@@ -15,8 +25,12 @@ function rng(max) {
 function pickCard(cardID) {
 	let x = parseFloat(cardID[4]+cardID[5]);
 	userCardPool.push(pack[x]);
-	for (i=0; i<userCardPool.length; i++) {
-		alert(userCardPool[i].name);
+	while (getElementById("currentPack").hasChildNodes()) {   
+  		getElementById("currentPack").removeChild(list.firstChild);
+	}
+	pack.splice(x,1);
+	for (i=0; i<=pack.length; i++) {
+		show_image(pack[i].img,i);
 	}
 }
 
@@ -36,6 +50,28 @@ function show_image(src, num) {
 
 //Rare/Mythic Planeswalker Test Function
 //Checks if there will be an Uncommon Planeswalker, ensures that there will not be 2 PWs in a pack
+
+//Start Draft
+//Create 8 packs, display first pack
+
+function startDraft() {
+	for (i=0; i<=7; i++) {
+		makePack();
+		packArray[i] = pack;
+	}
+	pack1 = packArray[0];
+	pack2 = packArray[1];
+	pack3 = packArray[2];
+	pack4 = packArray[3];
+	pack5 = packArray[4];
+	pack6 = packArray[5];
+	pack7 = packArray[6];
+	pack8 = packArray[7];
+	pack = pack1;
+	for (i=0; i<=pack.length; i++) {
+		show_image(pack[i].img,i);
+	}
+}
 
 function rareTest(x) {
 	let rare = 0;
