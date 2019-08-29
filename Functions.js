@@ -55,7 +55,7 @@ function show_image(src, num) {
 //Create 8 packs, display first pack
 
 function startDraft() {
-	for (i=0; i<=7; i++) {
+	/*for (i=0; i<=7; i++) {
 		makePack();
 		packArray[i] = pack;
 	}
@@ -66,10 +66,11 @@ function startDraft() {
 	packFive = packArray[4];
 	packSix = packArray[5];
 	packSeven = packArray[6];
-	packEight = packArray[7];
-	pack = packOne;
-	for (i=0; i<=pack.length; i++) {
-		show_image(pack[i].img,i);
+	packEight = packArray[7];*/
+	makePack();
+	packOne = pack;
+	for (i=0; i<=packOne.length; i++) {
+		show_image(packOne[i].img,i);
 	}
 }
 
