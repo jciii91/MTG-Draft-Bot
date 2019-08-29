@@ -1,5 +1,6 @@
 //Global Variable Declarations
 let pack = new Array();
+let userCardPool = new Array();
 
 //Random number generator
 
@@ -13,7 +14,10 @@ function rng(max) {
 
 function pickCard(cardID) {
 	let x = parseFloat(cardID[4]+cardID[5]);
-	alert(pack[x].name);
+	userCardPool.push(pack[x]);
+	for (i=0; i<=userCardPool.length; i++) {
+		alert(userCardPool[i]);
+	}
 }
 
 //Image display
