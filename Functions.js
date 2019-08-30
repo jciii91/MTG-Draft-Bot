@@ -25,9 +25,8 @@ function rng(max) {
 function pickCard(cardID) {
 	let x = parseFloat(cardID[4]+cardID[5]);
 	userCardPool.push(pack[x]);
-	while (getElementById("currentPack").hasChildNodes()) {   
-  		getElementById("currentPack").removeChild(list.firstChild);
-	}
+	alert(userCardPool[0].name);
+	getElementById("currentPack").removeChild(list.firstChild);
 	/*pack.splice(x,1);
 	for (i=0; i<=pack.length; i++) {
 		show_image(pack[i].img,i);
