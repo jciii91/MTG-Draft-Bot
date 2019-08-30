@@ -25,14 +25,13 @@ function rng(max) {
 function pickCard(cardID) {
 	let x = parseFloat(cardID[4]+cardID[5]);
 	userCardPool.push(pack[x]);
-	alert(cardID);
 	var element = document.getElementById("currentPack");
 	var card = document.getElementById(cardID);
-	element.removeChild(card);
-	/*pack.splice(x,1);
-	for (i=0; i<=pack.length; i++) {
-		show_image(pack[i].img,i);
-	}*/
+	//element.removeChild(card);
+	//pack.splice(x,1);
+	for (i=0; i<=3; i++) {
+		element.removeChild(element.firstChild);
+	}
 }
 
 //Image display
