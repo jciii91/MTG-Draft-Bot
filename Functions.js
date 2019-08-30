@@ -31,6 +31,11 @@ function pickCard(cardID) {
 		element.removeChild(element.firstChild);
 	}
 	pack.splice(x,1);
+	if (pickCounter === 0 || pickCounter === 8) {
+		packOne = pack;
+		pack = packTwo;
+		for (i=0; i<=pack.length; i++) {show_image(pack[i].img, i);}
+	}
 }
 
 //Image display
