@@ -27,11 +27,10 @@ function pickCard(cardID) {
 	userCardPool.push(pack[x]);
 	var element = document.getElementById("currentPack");
 	var card = document.getElementById(cardID);
-	//element.removeChild(card);
-	//pack.splice(x,1);
-	for (i=0; i<=3; i++) {
+	for (i=0; i<=pack.length; i++) {
 		element.removeChild(element.firstChild);
 	}
+	pack.splice(x,1);
 }
 
 //Image display
