@@ -1,4 +1,18 @@
-﻿//Random number generator
+//Global Variable Declarations
+let pack = new Array(); //Current pack seen on screen
+let userCardPool = new Array();
+let packPool = new Array(); //Holds the 8 packs, index rotates through for initial pack construction and passing during draft
+let pickCounter = 0; //Tracks which pack needs to be displayed
+let packOne = new Array();
+let packTwo = new Array();
+let packThree = new Array();
+let packFour = new Array();
+let packFive = new Array();
+let packSix = new Array();
+let packSeven = new Array();
+let packEight = new Array();
+
+//Random number generator
 
 function rng(max) {
   // here rand is from 1 to (max+1)
@@ -6,16 +20,59 @@ function rng(max) {
   return Math.floor(rand);
 }
 
+//Card selector
+
+function pickCard(cardID) {
+	let x = parseFloat(cardID[4]+cardID[5]);
+	userCardPool.push(pack[x]);
+	alert(cardID);
+	var element = document.getElementById("currentPack");
+	var card = document.getElementById(cardID);
+	element.removeChild(card);
+	/*pack.splice(x,1);
+	for (i=0; i<=pack.length; i++) {
+		show_image(pack[i].img,i);
+	}*/
+}
+
 //Image display
 
-function show_image(src, width, height) {
+function show_image(src, num) {
     var img = document.createElement("img");
     img.src = src;
-    img.width = width;
-    img.height = height;
+    img.width = 265;
+    img.height = 370;
+    img.id = "card" + num;
+    img.setAttribute("onclick", "pickCard(id)");
 
     // This next line will just add it to the <body> tag
-    document.body.appendChild(img);
+    document.getElementById("currentPack").appendChild(img);
+}
+
+//Start Draft
+//Create 8 packs, display first pack
+
+function startDraft() {
+	makePack();
+	packOne = pack;
+	makePack();
+	packTwo = pack;
+	makePack();
+	packThree = pack;
+	makePack();
+	packFour = pack;
+	makePack();
+	packFive = pack;
+	makePack();
+	packSix = pack;
+	makePack();
+	packSeven = pack;
+	makePack();
+	packEight = pack;
+	for (i=0; i<=packOne.length; i++) {
+		show_image(packOne[i].img,i);
+	}
+	pack = packOne;
 }
 
 //Rare/Mythic Planeswalker Test Function
@@ -35,7 +92,7 @@ function rareTest(x) {
 			check = !(rare.type.includes("Planeswalker"));
 		}
 	}
-	show_image(rare.img, 265, 370);
+	return rare;
 }
 
 //Uncommon and Rare/Mythic Determinant
@@ -47,35 +104,34 @@ function uncommonDeterminant() {
 	let numDet2 = rng(100);
 	
 	if ((numDet1 <= 75) && (numDet2 > 50)){
-		rareTest(numDet1);
-		show_image(uncommonRunA[rng(54)-1].img, 265, 370);
-		show_image(uncommonRunB[rng(66)-1].img, 265, 370);
-		show_image(uncommonRunPW[rng(20)-1].img, 265, 370);
+		pack[0] = rareTest(numDet1);
+		pack[1] = uncommonRunA[rng(54)-1];
+		pack[2] = uncommonRunB[rng(66)-1];
+		pack[3] = uncommonRunPW[rng(20)-1];
 	} else if ((numDet1 <= 75) && (numDet2 <= 50)){
-		rareTest(numDet1);
+		pack[0] = rareTest(numDet1);
 		let B = rng(66)-1;
-		show_image(uncommonRunB[B].img, 265, 370);
-		show_image(uncommonRunB[(B == 65 ? 0 : B+1)].img, 265, 370);
-		show_image(uncommonRunPW[rng(20)-1].img, 265, 370);
+		pack[1] = uncommonRunB[B];
+		pack[2] = uncommonRunB[(B == 65 ? 0 : B+1)];
+		pack[3] = uncommonRunPW[rng(20)-1];
 	} else if ((numDet1 > 75) && (numDet2 > 50)){
-		rareTest(numDet1);
+		pack[0] = rareTest(numDet1);
 		let A = rng(54)-1;
-		show_image(uncommonRunA[A].img, 265, 370);
-		show_image(uncommonRunA[(A == 53 ? 0 : A+1)].img, 265, 370);
-		show_image(uncommonRunB[rng(66)-1].img, 265, 370);
+		pack[1] = uncommonRunA[A];
+		pack[2] = uncommonRunA[(A == 53 ? 0 : A+1)];
+		pack[3] = uncommonRunB[rng(66)-1];
 	} else if ((numDet1 > 75) && (numDet2 <= 50)){
-		rareTest(numDet1);
+		pack[0] = rareTest(numDet1);
 		let B = rng(66)-1;
-		show_image(uncommonRunA[rng(53)-1].img, 265, 370);
-		show_image(uncommonRunB[B].img, 265, 370);
-		show_image(uncommonRunB[(B == 65 ? 0 : B+1)].img, 265, 370);
+		pack[1] = uncommonRunA[rng(53)-1];
+		pack[2] = uncommonRunB[B];
+		pack[3] = uncommonRunB[(B == 65 ? 0 : B+1)];
 	}
 }
 
 //Pack generator
 
 function makePack() {
-	
 	uncommonDeterminant();
 	
 	let packNum = rng(5);
@@ -83,162 +139,162 @@ function makePack() {
 	if (packNum === 1) {
 
 		let A1 = rng(66)-1; //Determines the first card selected
-		show_image(commonRunA[A1].img, 265, 370);
+		pack[4] = commonRunA[A1];
 
 		let A2 = (A1 === 65) ? 0 : A1 + 1;
-		show_image(commonRunA[A2].img, 265, 370);
+		pack[5] = commonRunA[A2];
 
 		let B1 = rng(66)-1; //Determines the first card selected
-		show_image(commonRunB[B1].img, 265, 370);
+		pack[6] = commonRunB[B1];
 
 		let B2 = (B1 === 65) ? 0 : B1 + 1;
-		show_image(commonRunB[B2].img, 265, 370);
+		pack[7] = commonRunB[B2];
 
 		let C1 = rng(55)-1; //Determines the first card selected
-		show_image(commonRunC1[C1].img, 265, 370);
+		pack[8] = commonRunC1[C1].img;
 
 		let C2 = (C1 === 54) ? 0 : C1 + 1;
-		show_image(commonRunC1[C2].img, 265, 370);
+		pack[9] = commonRunC1[C2].img;
 
 		let C3 = (C2 === 54) ? 0 : C2 + 1;
-		show_image(commonRunC1[C3].img, 265, 370);
+		pack[10] = commonRunC1[C3].img;
 
 		let C4 = (C3 === 54) ? 0 : C3 + 1;
-		show_image(commonRunC1[C4].img, 265, 370);
+		pack[11] = commonRunC1[C4].img;
 
 		let C5 = (C4 === 54) ? 0 : C4 + 1;
-		show_image(commonRunC1[C5].img, 265, 370);
+		pack[12] = commonRunC1[C5].img;
 
 		let C6 = (C5 === 54) ? 0 : C5 + 1;
-		show_image(commonRunC1[C6].img, 265, 370);
+		pack[13] = commonRunC1[C6].img;
 
 	} else if (packNum === 2) {
 		
 		let A1 = rng(66)-1; //Determines the first card selected
-		show_image(commonRunA[A1].img, 265, 370);
+		pack[4] = commonRunA[A1];
 
 		let A2 = (A1 === 65) ? 0 : A1 + 1;
-		show_image(commonRunA[A2].img, 265, 370);
+		pack[5] = commonRunA[A2];
 
 		let A3 = (A2 === 65) ? 0 : A2 + 1;
-		show_image(commonRunA[A3].img, 265, 370);
+		pack[6] = commonRunA[A3];
 
 		let B1 = rng(66)-1; //Determines the first card selected
-		show_image(commonRunB[B1].img, 265, 370);
+		pack[7] = commonRunB[B1];
 
 		let B2 = (B1 === 65) ? 0 : B1 + 1;
-		show_image(commonRunB[B2].img, 265, 370);
+		pack[8] = commonRunB[B2];
 
 		let C1 = rng(55)-1; //Determines the first card selected
-		show_image(commonRunC1[C1].img, 265, 370);
+		pack[9] = commonRunC1[C1];
 
 		let C2 = (C1 === 54) ? 0 : C1 + 1;
-		show_image(commonRunC1[C2].img, 265, 370);
+		pack[10] = commonRunC1[C2];
 
 		let C3 = (C2 === 54) ? 0 : C2 + 1;
-		show_image(commonRunC1[C3].img, 265, 370);
+		pack[11] = commonRunC1[C3];
 
 		let C4 = (C3 === 54) ? 0 : C3 + 1;
-		show_image(commonRunC1[C4].img, 265, 370);
+		pack[12] = commonRunC1[C4];
 
 		let C5 = (C4 === 54) ? 0 : C4 + 1;
-		show_image(commonRunC1[C5].img, 265, 370);
+		pack[13] = commonRunC1[C5];
 
 	} else if (packNum === 3) {
 
 		let A1 = rng(66)-1; //Determines the first card selected
-		show_image(commonRunA[A1].img, 265, 370);
+		pack[4] = commonRunA[A1];
 
 		let A2 = (A1 === 65) ? 0 : A1 + 1;
-		show_image(commonRunA[A2].img, 265, 370);
+		pack[5] = commonRunA[A2];
 
 		let A3 = (A2 === 65) ? 0 : A2 + 1;
-		show_image(commonRunA[A3].img, 265, 370);
+		pack[6] = commonRunA[A3];
 
 		let A4 = (A3 === 65) ? 0 : A3 + 1;
-		show_image(commonRunA[A4].img, 265, 370);
+		pack[7] = commonRunA[A4];
 
 		let B1 = rng(66)-1; //Determines the first card selected
-		show_image(commonRunB[B1].img, 265, 370);
+		pack[8] = commonRunB[B1];
 
 		let B2 = (B1 === 65) ? 0 : B1 + 1;
-		show_image(commonRunB[B2].img, 265, 370);
+		pack[9] = commonRunB[B2];
 
 		let C1 = rng(55)-1; //Determines the first card selected
-		show_image(commonRunC2[C1].img, 265, 370);
+		pack[10] = commonRunC2[C1];
 
 		let C2 = (C1 === 54) ? 0 : C1 + 1;
-		show_image(commonRunC2[C2].img, 265, 370);
+		pack[11] = commonRunC2[C2];
 
 		let C3 = (C2 === 54) ? 0 : C2 + 1;
-		show_image(commonRunC2[C3].img, 265, 370);
+		pack[12] = commonRunC2[C3];
 
 		let C4 = (C3 === 54) ? 0 : C3 + 1;
-		show_image(commonRunC2[C4].img, 265, 370);
+		pack[13] = commonRunC2[C4];
 
 	} else if (packNum === 4) {
 
 		let A1 = rng(66)-1; //Determines the first card selected
-		show_image(commonRunA[A1].img, 265, 370);
+		pack[4] = commonRunA[A1];
 
 		let A2 = (A1 === 65) ? 0 : A1 + 1;
-		show_image(commonRunA[A2].img, 265, 370);
+		pack[5] = commonRunA[A2];
 
 		let A3 = (A2 === 65) ? 0 : A2 + 1;
-		show_image(commonRunA[A3].img, 265, 370);
+		pack[6] = commonRunA[A3];
 
 		let A4 = (A3 === 65) ? 0 : A3 + 1;
-		show_image(commonRunA[A4].img, 265, 370);
+		pack[7] = commonRunA[A4];
 
 		let B1 = rng(66)-1; //Determines the first card selected
-		show_image(commonRunB[B1].img, 265, 370);
+		pack[8] = commonRunB[B1];
 
 		let B2 = (B1 === 65) ? 0 : B1 + 1;
-		show_image(commonRunB[B2].img, 265, 370);
+		pack[9] = commonRunB[B2];
 
 		let B3 = (B2 === 65) ? 0 : B2 + 1;
-		show_image(commonRunB[B3].img, 265, 370);
+		pack[10] = commonRunB[B3];
 
 		let C1 = rng(55)-1; //Determines the first card selected
-		show_image(commonRunC2[C1].img, 265, 370);
+		pack[11] = commonRunC2[C1];
 
 		let C2 = (C1 === 54) ? 0 : C1 + 1;
-		show_image(commonRunC2[C2].img, 265, 370);
+		pack[12] = commonRunC2[C2];
 
 		let C3 = (C2 === 54) ? 0 : C2 + 1;
-		show_image(commonRunC2[C3].img, 265, 370);
+		pack[13] = commonRunC2[C3];
 
 	} else if (packNum === 5) {
 
 		let A1 = rng(66); //Determines the first card selected
-		show_image(commonRunA[A1].img, 265, 370);
+		pack[4] = commonRunA[A1];
 
 		let A2 = (A1 === 65) ? 0 : A1 + 1;
-		show_image(commonRunA[A2].img, 265, 370);
+		pack[5] = commonRunA[A2];
 
 		let A3 = (A2 === 65) ? 0 : A2 + 1;
-		show_image(commonRunA[A3].img, 265, 370);
+		pack[6] = commonRunA[A3];
 
 		let A4 = (A3 === 65) ? 0 : A3 + 1;
-		show_image(commonRunA[A4].img, 265, 370);
+		pack[7] = commonRunA[A4];
 
 		let B1 = rng(66)-1; //Determines the first card selected
-		show_image(commonRunB[B1].img, 265, 370);
+		pack[8] = commonRunB[B1];
 
 		let B2 = (B1 === 65) ? 0 : B1 + 1;
-		show_image(commonRunB[B2].img, 265, 370);
+		pack[9] = commonRunB[B2];
 
 		let B3 = (B2 === 65) ? 0 : B2 + 1;
-		show_image(commonRunB[B3].img, 265, 370);
+		pack[10] = commonRunB[B3];
 
 		let B4 = (B3 === 65) ? 0 : B3 + 1;
-		show_image(commonRunB[B4].img, 265, 370);
+		pack[11] = commonRunB[B4];
 
 		let C1 = rng(55)-1; //Determines the first card selected
-		show_image(commonRunC2[C1].img, 265, 370);
+		pack[12] = commonRunC2[C1];
 
 		let C2 = (C1 === 54) ? 0 : C1 + 1;
-		show_image(commonRunC2[C2].img, 265, 370);
+		pack[13] = commonRunC2[C2];
 
 	}
 
