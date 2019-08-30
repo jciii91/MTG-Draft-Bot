@@ -2,7 +2,7 @@
 let pack = new Array(); //Current pack seen on screen
 let userCardPool = new Array();
 let packPool = new Array(); //Holds the 8 packs, index rotates through for initial pack construction and passing during draft
-let pickCounter = 0; //Counter to flag when each round ends
+let pickCounter = 0; //Tracks which pack needs to be displayed
 let packOne = new Array();
 let packTwo = new Array();
 let packThree = new Array();
@@ -55,21 +55,22 @@ function show_image(src, num) {
 //Create 8 packs, display first pack
 
 function startDraft() {
-	/*for (i=0; i<=7; i++) {
-		makePack();
-		packArray[i] = pack;
-	}
-	packOne = packArray[0];
-	packTwo = packArray[1];
-	packThree = packArray[2];
-	packFour = packArray[3];
-	packFive = packArray[4];
-	packSix = packArray[5];
-	packSeven = packArray[6];
-	packEight = packArray[7];*/
 	makePack();
-	packArray[0] = pack;
-	packOne = packArray[0];
+	packOne = pack;
+	makePack();
+	packTwo = pack;
+	makePack();
+	packThree = pack;
+	makePack();
+	packFour = pack;
+	makePack();
+	packFive = pack;
+	makePack();
+	packSix = pack;
+	makePack();
+	packSeven = pack;
+	makePack();
+	packEight = pack;
 	for (i=0; i<=packOne.length; i++) {
 		show_image(packOne[i].img,i);
 	}
