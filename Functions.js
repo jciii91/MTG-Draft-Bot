@@ -22,17 +22,17 @@ function rng(max) {
 
 //Card selector
 
-/*function pickCard(cardID) {
+function pickCard(cardID) {
 	let x = parseFloat(cardID[4]+cardID[5]);
 	userCardPool.push(pack[x]);
 	while (getElementById("currentPack").hasChildNodes()) {   
   		getElementById("currentPack").removeChild(list.firstChild);
 	}
-	pack.splice(x,1);
+	/*pack.splice(x,1);
 	for (i=0; i<=pack.length; i++) {
 		show_image(pack[i].img,i);
-	}
-}*/
+	}*/
+}
 
 //Image display
 
@@ -47,9 +47,6 @@ function show_image(src, num) {
     // This next line will just add it to the <body> tag
     document.getElementById("currentPack").appendChild(img);
 }
-
-//Rare/Mythic Planeswalker Test Function
-//Checks if there will be an Uncommon Planeswalker, ensures that there will not be 2 PWs in a pack
 
 //Start Draft
 //Create 8 packs, display first pack
@@ -74,7 +71,11 @@ function startDraft() {
 	for (i=0; i<=packOne.length; i++) {
 		show_image(packOne[i].img,i);
 	}
+	pack = packOne;
 }
+
+//Rare/Mythic Planeswalker Test Function
+//Checks if there will be an Uncommon Planeswalker, ensures that there will not be 2 PWs in a pack
 
 function rareTest(x) {
 	let rare = 0;
