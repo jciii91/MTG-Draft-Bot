@@ -1,5 +1,4 @@
 //Global Variable Declarations
-let pack = new Array(); //Current pack seen on screen
 let userCardPool = new Array();
 let packPool = new Array(); //Holds the 8 packs, index rotates through for initial pack construction and passing during draft
 let pickCounter = 0; //Tracks which pack needs to be displayed
@@ -135,6 +134,7 @@ function uncommonDeterminant() {
 //Pack generator
 
 function makePack() {
+	let pack = new Array();
 	uncommonDeterminant();
 	
 	let packNum = rng(5);
