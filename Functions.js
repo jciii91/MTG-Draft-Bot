@@ -71,6 +71,7 @@ function startDraft() {
 	packSeven = pack;
 	makePack();
 	packEight = pack;
+	alert(packOne[0].name);
 	for (i=0; i<=packOne.length; i++) {
 		show_image(packOne[i].img,i);
 	}
