@@ -1,4 +1,6 @@
 //Global Variable Declarations
+let pack = new Array(); //Current pack seen on screen
+let randomPack = new Array();
 let userCardPool = new Array();
 let packPool = new Array(); //Holds the 8 packs, index rotates through for initial pack construction and passing during draft
 let pickCounter = 0; //Tracks which pack needs to be displayed
@@ -24,16 +26,14 @@ function rng(max) {
 function pickCard(cardID) {
 	let x = parseFloat(cardID[4]+cardID[5]);
 	userCardPool.push(pack[x]);
+	pack.splice(x,1);
+	packOne = pack;
+	pack = packTwo;
 	var element = document.getElementById("currentPack");
 	var card = document.getElementById(cardID);
-	for (i=0; i<=pack.length; i++) {
+	for (i=0; i<pack.length; i++) {
 		element.removeChild(element.firstChild);
-	}
-	pack.splice(x,1);
-	if (pickCounter === 0 || pickCounter === 8) {
-		packOne = pack;
-		pack = packTwo;
-		for (i=0; i<=pack.length; i++) {show_image(pack[i].img, i);}
+		show_image(pack[i].img, i);
 	}
 }
 
@@ -56,22 +56,21 @@ function show_image(src, num) {
 
 function startDraft() {
 	makePack();
-	packOne = pack;
+	packOne = randomPack;
 	makePack();
-	packTwo = pack;
+	packTwo = randomPack;
 	makePack();
-	packThree = pack;
+	packThree = randomPack;
 	makePack();
-	packFour = pack;
+	packFour = randomPack;
 	makePack();
-	packFive = pack;
+	packFive = randomPack;
 	makePack();
-	packSix = pack;
+	packSix = randomPack;
 	makePack();
-	packSeven = pack;
+	packSeven = randomPack;
 	makePack();
-	packEight = pack;
-	alert(packOne[0].name);
+	packEight = randomPack;
 	for (i=0; i<=packOne.length; i++) {
 		show_image(packOne[i].img,i);
 	}
@@ -107,35 +106,35 @@ function uncommonDeterminant() {
 	let numDet2 = rng(100);
 	
 	if ((numDet1 <= 75) && (numDet2 > 50)){
-		pack[0] = rareTest(numDet1);
-		pack[1] = uncommonRunA[rng(54)-1];
-		pack[2] = uncommonRunB[rng(66)-1];
-		pack[3] = uncommonRunPW[rng(20)-1];
+		randomPack[0] = rareTest(numDet1);
+		randomPack[1] = uncommonRunA[rng(54)-1];
+		randomPack[2] = uncommonRunB[rng(66)-1];
+		randomPack[3] = uncommonRunPW[rng(20)-1];
 	} else if ((numDet1 <= 75) && (numDet2 <= 50)){
-		pack[0] = rareTest(numDet1);
+		randomPack[0] = rareTest(numDet1);
 		let B = rng(66)-1;
-		pack[1] = uncommonRunB[B];
-		pack[2] = uncommonRunB[(B == 65 ? 0 : B+1)];
-		pack[3] = uncommonRunPW[rng(20)-1];
+		randomPack[1] = uncommonRunB[B];
+		randomPack[2] = uncommonRunB[(B == 65 ? 0 : B+1)];
+		randomPack[3] = uncommonRunPW[rng(20)-1];
 	} else if ((numDet1 > 75) && (numDet2 > 50)){
-		pack[0] = rareTest(numDet1);
+		randomPack[0] = rareTest(numDet1);
 		let A = rng(54)-1;
-		pack[1] = uncommonRunA[A];
-		pack[2] = uncommonRunA[(A == 53 ? 0 : A+1)];
-		pack[3] = uncommonRunB[rng(66)-1];
+		randomPack[1] = uncommonRunA[A];
+		randomPack[2] = uncommonRunA[(A == 53 ? 0 : A+1)];
+		randomPack[3] = uncommonRunB[rng(66)-1];
 	} else if ((numDet1 > 75) && (numDet2 <= 50)){
-		pack[0] = rareTest(numDet1);
+		randomPack[0] = rareTest(numDet1);
 		let B = rng(66)-1;
-		pack[1] = uncommonRunA[rng(53)-1];
-		pack[2] = uncommonRunB[B];
-		pack[3] = uncommonRunB[(B == 65 ? 0 : B+1)];
+		randomPack[1] = uncommonRunA[rng(53)-1];
+		randomPack[2] = uncommonRunB[B];
+		randomPack[3] = uncommonRunB[(B == 65 ? 0 : B+1)];
 	}
 }
 
 //Pack generator
 
 function makePack() {
-	let pack = new Array();
+	randomPack = new Array();
 	uncommonDeterminant();
 	
 	let packNum = rng(5);
@@ -143,162 +142,162 @@ function makePack() {
 	if (packNum === 1) {
 
 		let A1 = rng(66)-1; //Determines the first card selected
-		pack[4] = commonRunA[A1];
+		randomPack[4] = commonRunA[A1];
 
 		let A2 = (A1 === 65) ? 0 : A1 + 1;
-		pack[5] = commonRunA[A2];
+		randomPack[5] = commonRunA[A2];
 
 		let B1 = rng(66)-1; //Determines the first card selected
-		pack[6] = commonRunB[B1];
+		randomPack[6] = commonRunB[B1];
 
 		let B2 = (B1 === 65) ? 0 : B1 + 1;
-		pack[7] = commonRunB[B2];
+		randomPack[7] = commonRunB[B2];
 
 		let C1 = rng(55)-1; //Determines the first card selected
-		pack[8] = commonRunC1[C1].img;
+		randomPack[8] = commonRunC1[C1].img;
 
 		let C2 = (C1 === 54) ? 0 : C1 + 1;
-		pack[9] = commonRunC1[C2].img;
+		randomPack[9] = commonRunC1[C2].img;
 
 		let C3 = (C2 === 54) ? 0 : C2 + 1;
-		pack[10] = commonRunC1[C3].img;
+		randomPack[10] = commonRunC1[C3].img;
 
 		let C4 = (C3 === 54) ? 0 : C3 + 1;
-		pack[11] = commonRunC1[C4].img;
+		randomPack[11] = commonRunC1[C4].img;
 
 		let C5 = (C4 === 54) ? 0 : C4 + 1;
-		pack[12] = commonRunC1[C5].img;
+		randomPack[12] = commonRunC1[C5].img;
 
 		let C6 = (C5 === 54) ? 0 : C5 + 1;
-		pack[13] = commonRunC1[C6].img;
+		randomPack[13] = commonRunC1[C6].img;
 
 	} else if (packNum === 2) {
 		
 		let A1 = rng(66)-1; //Determines the first card selected
-		pack[4] = commonRunA[A1];
+		randomPack[4] = commonRunA[A1];
 
 		let A2 = (A1 === 65) ? 0 : A1 + 1;
-		pack[5] = commonRunA[A2];
+		randomPack[5] = commonRunA[A2];
 
 		let A3 = (A2 === 65) ? 0 : A2 + 1;
-		pack[6] = commonRunA[A3];
+		randomPack[6] = commonRunA[A3];
 
 		let B1 = rng(66)-1; //Determines the first card selected
-		pack[7] = commonRunB[B1];
+		randomPack[7] = commonRunB[B1];
 
 		let B2 = (B1 === 65) ? 0 : B1 + 1;
-		pack[8] = commonRunB[B2];
+		randomPack[8] = commonRunB[B2];
 
 		let C1 = rng(55)-1; //Determines the first card selected
-		pack[9] = commonRunC1[C1];
+		randomPack[9] = commonRunC1[C1];
 
 		let C2 = (C1 === 54) ? 0 : C1 + 1;
-		pack[10] = commonRunC1[C2];
+		randomPack[10] = commonRunC1[C2];
 
 		let C3 = (C2 === 54) ? 0 : C2 + 1;
-		pack[11] = commonRunC1[C3];
+		randomPack[11] = commonRunC1[C3];
 
 		let C4 = (C3 === 54) ? 0 : C3 + 1;
-		pack[12] = commonRunC1[C4];
+		randomPack[12] = commonRunC1[C4];
 
 		let C5 = (C4 === 54) ? 0 : C4 + 1;
-		pack[13] = commonRunC1[C5];
+		randomPack[13] = commonRunC1[C5];
 
 	} else if (packNum === 3) {
 
 		let A1 = rng(66)-1; //Determines the first card selected
-		pack[4] = commonRunA[A1];
+		randomPack[4] = commonRunA[A1];
 
 		let A2 = (A1 === 65) ? 0 : A1 + 1;
-		pack[5] = commonRunA[A2];
+		randomPack[5] = commonRunA[A2];
 
 		let A3 = (A2 === 65) ? 0 : A2 + 1;
-		pack[6] = commonRunA[A3];
+		randomPack[6] = commonRunA[A3];
 
 		let A4 = (A3 === 65) ? 0 : A3 + 1;
-		pack[7] = commonRunA[A4];
+		randomPack[7] = commonRunA[A4];
 
 		let B1 = rng(66)-1; //Determines the first card selected
-		pack[8] = commonRunB[B1];
+		randomPack[8] = commonRunB[B1];
 
 		let B2 = (B1 === 65) ? 0 : B1 + 1;
-		pack[9] = commonRunB[B2];
+		randomPack[9] = commonRunB[B2];
 
 		let C1 = rng(55)-1; //Determines the first card selected
-		pack[10] = commonRunC2[C1];
+		randomPack[10] = commonRunC2[C1];
 
 		let C2 = (C1 === 54) ? 0 : C1 + 1;
-		pack[11] = commonRunC2[C2];
+		randomPack[11] = commonRunC2[C2];
 
 		let C3 = (C2 === 54) ? 0 : C2 + 1;
-		pack[12] = commonRunC2[C3];
+		randomPack[12] = commonRunC2[C3];
 
 		let C4 = (C3 === 54) ? 0 : C3 + 1;
-		pack[13] = commonRunC2[C4];
+		randomPack[13] = commonRunC2[C4];
 
 	} else if (packNum === 4) {
 
 		let A1 = rng(66)-1; //Determines the first card selected
-		pack[4] = commonRunA[A1];
+		randomPack[4] = commonRunA[A1];
 
 		let A2 = (A1 === 65) ? 0 : A1 + 1;
-		pack[5] = commonRunA[A2];
+		randomPack[5] = commonRunA[A2];
 
 		let A3 = (A2 === 65) ? 0 : A2 + 1;
-		pack[6] = commonRunA[A3];
+		randomPack[6] = commonRunA[A3];
 
 		let A4 = (A3 === 65) ? 0 : A3 + 1;
-		pack[7] = commonRunA[A4];
+		randomPack[7] = commonRunA[A4];
 
 		let B1 = rng(66)-1; //Determines the first card selected
-		pack[8] = commonRunB[B1];
+		randomPack[8] = commonRunB[B1];
 
 		let B2 = (B1 === 65) ? 0 : B1 + 1;
-		pack[9] = commonRunB[B2];
+		randomPack[9] = commonRunB[B2];
 
 		let B3 = (B2 === 65) ? 0 : B2 + 1;
-		pack[10] = commonRunB[B3];
+		randomPack[10] = commonRunB[B3];
 
 		let C1 = rng(55)-1; //Determines the first card selected
-		pack[11] = commonRunC2[C1];
+		randomPack[11] = commonRunC2[C1];
 
 		let C2 = (C1 === 54) ? 0 : C1 + 1;
-		pack[12] = commonRunC2[C2];
+		randomPack[12] = commonRunC2[C2];
 
 		let C3 = (C2 === 54) ? 0 : C2 + 1;
-		pack[13] = commonRunC2[C3];
+		randomPack[13] = commonRunC2[C3];
 
 	} else if (packNum === 5) {
 
 		let A1 = rng(66); //Determines the first card selected
-		pack[4] = commonRunA[A1];
+		randomPack[4] = commonRunA[A1];
 
 		let A2 = (A1 === 65) ? 0 : A1 + 1;
-		pack[5] = commonRunA[A2];
+		randomPack[5] = commonRunA[A2];
 
 		let A3 = (A2 === 65) ? 0 : A2 + 1;
-		pack[6] = commonRunA[A3];
+		randomPack[6] = commonRunA[A3];
 
 		let A4 = (A3 === 65) ? 0 : A3 + 1;
-		pack[7] = commonRunA[A4];
+		randomPack[7] = commonRunA[A4];
 
 		let B1 = rng(66)-1; //Determines the first card selected
-		pack[8] = commonRunB[B1];
+		randomPack[8] = commonRunB[B1];
 
 		let B2 = (B1 === 65) ? 0 : B1 + 1;
-		pack[9] = commonRunB[B2];
+		randomPack[9] = commonRunB[B2];
 
 		let B3 = (B2 === 65) ? 0 : B2 + 1;
-		pack[10] = commonRunB[B3];
+		randomPack[10] = commonRunB[B3];
 
 		let B4 = (B3 === 65) ? 0 : B3 + 1;
-		pack[11] = commonRunB[B4];
+		randomPack[11] = commonRunB[B4];
 
 		let C1 = rng(55)-1; //Determines the first card selected
-		pack[12] = commonRunC2[C1];
+		randomPack[12] = commonRunC2[C1];
 
 		let C2 = (C1 === 54) ? 0 : C1 + 1;
-		pack[13] = commonRunC2[C2];
+		randomPack[13] = commonRunC2[C2];
 
 	}
 
