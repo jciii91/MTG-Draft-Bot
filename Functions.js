@@ -68,13 +68,13 @@ function pickCard(cardID) {
 		for (i=0; i<pack.length; i++) {
 			element.removeChild(element.firstChild);
 			show_image(pack[i].img, i);
+		}
 	}
 	var element = document.getElementById("currentPack");
 	var card = document.getElementById(cardID);
 	for (i=0; i<pack.length; i++) {
 		element.removeChild(element.firstChild);
 		show_image(pack[i].img, i);
-	}
 }
 
 //Image display
