@@ -27,8 +27,8 @@ function pickCard(cardID) {
 	let x = parseFloat(cardID[4]+cardID[5]);
 	userCardPool.push(pack[x]);
 	pack.splice(x,1);
-	packOne = pack;
-	pack = packTwo;
+	packPool[0] = pack;
+	pack = packPool[1];
 	var element = document.getElementById("currentPack");
 	var card = document.getElementById(cardID);
 	for (i=0; i<pack.length; i++) {
@@ -56,9 +56,9 @@ function show_image(src, num) {
 
 function startDraft() {
 	makePack();
-	packOne = randomPack;
+	packPool[0] = randomPack;
 	makePack();
-	packTwo = randomPack;
+	packPool[1] = randomPack;
 	makePack();
 	packThree = randomPack;
 	makePack();
@@ -71,10 +71,10 @@ function startDraft() {
 	packSeven = randomPack;
 	makePack();
 	packEight = randomPack;
-	for (i=0; i<=packOne.length; i++) {
-		show_image(packOne[i].img,i);
+	for (i=0; i<=packPool[0].length; i++) {
+		show_image(packPool[i].img,i);
 	}
-	pack = packOne;
+	pack = packPool[0];
 }
 
 //Rare/Mythic Planeswalker Test Function
