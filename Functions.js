@@ -64,6 +64,7 @@ function pickCard(cardID) {
 		startDraft();
 		pickCounter = 1;
 	}
+	alert(pack.length);
 	var element = document.getElementById("currentPack");
 	var card = document.getElementById(cardID);
 	for (i=0; i<pack.length; i++) {
