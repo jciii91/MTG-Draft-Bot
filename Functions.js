@@ -63,12 +63,6 @@ function pickCard(cardID) {
 		alert("Round over.");
 		startDraft();
 		pickCounter = 1;
-		var element = document.getElementById("currentPack");
-		var card = document.getElementById(cardID);
-		for (i=0; i<pack.length; i++) {
-			element.removeChild(element.firstChild);
-			show_image(pack[i].img, i);
-		}
 	}
 	var element = document.getElementById("currentPack");
 	var card = document.getElementById(cardID);
