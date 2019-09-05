@@ -3,7 +3,7 @@ let pack = new Array(); //Current pack seen on screen
 let randomPack = new Array();
 let userCardPool = new Array();
 let packPool = new Array(); //Holds the 8 packs, index rotates through for initial pack construction and passing during draft
-let pickCounter = 0; //Tracks which pack needs to be displayed
+let pickCounter = 1; //Tracks which pack needs to be displayed
 let packOne = new Array();
 let packTwo = new Array();
 let packThree = new Array();
@@ -27,8 +27,15 @@ function pickCard(cardID) {
 	let x = parseFloat(cardID[4]+cardID[5]);
 	userCardPool.push(pack[x]);
 	pack.splice(x,1);
-	packPool[0] = pack;
-	pack = packPool[1];
+	if (pickCounter === 1 || pickCounter === 9) {
+		packOne = pack;
+		pack = packTwo;
+		pickCounter++;
+	} else if (pickCounter === 2 || pickCounter === 10) {
+		packTwo = pack;
+		pack = packThree;
+		pickCounter++;
+	}
 	var element = document.getElementById("currentPack");
 	var card = document.getElementById(cardID);
 	for (i=0; i<pack.length; i++) {
@@ -56,9 +63,9 @@ function show_image(src, num) {
 
 function startDraft() {
 	makePack();
-	packPool[0] = randomPack;
+	packOne = randomPack;
 	makePack();
-	packPool[1] = randomPack;
+	packTwo = randomPack;
 	makePack();
 	packThree = randomPack;
 	makePack();
@@ -71,10 +78,10 @@ function startDraft() {
 	packSeven = randomPack;
 	makePack();
 	packEight = randomPack;
-	for (i=0; i<=packPool[0].length; i++) {
-		show_image(packPool[i].img,i);
+	for (i=0; i<=packOne.length; i++) {
+		show_image(packOne[i].img,i);
 	}
-	pack = packPool[0];
+	pack = packOne;
 }
 
 //Rare/Mythic Planeswalker Test Function
