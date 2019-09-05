@@ -35,6 +35,34 @@ function pickCard(cardID) {
 		packTwo = pack;
 		pack = packThree;
 		pickCounter++;
+	} else if (pickCounter === 3 || pickCounter === 11) {
+		packTwo = pack;
+		pack = packThree;
+		pickCounter++;
+	} else if (pickCounter === 4 || pickCounter === 12) {
+		packTwo = pack;
+		pack = packThree;
+		pickCounter++;
+	} else if (pickCounter === 5 || pickCounter === 13) {
+		packTwo = pack;
+		pack = packThree;
+		pickCounter++;
+	} else if (pickCounter === 6) {
+		packTwo = pack;
+		pack = packThree;
+		pickCounter++;
+	} else if (pickCounter === 7) {
+		packTwo = pack;
+		pack = packThree;
+		pickCounter++;
+	} else if (pickCounter === 8) {
+		packTwo = pack;
+		pack = packThree;
+		pickCounter++;
+	} else if (pickCounter === 14) {
+		alert("Round over.");
+		startDraft();
+		pickCounter = 1;
 	}
 	var element = document.getElementById("currentPack");
 	var card = document.getElementById(cardID);
