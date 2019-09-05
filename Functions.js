@@ -28,35 +28,43 @@ function pickCard(cardID) {
 	userCardPool.push(pack[x]);
 	pack.splice(x,1);
 	if (pickCounter === 1 || pickCounter === 9) {
-		packOne = pack;
+		for (i=0;i<pack.length;i++) {packOne[i] = pack[i]};
+		packOne.pop();
 		pack = packTwo;
 		pickCounter++;
 	} else if (pickCounter === 2 || pickCounter === 10) {
-		packTwo = pack;
+		for (i=0;i<pack.length;i++) {packTwo[i] = pack[i]};
+		packTwo.pop();
 		pack = packThree;
 		pickCounter++;
 	} else if (pickCounter === 3 || pickCounter === 11) {
-		packThree = pack;
+		for (i=0;i<pack.length;i++) {packThree[i] = pack[i]};
+		packThree.pop();
 		pack = packFour;
 		pickCounter++;
 	} else if (pickCounter === 4 || pickCounter === 12) {
-		packFour = pack;
+		for (i=0;i<pack.length;i++) {packFour[i] = pack[i]};
+		packFour.pop();
 		pack = packFive;
 		pickCounter++;
 	} else if (pickCounter === 5 || pickCounter === 13) {
-		packFive = pack;
+		for (i=0;i<pack.length;i++) {packFive[i] = pack[i]};
+		packFive.pop();
 		pack = packSix;
 		pickCounter++;
 	} else if (pickCounter === 6) {
-		packSix = pack;
+		for (i=0;i<pack.length;i++) {packSix[i] = pack[i]};
+		packSix.pop();
 		pack = packSeven;
 		pickCounter++;
 	} else if (pickCounter === 7) {
-		packSeven = pack;
+		for (i=0;i<pack.length;i++) {packSeven[i] = pack[i]};
+		packSeven.pop();
 		pack = packEight;
 		pickCounter++;
 	} else if (pickCounter === 8) {
-		packEight = pack;
+		for (i=0;i<pack.length;i++) {packEight[i] = pack[i]};
+		packEight.pop();
 		pack = packOne;
 		pickCounter++;
 	} else if (pickCounter === 14) {
