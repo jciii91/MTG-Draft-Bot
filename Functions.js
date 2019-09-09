@@ -1,8 +1,9 @@
 //Global Variable Declarations
 let pack = new Array(); //Current pack seen on screen
+let randomPack = new Array();
 let userCardPool = new Array();
 let packPool = new Array(); //Holds the 8 packs, index rotates through for initial pack construction and passing during draft
-let pickCounter = 0; //Tracks which pack needs to be displayed
+let pickCounter = 1; //Tracks which pack needs to be displayed
 let packOne = new Array();
 let packTwo = new Array();
 let packThree = new Array();
@@ -11,6 +12,7 @@ let packFive = new Array();
 let packSix = new Array();
 let packSeven = new Array();
 let packEight = new Array();
+let roundCounter = 0;
 
 //Random number generator
 
@@ -24,15 +26,106 @@ function rng(max) {
 
 function pickCard(cardID) {
 	let x = parseFloat(cardID[4]+cardID[5]);
-	userCardPool.push(pack[x]);
-	alert(cardID);
-	var element = document.getElementById("currentPack");
-	var card = document.getElementById(cardID);
-	element.removeChild(card);
-	/*pack.splice(x,1);
-	for (i=0; i<=pack.length; i++) {
-		show_image(pack[i].img,i);
-	}*/
+	if (pickCounter === 1 || pickCounter === 9) {
+		userCardPool.push(packOne[x]);
+		packOne.splice(x,1);
+		pickCounter++;
+		var element = document.getElementById("currentPack");
+		var card = document.getElementById(cardID);
+		for (i=0; i<=packOne.length; i++) {
+			element.removeChild(element.firstChild);
+			show_image(packTwo[i].img, i);
+		}
+	} else if (pickCounter === 2 || pickCounter === 10) {
+		userCardPool.push(packTwo[x]);
+		packTwo.splice(x,1);
+		pickCounter++;
+		var element = document.getElementById("currentPack");
+		var card = document.getElementById(cardID);
+		for (i=0; i<=packTwo.length; i++) {
+			element.removeChild(element.firstChild);
+			show_image(packThree[i].img, i);
+		}
+	} else if (pickCounter === 3 || pickCounter === 11) {
+		userCardPool.push(packThree[x]);
+		packThree.splice(x,1);
+		pickCounter++;
+		var element = document.getElementById("currentPack");
+		var card = document.getElementById(cardID);
+		for (i=0; i<=packThree.length; i++) {
+			element.removeChild(element.firstChild);
+			show_image(packFour[i].img, i);
+		}
+	} else if (pickCounter === 4 || pickCounter === 12) {
+		userCardPool.push(packFour[x]);
+		packFour.splice(x,1);
+		pickCounter++;
+		var element = document.getElementById("currentPack");
+		var card = document.getElementById(cardID);
+		for (i=0; i<=packFour.length; i++) {
+			element.removeChild(element.firstChild);
+			show_image(packFive[i].img, i);
+		}
+	} else if (pickCounter === 5 || pickCounter === 13) {
+		userCardPool.push(packFive[x]);
+		packFive.splice(x,1);
+		pickCounter++;
+		var element = document.getElementById("currentPack");
+		var card = document.getElementById(cardID);
+		for (i=0; i<=packFive.length; i++) {
+			element.removeChild(element.firstChild);
+			show_image(packSix[i].img, i);
+		}
+	} else if (pickCounter === 6) {
+		userCardPool.push(packSix[x]);
+		packSix.splice(x,1);
+		pickCounter++;
+		var element = document.getElementById("currentPack");
+		var card = document.getElementById(cardID);
+		for (i=0; i<=packSix.length; i++) {
+			element.removeChild(element.firstChild);
+			show_image(packSeven[i].img, i);
+		}
+	} else if (pickCounter === 7) {
+		userCardPool.push(packSeven[x]);
+		packSeven.splice(x,1);
+		pickCounter++;
+		var element = document.getElementById("currentPack");
+		var card = document.getElementById(cardID);
+		for (i=0; i<=packSeven.length; i++) {
+			element.removeChild(element.firstChild);
+			show_image(packEight[i].img, i);
+		}
+	} else if (pickCounter === 8) {
+		userCardPool.push(packEight[x]);
+		packEight.splice(x,1);
+		pickCounter++;
+		var element = document.getElementById("currentPack");
+		var card = document.getElementById(cardID);
+		for (i=0; i<=packEight.length; i++) {
+			element.removeChild(element.firstChild);
+			show_image(packOne[i].img, i);
+		}
+	} else if (pickCounter === 14) {
+		userCardPool.push(packSix[x]);
+		packSix.splice(x,1);
+		pickCounter = 1;
+		roundCounter++;
+		var element = document.getElementById("currentPack");
+		var card = document.getElementById(cardID);
+		for (i=0; i<=packSix.length; i++) {
+			element.removeChild(element.firstChild);
+		}
+		alert("Round over.");
+		if (roundCounter === 3) {
+			for (i=0;i<userCardPool.length;i++) {
+				show_userCardPool(userCardPool[i].img);
+			}
+			alert("Draft complete.");
+			return;
+		}
+		startDraft();
+	}
 }
 
 //Image display
@@ -49,26 +142,39 @@ function show_image(src, num) {
     document.getElementById("currentPack").appendChild(img);
 }
 
+//Show User Card Pool
+//Same as image display function but no onclick is added
+
+function show_userCardPool(src) {
+    var img = document.createElement("img");
+    img.src = src;
+    img.width = 265;
+    img.height = 370;
+
+    // This next line will just add it to the <body> tag
+    document.getElementById("currentPack").appendChild(img);
+}
+
 //Start Draft
 //Create 8 packs, display first pack
 
 function startDraft() {
 	makePack();
-	packOne = pack;
+	packOne = randomPack;
 	makePack();
-	packTwo = pack;
+	packTwo = randomPack;
 	makePack();
-	packThree = pack;
+	packThree = randomPack;
 	makePack();
-	packFour = pack;
+	packFour = randomPack;
 	makePack();
-	packFive = pack;
+	packFive = randomPack;
 	makePack();
-	packSix = pack;
+	packSix = randomPack;
 	makePack();
-	packSeven = pack;
+	packSeven = randomPack;
 	makePack();
-	packEight = pack;
+	packEight = randomPack;
 	for (i=0; i<=packOne.length; i++) {
 		show_image(packOne[i].img,i);
 	}
@@ -104,34 +210,35 @@ function uncommonDeterminant() {
 	let numDet2 = rng(100);
 	
 	if ((numDet1 <= 75) && (numDet2 > 50)){
-		pack[0] = rareTest(numDet1);
-		pack[1] = uncommonRunA[rng(54)-1];
-		pack[2] = uncommonRunB[rng(66)-1];
-		pack[3] = uncommonRunPW[rng(20)-1];
+		randomPack[0] = rareTest(numDet1);
+		randomPack[1] = uncommonRunA[rng(54)-1];
+		randomPack[2] = uncommonRunB[rng(66)-1];
+		randomPack[3] = uncommonRunPW[rng(20)-1];
 	} else if ((numDet1 <= 75) && (numDet2 <= 50)){
-		pack[0] = rareTest(numDet1);
+		randomPack[0] = rareTest(numDet1);
 		let B = rng(66)-1;
-		pack[1] = uncommonRunB[B];
-		pack[2] = uncommonRunB[(B == 65 ? 0 : B+1)];
-		pack[3] = uncommonRunPW[rng(20)-1];
+		randomPack[1] = uncommonRunB[B];
+		randomPack[2] = uncommonRunB[(B == 65 ? 0 : B+1)];
+		randomPack[3] = uncommonRunPW[rng(20)-1];
 	} else if ((numDet1 > 75) && (numDet2 > 50)){
-		pack[0] = rareTest(numDet1);
+		randomPack[0] = rareTest(numDet1);
 		let A = rng(54)-1;
-		pack[1] = uncommonRunA[A];
-		pack[2] = uncommonRunA[(A == 53 ? 0 : A+1)];
-		pack[3] = uncommonRunB[rng(66)-1];
+		randomPack[1] = uncommonRunA[A];
+		randomPack[2] = uncommonRunA[(A == 53 ? 0 : A+1)];
+		randomPack[3] = uncommonRunB[rng(66)-1];
 	} else if ((numDet1 > 75) && (numDet2 <= 50)){
-		pack[0] = rareTest(numDet1);
+		randomPack[0] = rareTest(numDet1);
 		let B = rng(66)-1;
-		pack[1] = uncommonRunA[rng(53)-1];
-		pack[2] = uncommonRunB[B];
-		pack[3] = uncommonRunB[(B == 65 ? 0 : B+1)];
+		randomPack[1] = uncommonRunA[rng(53)-1];
+		randomPack[2] = uncommonRunB[B];
+		randomPack[3] = uncommonRunB[(B == 65 ? 0 : B+1)];
 	}
 }
 
 //Pack generator
 
 function makePack() {
+	randomPack = new Array();
 	uncommonDeterminant();
 	
 	let packNum = rng(5);
@@ -139,162 +246,162 @@ function makePack() {
 	if (packNum === 1) {
 
 		let A1 = rng(66)-1; //Determines the first card selected
-		pack[4] = commonRunA[A1];
+		randomPack[4] = commonRunA[A1];
 
 		let A2 = (A1 === 65) ? 0 : A1 + 1;
-		pack[5] = commonRunA[A2];
+		randomPack[5] = commonRunA[A2];
 
 		let B1 = rng(66)-1; //Determines the first card selected
-		pack[6] = commonRunB[B1];
+		randomPack[6] = commonRunB[B1];
 
 		let B2 = (B1 === 65) ? 0 : B1 + 1;
-		pack[7] = commonRunB[B2];
+		randomPack[7] = commonRunB[B2];
 
 		let C1 = rng(55)-1; //Determines the first card selected
-		pack[8] = commonRunC1[C1].img;
+		randomPack[8] = commonRunC1[C1].img;
 
 		let C2 = (C1 === 54) ? 0 : C1 + 1;
-		pack[9] = commonRunC1[C2].img;
+		randomPack[9] = commonRunC1[C2].img;
 
 		let C3 = (C2 === 54) ? 0 : C2 + 1;
-		pack[10] = commonRunC1[C3].img;
+		randomPack[10] = commonRunC1[C3].img;
 
 		let C4 = (C3 === 54) ? 0 : C3 + 1;
-		pack[11] = commonRunC1[C4].img;
+		randomPack[11] = commonRunC1[C4].img;
 
 		let C5 = (C4 === 54) ? 0 : C4 + 1;
-		pack[12] = commonRunC1[C5].img;
+		randomPack[12] = commonRunC1[C5].img;
 
 		let C6 = (C5 === 54) ? 0 : C5 + 1;
-		pack[13] = commonRunC1[C6].img;
+		randomPack[13] = commonRunC1[C6].img;
 
 	} else if (packNum === 2) {
 		
 		let A1 = rng(66)-1; //Determines the first card selected
-		pack[4] = commonRunA[A1];
+		randomPack[4] = commonRunA[A1];
 
 		let A2 = (A1 === 65) ? 0 : A1 + 1;
-		pack[5] = commonRunA[A2];
+		randomPack[5] = commonRunA[A2];
 
 		let A3 = (A2 === 65) ? 0 : A2 + 1;
-		pack[6] = commonRunA[A3];
+		randomPack[6] = commonRunA[A3];
 
 		let B1 = rng(66)-1; //Determines the first card selected
-		pack[7] = commonRunB[B1];
+		randomPack[7] = commonRunB[B1];
 
 		let B2 = (B1 === 65) ? 0 : B1 + 1;
-		pack[8] = commonRunB[B2];
+		randomPack[8] = commonRunB[B2];
 
 		let C1 = rng(55)-1; //Determines the first card selected
-		pack[9] = commonRunC1[C1];
+		randomPack[9] = commonRunC1[C1];
 
 		let C2 = (C1 === 54) ? 0 : C1 + 1;
-		pack[10] = commonRunC1[C2];
+		randomPack[10] = commonRunC1[C2];
 
 		let C3 = (C2 === 54) ? 0 : C2 + 1;
-		pack[11] = commonRunC1[C3];
+		randomPack[11] = commonRunC1[C3];
 
 		let C4 = (C3 === 54) ? 0 : C3 + 1;
-		pack[12] = commonRunC1[C4];
+		randomPack[12] = commonRunC1[C4];
 
 		let C5 = (C4 === 54) ? 0 : C4 + 1;
-		pack[13] = commonRunC1[C5];
+		randomPack[13] = commonRunC1[C5];
 
 	} else if (packNum === 3) {
 
 		let A1 = rng(66)-1; //Determines the first card selected
-		pack[4] = commonRunA[A1];
+		randomPack[4] = commonRunA[A1];
 
 		let A2 = (A1 === 65) ? 0 : A1 + 1;
-		pack[5] = commonRunA[A2];
+		randomPack[5] = commonRunA[A2];
 
 		let A3 = (A2 === 65) ? 0 : A2 + 1;
-		pack[6] = commonRunA[A3];
+		randomPack[6] = commonRunA[A3];
 
 		let A4 = (A3 === 65) ? 0 : A3 + 1;
-		pack[7] = commonRunA[A4];
+		randomPack[7] = commonRunA[A4];
 
 		let B1 = rng(66)-1; //Determines the first card selected
-		pack[8] = commonRunB[B1];
+		randomPack[8] = commonRunB[B1];
 
 		let B2 = (B1 === 65) ? 0 : B1 + 1;
-		pack[9] = commonRunB[B2];
+		randomPack[9] = commonRunB[B2];
 
 		let C1 = rng(55)-1; //Determines the first card selected
-		pack[10] = commonRunC2[C1];
+		randomPack[10] = commonRunC2[C1];
 
 		let C2 = (C1 === 54) ? 0 : C1 + 1;
-		pack[11] = commonRunC2[C2];
+		randomPack[11] = commonRunC2[C2];
 
 		let C3 = (C2 === 54) ? 0 : C2 + 1;
-		pack[12] = commonRunC2[C3];
+		randomPack[12] = commonRunC2[C3];
 
 		let C4 = (C3 === 54) ? 0 : C3 + 1;
-		pack[13] = commonRunC2[C4];
+		randomPack[13] = commonRunC2[C4];
 
 	} else if (packNum === 4) {
 
 		let A1 = rng(66)-1; //Determines the first card selected
-		pack[4] = commonRunA[A1];
+		randomPack[4] = commonRunA[A1];
 
 		let A2 = (A1 === 65) ? 0 : A1 + 1;
-		pack[5] = commonRunA[A2];
+		randomPack[5] = commonRunA[A2];
 
 		let A3 = (A2 === 65) ? 0 : A2 + 1;
-		pack[6] = commonRunA[A3];
+		randomPack[6] = commonRunA[A3];
 
 		let A4 = (A3 === 65) ? 0 : A3 + 1;
-		pack[7] = commonRunA[A4];
+		randomPack[7] = commonRunA[A4];
 
 		let B1 = rng(66)-1; //Determines the first card selected
-		pack[8] = commonRunB[B1];
+		randomPack[8] = commonRunB[B1];
 
 		let B2 = (B1 === 65) ? 0 : B1 + 1;
-		pack[9] = commonRunB[B2];
+		randomPack[9] = commonRunB[B2];
 
 		let B3 = (B2 === 65) ? 0 : B2 + 1;
-		pack[10] = commonRunB[B3];
+		randomPack[10] = commonRunB[B3];
 
 		let C1 = rng(55)-1; //Determines the first card selected
-		pack[11] = commonRunC2[C1];
+		randomPack[11] = commonRunC2[C1];
 
 		let C2 = (C1 === 54) ? 0 : C1 + 1;
-		pack[12] = commonRunC2[C2];
+		randomPack[12] = commonRunC2[C2];
 
 		let C3 = (C2 === 54) ? 0 : C2 + 1;
-		pack[13] = commonRunC2[C3];
+		randomPack[13] = commonRunC2[C3];
 
 	} else if (packNum === 5) {
 
 		let A1 = rng(66); //Determines the first card selected
-		pack[4] = commonRunA[A1];
+		randomPack[4] = commonRunA[A1];
 
 		let A2 = (A1 === 65) ? 0 : A1 + 1;
-		pack[5] = commonRunA[A2];
+		randomPack[5] = commonRunA[A2];
 
 		let A3 = (A2 === 65) ? 0 : A2 + 1;
-		pack[6] = commonRunA[A3];
+		randomPack[6] = commonRunA[A3];
 
 		let A4 = (A3 === 65) ? 0 : A3 + 1;
-		pack[7] = commonRunA[A4];
+		randomPack[7] = commonRunA[A4];
 
 		let B1 = rng(66)-1; //Determines the first card selected
-		pack[8] = commonRunB[B1];
+		randomPack[8] = commonRunB[B1];
 
 		let B2 = (B1 === 65) ? 0 : B1 + 1;
-		pack[9] = commonRunB[B2];
+		randomPack[9] = commonRunB[B2];
 
 		let B3 = (B2 === 65) ? 0 : B2 + 1;
-		pack[10] = commonRunB[B3];
+		randomPack[10] = commonRunB[B3];
 
 		let B4 = (B3 === 65) ? 0 : B3 + 1;
-		pack[11] = commonRunB[B4];
+		randomPack[11] = commonRunB[B4];
 
 		let C1 = rng(55)-1; //Determines the first card selected
-		pack[12] = commonRunC2[C1];
+		randomPack[12] = commonRunC2[C1];
 
 		let C2 = (C1 === 54) ? 0 : C1 + 1;
-		pack[13] = commonRunC2[C2];
+		randomPack[13] = commonRunC2[C2];
 
 	}
 
