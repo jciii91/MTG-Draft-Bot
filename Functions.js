@@ -29,6 +29,13 @@ function pickCard(cardID) {
 	if (pickCounter === 1 || pickCounter === 9) {
 		userCardPool.push(packOne[x]);
 		packOne.splice(x,1);
+		packTwo.splice(botHand(packTwo),1);
+		packThree.splice(botHand(packThree),1);
+		packFour.splice(botHand(packFour),1);
+		packFive.splice(botHand(packFive),1);
+		packSix.splice(botHand(packSix),1);
+		packSeven.splice(botHand(packSeven),1);
+		packEight.splice(botHand(packEight),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
 		var card = document.getElementById(cardID);
@@ -39,6 +46,13 @@ function pickCard(cardID) {
 	} else if (pickCounter === 2 || pickCounter === 10) {
 		userCardPool.push(packTwo[x]);
 		packTwo.splice(x,1);
+		packThree.splice(botHand(packThree),1);
+		packFour.splice(botHand(packFour),1);
+		packFive.splice(botHand(packFive),1);
+		packSix.splice(botHand(packSix),1);
+		packSeven.splice(botHand(packSeven),1);
+		packEight.splice(botHand(packEight),1);
+		packOne.splice(botHand(packOne),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
 		var card = document.getElementById(cardID);
@@ -49,6 +63,13 @@ function pickCard(cardID) {
 	} else if (pickCounter === 3 || pickCounter === 11) {
 		userCardPool.push(packThree[x]);
 		packThree.splice(x,1);
+		packFour.splice(botHand(packFour),1);
+		packFive.splice(botHand(packFive),1);
+		packSix.splice(botHand(packSix),1);
+		packSeven.splice(botHand(packSeven),1);
+		packEight.splice(botHand(packEight),1);
+		packOne.splice(botHand(packOne),1);
+		packTwo.splice(botHand(packTwo),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
 		var card = document.getElementById(cardID);
@@ -59,6 +80,13 @@ function pickCard(cardID) {
 	} else if (pickCounter === 4 || pickCounter === 12) {
 		userCardPool.push(packFour[x]);
 		packFour.splice(x,1);
+		packFive.splice(botHand(packFive),1);
+		packSix.splice(botHand(packSix),1);
+		packSeven.splice(botHand(packSeven),1);
+		packEight.splice(botHand(packEight),1);
+		packOne.splice(botHand(packOne),1);
+		packTwo.splice(botHand(packTwo),1);
+		packThree.splice(botHand(packThree),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
 		var card = document.getElementById(cardID);
@@ -69,6 +97,13 @@ function pickCard(cardID) {
 	} else if (pickCounter === 5 || pickCounter === 13) {
 		userCardPool.push(packFive[x]);
 		packFive.splice(x,1);
+		packSix.splice(botHand(packSix),1);
+		packSeven.splice(botHand(packSeven),1);
+		packEight.splice(botHand(packEight),1);
+		packOne.splice(botHand(packOne),1);
+		packTwo.splice(botHand(packTwo),1);
+		packThree.splice(botHand(packThree),1);
+		packFour.splice(botHand(packFour),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
 		var card = document.getElementById(cardID);
@@ -79,6 +114,13 @@ function pickCard(cardID) {
 	} else if (pickCounter === 6) {
 		userCardPool.push(packSix[x]);
 		packSix.splice(x,1);
+		packSeven.splice(botHand(packSeven),1);
+		packEight.splice(botHand(packEight),1);
+		packOne.splice(botHand(packOne),1);
+		packTwo.splice(botHand(packTwo),1);
+		packThree.splice(botHand(packThree),1);
+		packFour.splice(botHand(packFour),1);
+		packFive.splice(botHand(packFive),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
 		var card = document.getElementById(cardID);
@@ -89,6 +131,13 @@ function pickCard(cardID) {
 	} else if (pickCounter === 7) {
 		userCardPool.push(packSeven[x]);
 		packSeven.splice(x,1);
+		packEight.splice(botHand(packEight),1);
+		packOne.splice(botHand(packOne),1);
+		packTwo.splice(botHand(packTwo),1);
+		packThree.splice(botHand(packThree),1);
+		packFour.splice(botHand(packFour),1);
+		packFive.splice(botHand(packFive),1);
+		packSix.splice(botHand(packSix),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
 		var card = document.getElementById(cardID);
@@ -99,6 +148,13 @@ function pickCard(cardID) {
 	} else if (pickCounter === 8) {
 		userCardPool.push(packEight[x]);
 		packEight.splice(x,1);
+		packOne.splice(botHand(packOne),1);
+		packTwo.splice(botHand(packTwo),1);
+		packThree.splice(botHand(packThree),1);
+		packFour.splice(botHand(packFour),1);
+		packFive.splice(botHand(packFive),1);
+		packSix.splice(botHand(packSix),1);
+		packSeven.splice(botHand(packSeven),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
 		var card = document.getElementById(cardID);
@@ -109,6 +165,13 @@ function pickCard(cardID) {
 	} else if (pickCounter === 14) {
 		userCardPool.push(packSix[x]);
 		packSix.splice(x,1);
+		packSeven.splice(botHand(packSeven),1);
+		packEight.splice(botHand(packEight),1);
+		packOne.splice(botHand(packOne),1);
+		packTwo.splice(botHand(packTwo),1);
+		packThree.splice(botHand(packThree),1);
+		packFour.splice(botHand(packFour),1);
+		packFive.splice(botHand(packFive),1);
 		pickCounter = 1;
 		roundCounter++;
 		var element = document.getElementById("currentPack");
@@ -126,6 +189,14 @@ function pickCard(cardID) {
 		}
 		startDraft();
 	}
+}
+
+//Bot Hand
+//Selection function used by the bots
+
+function botHand (bp) {
+	let botPick = 0;
+	return botPick;
 }
 
 //Image display
