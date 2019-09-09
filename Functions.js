@@ -12,6 +12,7 @@ let packFive = new Array();
 let packSix = new Array();
 let packSeven = new Array();
 let packEight = new Array();
+let roundCounter = 0;
 
 //Random number generator
 
@@ -25,61 +26,105 @@ function rng(max) {
 
 function pickCard(cardID) {
 	let x = parseFloat(cardID[4]+cardID[5]);
-	userCardPool.push(pack[x]);
-	pack.splice(x,1);
 	if (pickCounter === 1 || pickCounter === 9) {
-		for (i=0;i<pack.length;i++) {packOne[i] = pack[i]};
-		packOne.pop();
-		pack = packTwo;
+		userCardPool.push(packOne[x]);
+		packOne.splice(x,1);
 		pickCounter++;
+		var element = document.getElementById("currentPack");
+		var card = document.getElementById(cardID);
+		for (i=0; i<=packOne.length; i++) {
+			element.removeChild(element.firstChild);
+			show_image(packTwo[i].img, i);
+		}
 	} else if (pickCounter === 2 || pickCounter === 10) {
-		for (i=0;i<pack.length;i++) {packTwo[i] = pack[i]};
-		packTwo.pop();
-		pack = packThree;
+		userCardPool.push(packTwo[x]);
+		packTwo.splice(x,1);
 		pickCounter++;
+		var element = document.getElementById("currentPack");
+		var card = document.getElementById(cardID);
+		for (i=0; i<=packTwo.length; i++) {
+			element.removeChild(element.firstChild);
+			show_image(packThree[i].img, i);
+		}
 	} else if (pickCounter === 3 || pickCounter === 11) {
-		for (i=0;i<pack.length;i++) {packThree[i] = pack[i]};
-		packThree.pop();
-		pack = packFour;
+		userCardPool.push(packThree[x]);
+		packThree.splice(x,1);
 		pickCounter++;
+		var element = document.getElementById("currentPack");
+		var card = document.getElementById(cardID);
+		for (i=0; i<=packThree.length; i++) {
+			element.removeChild(element.firstChild);
+			show_image(packFour[i].img, i);
+		}
 	} else if (pickCounter === 4 || pickCounter === 12) {
-		for (i=0;i<pack.length;i++) {packFour[i] = pack[i]};
-		packFour.pop();
-		pack = packFive;
+		userCardPool.push(packFour[x]);
+		packFour.splice(x,1);
 		pickCounter++;
+		var element = document.getElementById("currentPack");
+		var card = document.getElementById(cardID);
+		for (i=0; i<=packFour.length; i++) {
+			element.removeChild(element.firstChild);
+			show_image(packFive[i].img, i);
+		}
 	} else if (pickCounter === 5 || pickCounter === 13) {
-		for (i=0;i<pack.length;i++) {packFive[i] = pack[i]};
-		packFive.pop();
-		pack = packSix;
+		userCardPool.push(packFive[x]);
+		packFive.splice(x,1);
 		pickCounter++;
+		var element = document.getElementById("currentPack");
+		var card = document.getElementById(cardID);
+		for (i=0; i<=packFive.length; i++) {
+			element.removeChild(element.firstChild);
+			show_image(packSix[i].img, i);
+		}
 	} else if (pickCounter === 6) {
-		for (i=0;i<pack.length;i++) {packSix[i] = pack[i]};
-		packSix.pop();
-		pack = packSeven;
+		userCardPool.push(packSix[x]);
+		packSix.splice(x,1);
 		pickCounter++;
+		var element = document.getElementById("currentPack");
+		var card = document.getElementById(cardID);
+		for (i=0; i<=packSix.length; i++) {
+			element.removeChild(element.firstChild);
+			show_image(packSeven[i].img, i);
+		}
 	} else if (pickCounter === 7) {
-		for (i=0;i<pack.length;i++) {packSeven[i] = pack[i]};
-		packSeven.pop();
-		pack = packEight;
+		userCardPool.push(packSeven[x]);
+		packSeven.splice(x,1);
 		pickCounter++;
+		var element = document.getElementById("currentPack");
+		var card = document.getElementById(cardID);
+		for (i=0; i<=packSeven.length; i++) {
+			element.removeChild(element.firstChild);
+			show_image(packEight[i].img, i);
+		}
 	} else if (pickCounter === 8) {
-		for (i=0;i<pack.length;i++) {packEight[i] = pack[i]};
-		packEight.pop();
-		pack = packOne;
+		userCardPool.push(packEight[x]);
+		packEight.splice(x,1);
 		pickCounter++;
+		var element = document.getElementById("currentPack");
+		var card = document.getElementById(cardID);
+		for (i=0; i<=packEight.length; i++) {
+			element.removeChild(element.firstChild);
+			show_image(packOne[i].img, i);
+		}
 	} else if (pickCounter === 14) {
-		alert("Round over.");
-		startDraft();
+		userCardPool.push(packSix[x]);
+		packSix.splice(x,1);
 		pickCounter = 1;
-	}
-	alert(pickCounter);
-	alert(pack.length);
-	var element = document.getElementById("currentPack");
-	var card = document.getElementById(cardID);
-	for (i=0; i<pack.length; i++) {
-		element.removeChild(element.firstChild);
-		show_image(pack[i].img, i);
-
+		roundCounter++;
+		var element = document.getElementById("currentPack");
+		var card = document.getElementById(cardID);
+		for (i=0; i<=packSix.length; i++) {
+			element.removeChild(element.firstChild);
+		}
+		alert("Round over.");
+		if (roundCounter === 3) {
+			for (i=0;i<userCardPool.length;i++) {
+				show_userCardPool(userCardPool[i].img);
+			}
+			alert("Draft complete.");
+			return;
+		}
+		startDraft();
 	}
 }
 
@@ -92,6 +137,19 @@ function show_image(src, num) {
     img.height = 370;
     img.id = "card" + num;
     img.setAttribute("onclick", "pickCard(id)");
+
+    // This next line will just add it to the <body> tag
+    document.getElementById("currentPack").appendChild(img);
+}
+
+//Show User Card Pool
+//Same as image display function but no onclick is added
+
+function show_userCardPool(src) {
+    var img = document.createElement("img");
+    img.src = src;
+    img.width = 265;
+    img.height = 370;
 
     // This next line will just add it to the <body> tag
     document.getElementById("currentPack").appendChild(img);
