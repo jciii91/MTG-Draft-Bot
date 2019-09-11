@@ -1,7 +1,8 @@
-﻿let commonRunA = new Array();
+let commonRunA = new Array();
     commonRunA[0] = {
         name: "Kasmina's Transmutation",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460984&type=card",
+		priority: 91,
         cmc: "1U",
         type: "Enchantment",
         subtype: "Aura",
@@ -14,6 +15,7 @@
     commonRunA[1] = {
         name: "Goblin Assault Team",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461056&type=card",
+		priority: 42,
         cmc: "4R",
         type: "Creature",
         subtype: "Goblin Warrior",
@@ -26,6 +28,7 @@
     commonRunA[2] = {
         name: "Ironclad Krovod",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460946&type=card",
+		priority: 36,
         cmc: "3W",
         type: "Creature",
         subtype: "Beast",
@@ -38,6 +41,7 @@
     commonRunA[3] = {
         name: "Spellkeeper Weird",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460996&type=card",
+		priority: 115,
         cmc: "2U",
         type: "Creature",
         subtype: "Weird",
@@ -50,6 +54,7 @@
     commonRunA[4] = {
         name: "Ahn-Crop Invader",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461040&type=card",
+		priority: 87,
         cmc: "2R",
         type: "Creature",
         subtype: "Zombie Minotaur Warrior",
@@ -62,6 +67,7 @@
     commonRunA[5] = {
         name: "War Screecher",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460966&type=card",
+		priority: 98,
         cmc: "1W",
         type: "Creature",
         subtype: "Bird",
@@ -74,6 +80,7 @@
     commonRunA[6] = {
         name: "Ashiok's Skulker",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460967&type=card",
+		priority: 58,
         cmc: "5U",
         type: "Creature",
         subtype: "Nightmare",
@@ -86,6 +93,7 @@
     commonRunA[7] = {
         name: "Invading Manticore",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461061&type=card",
+		priority: 65,
         cmc: "5R",
         type: "Creature",
         subtype: "Zombie Manticore",
@@ -98,6 +106,7 @@
     commonRunA[8] = {
         name: "Bulwark Giant",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460934&type=card",
+		priority: 26,
         cmc: "5W",
         type: "Creature",
         subtype: "Giant Soldier",
@@ -110,6 +119,7 @@
     commonRunA[9] = {
         name: "Kiora's Dambreaker",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460985&type=card",
+		priority: 59,
         cmc: "5U",
         type: "Creature",
         subtype: "Leviathan",
@@ -122,6 +132,7 @@
     commonRunA[10] = {
         name: "Raging Kronch",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461068&type=card",
+		priority: 147,
         cmc: "2R",
         type: "Creature",
         subtype: "Beast",
@@ -134,6 +145,7 @@
     commonRunA[11] = {
         name: "Gideon's Sacrifice",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460941&type=card",
+		priority: 5,
         cmc: "W",
         type: "Instant",
         subtype: undefined,
@@ -146,6 +158,7 @@
     commonRunA[12] = {
         name: "Teferi's Time Twist",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460999&type=card",
+		priority: 39,
         cmc: "1U",
         type: "Instant",
         subtype: undefined,
@@ -158,6 +171,7 @@
     commonRunA[13] = {
         name: "Grim Initiate",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461057&type=card",
+		priority: 54,
         cmc: "R",
         type: "Creature",
         subtype: "Zombie Warrior",
@@ -170,6 +184,7 @@
     commonRunA[14] = {
         name: "Martyr for the Cause",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460950&type=card",
+		priority: 108,
         cmc: "1W",
         type: "Creature",
         subtype: "Human Soldier",
@@ -182,6 +197,7 @@
     commonRunA[15] = {
         name: "Contentious Plan",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460973&type=card",
+		priority: 62,
         cmc: "1U",
         type: "Sorcery",
         subtype: undefined,
@@ -194,6 +210,7 @@
     commonRunA[16] = {
         name: "Blindblast",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461041&type=card",
+		priority: 21,
         cmc: "2R",
         type: "Instant",
         subtype: undefined,
@@ -206,6 +223,7 @@
     commonRunA[17] = {
         name: "Battlefield Promotion",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460932&type=card",
+		priority: 77,
         cmc: "1W",
         type: "Instant",
         subtype: undefined,
@@ -218,6 +236,7 @@
     commonRunA[18] = {
         name: "Crush Dissent",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460974&type=card",
+		priority: 35,
         cmc: "3U",
         type: "Instant",
         subtype: undefined,
@@ -230,6 +249,7 @@
     commonRunA[19] = {
         name: "Chainwhip Cyclops",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461045&type=card",
+		priority: 78,
         cmc: "4R",
         type: "Creature",
         subtype: "Cyclops Warrior",
@@ -242,6 +262,7 @@
     commonRunA[20] = {
         name: "Teyo's Lightshield",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460960&type=card",
+		priority: 64,
         cmc: "2W",
         type: "Creature",
         subtype: "Illusion",
@@ -254,6 +275,7 @@
     commonRunA[21] = {
         name: "No Escape",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460990&type=card",
+		priority: 83,
         cmc: "2U",
         type: "Instant",
         subtype: undefined,
@@ -266,6 +288,7 @@
     commonRunA[22] = {
         name: "Turret Ogre",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461075&type=card",
+		priority: 140,
         cmc: "3R",
         type: "Creature",
         subtype: "Ogre Warrior",
@@ -278,6 +301,7 @@
     commonRunA[23] = {
         name: "Ironclad Krovod",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460946&type=card",
+		priority: 36,
         cmc: "3W",
         type: "Creature",
         subtype: "Beast",
@@ -290,6 +314,7 @@
     commonRunA[24] = {
         name: "Ashiok's Skulker",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460967&type=card",
+		priority: 58,
         cmc: "5U",
         type: "Creature",
         subtype: "Nightmare",
@@ -302,6 +327,7 @@
     commonRunA[25] = {
         name: "Honor the God-Pharaoh",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461059&type=card",
+		priority: 49,
         cmc: "2R",
         type: "Sorcery",
         subtype: undefined,
@@ -314,6 +340,7 @@
     commonRunA[26] = {
         name: "Rising Populace",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460956&type=card",
+		priority: 97,
         cmc: "2W",
         type: "Creature",
         subtype: "Human",
@@ -326,6 +353,7 @@
     commonRunA[27] = {
         name: "Stealth Mission",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460997&type=card",
+		priority: 50,
         cmc: "2U",
         type: "Sorcery",
         subtype: undefined,
@@ -338,6 +366,7 @@
     commonRunA[28] = {
         name: "Goblin Assault Team",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461056&type=card",
+		priority: 42,
         cmc: "4R",
         type: "Creature",
         subtype: "Goblin Warrior",
@@ -350,6 +379,7 @@
     commonRunA[29] = {
         name: "Pouncing Lynx",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460952&type=card",
+		priority: 103,
         cmc: "1W",
         type: "Creature",
         subtype: "Cat",
@@ -362,6 +392,7 @@
     commonRunA[30] = {
         name: "Sky Theater Strix",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460994&type=card",
+		priority: 121,
         cmc: "1U",
         type: "Creature",
         subtype: "Bird",
@@ -374,6 +405,7 @@
     commonRunA[31] = {
         name: "Goblin Assailant",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461055&type=card",
+		priority: 23,
         cmc: "1R",
         type: "Creature",
         subtype: "Goblin Warrior",
@@ -386,6 +418,7 @@
     commonRunA[32] = {
         name: "Makeshift Battalion",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460949&type=card",
+		priority: 72,
         cmc: "2W",
         type: "Creature",
         subtype: "Human Soldier",
@@ -395,9 +428,23 @@
         power: 3,
         toughness: 2
     }
-    commonRunA[33] = {
+	    commonRunA[33] = {
+        name: "Kasmina's Transmutation",
+        img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460984&type=card",
+		priority: 91,
+        cmc: "1U",
+        type: "Enchantment",
+        subtype: "Aura",
+        set: "WAR",
+        rules: "Enchant creature. Enchanted creature loses all abilities and has base power and toughness 1/1.",
+        flavor: "\"Hop away now, little Eternal. Go eat some flies.\" — Kasmina",
+        power: undefined,
+        toughness: undefined
+    }
+    commonRunA[34] = {
         name: "Samut's Sprint",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461069&type=card",
+		priority: 28,
         cmc: "R",
         type: "Instant",
         subtype: undefined,
@@ -407,9 +454,10 @@
         power: undefined,
         toughness: undefined
     }
-    commonRunA[34] = {
+    commonRunA[35] = {
         name: "War Screecher",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460966&type=card",
+		priority: 98,
         cmc: "1W",
         type: "Creature",
         subtype: "Bird",
@@ -419,9 +467,10 @@
         power: 1,
         toughness: 3
     }
-    commonRunA[35] = {
+    commonRunA[36] = {
         name: "Teferi's Time Twist",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460999&type=card",
+		priority: 39,
         cmc: "1U",
         type: "Instant",
         subtype: undefined,
@@ -431,10 +480,11 @@
         power: undefined,
         toughness: undefined
     }
-    commonRunA[36] = {
+    commonRunA[37] = {
         name: "Ahn-Crop Invader",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461040&type=card",
-        cmc: "2R",
+        priority: 87,
+		cmc: "2R",
         type: "Creature",
         subtype: "Zombie Minotaur Warrior",
         set: "WAR",
@@ -443,9 +493,10 @@
         power: 2,
         toughness: 2
     }
-    commonRunA[37] = {
+    commonRunA[38] = {
         name: "Bulwark Giant",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460934&type=card",
+		priority: 26,
         cmc: "5W",
         type: "Creature",
         subtype: "Giant Soldier",
@@ -455,9 +506,10 @@
         power: 3,
         toughness: 6
     }
-    commonRunA[38] = {
+    commonRunA[39] = {
         name: "Crush Dissent",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460974&type=card",
+		priority: 35,
         cmc: "3U",
         type: "Instant",
         subtype: undefined,
@@ -467,9 +519,10 @@
         power: undefined,
         toughness: undefined
     }
-    commonRunA[39] = {
+    commonRunA[40] = {
         name: "Invading Manticore",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461061&type=card",
+		priority: 65,
         cmc: "5R",
         type: "Creature",
         subtype: "Zombie Manticore",
@@ -479,9 +532,10 @@
         power: 4,
         toughness: 5
     }
-    commonRunA[40] = {
+    commonRunA[41] = {
         name: "Gideon's Sacrifice",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460941&type=card",
+		priority: 5,
         cmc: "W",
         type: "Instant",
         subtype: undefined,
@@ -491,9 +545,10 @@
         power: undefined,
         toughness: undefined
     }
-    commonRunA[41] = {
+    commonRunA[42] = {
         name: "Naga Eternal",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460987&type=card",
+		priority: 56,
         cmc: "2U",
         type: "Creature",
         subtype: "Zombie Naga",
@@ -503,9 +558,10 @@
         power: 3,
         toughness: 2
     }
-    commonRunA[42] = {
+    commonRunA[43] = {
         name: "Raging Kronch",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461068&type=card",
+		priority: 147,
         cmc: "2R",
         type: "Creature",
         subtype: "Beast",
@@ -515,9 +571,10 @@
         power: 4,
         toughness: 3
     }
-    commonRunA[43] = {
+    commonRunA[44] = {
         name: "Battlefield Promotion",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460932&type=card",
+		priority: 77,
         cmc: "1W",
         type: "Instant",
         subtype: undefined,
@@ -527,9 +584,10 @@
         power: undefined,
         toughness: undefined
     }
-    commonRunA[44] = {
+    commonRunA[45] = {
         name: "Sky Theater Strix",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460994&type=card",
+		priority: 121,
         cmc: "1U",
         type: "Creature",
         subtype: "Bird",
@@ -539,9 +597,10 @@
         power: 1,
         toughness: 2
     }
-    commonRunA[45] = {
+    commonRunA[46] = {
         name: "Ahn-Crop Invader",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461040&type=card",
+		priority: 87,
         cmc: "2R",
         type: "Creature",
         subtype: "Zombie Minotaur Warrior",
@@ -551,9 +610,10 @@
         power: 2,
         toughness: 2
     }
-    commonRunA[46] = {
+    commonRunA[47] = {
         name: "Blindblast",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461041&type=card",
+		priority: 21,
         cmc: "2R",
         type: "Instant",
         subtype: undefined,
@@ -563,9 +623,10 @@
         power: undefined,
         toughness: undefined
     }
-    commonRunA[47] = {
+    commonRunA[48] = {
         name: "Loxodon Sergeant",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460948&type=card",
+		priority: 47,
         cmc: "3W",
         type: "Creature",
         subtype: "Elephant Soldier",
@@ -575,9 +636,10 @@
         power: 3,
         toughness: 3
     }
-    commonRunA[48] = {
+    commonRunA[49] = {
         name: "Kiora's Dambreaker",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460985&type=card",
+		priority: 59,
         cmc: "5U",
         type: "Creature",
         subtype: "Leviathan",
@@ -587,9 +649,10 @@
         power: 5,
         toughness: 6
     }
-    commonRunA[49] = {
+    commonRunA[50] = {
         name: "Chainwhip Cyclops",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461045&type=card",
+		priority: 78,
         cmc: "4R",
         type: "Creature",
         subtype: "Cyclops Warrior",
@@ -599,9 +662,10 @@
         power: 4,
         toughness: 4
     }
-    commonRunA[50] = {
+    commonRunA[51] = {
         name: "Teyo's Lightshield",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460960&type=card",
+		priority: 64,
         cmc: "2W",
         type: "Creature",
         subtype: "Illusion",
@@ -611,9 +675,10 @@
         power: 0,
         toughness: 3
     }
-    commonRunA[51] = {
+    commonRunA[52] = {
         name: "Spellkeeper Weird",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460996&type=card",
+		priority: 115,
         cmc: "2U",
         type: "Creature",
         subtype: "Weird",
@@ -623,9 +688,10 @@
         power: 1,
         toughness: 4
     }
-    commonRunA[52] = {
+    commonRunA[53] = {
         name: "Turret Ogre",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461075&type=card",
+		priority: 140,
         cmc: "3R",
         type: "Creature",
         subtype: "Ogre Warrior",
@@ -635,9 +701,10 @@
         power: 4,
         toughness: 3
     }
-    commonRunA[53] = {
+    commonRunA[54] = {
         name: "Pouncing Lynx",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460952&type=card",
+		priority: 103,
         cmc: "1W",
         type: "Creature",
         subtype: "Cat",
@@ -647,9 +714,10 @@
         power: 2,
         toughness: 1
     }
-    commonRunA[54] = {
+    commonRunA[55] = {
         name: "Stealth Mission",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460997&type=card",
+		priority: 50,
         cmc: "2U",
         type: "Sorcery",
         subtype: undefined,
@@ -659,9 +727,10 @@
         power: undefined,
         toughness: undefined
     }
-    commonRunA[55] = {
+    commonRunA[56] = {
         name: "Honor the God-Pharaoh",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461059&type=card",
+		priority: 49,
         cmc: "2R",
         type: "Sorcery",
         subtype: undefined,
@@ -671,9 +740,10 @@
         power: undefined,
         toughness: undefined
     }
-    commonRunA[56] = {
+    commonRunA[57] = {
         name: "Rising Populace",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460956&type=card",
+		priority: 97,
         cmc: "2W",
         type: "Creature",
         subtype: "Human",
@@ -683,9 +753,10 @@
         power: 2,
         toughness: 2
     }
-    commonRunA[57] = {
+    commonRunA[58] = {
         name: "No Escape",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460990&type=card",
+		priority: 83,
         cmc: "2U",
         type: "Instant",
         subtype: undefined,
@@ -695,9 +766,10 @@
         power: undefined,
         toughness: undefined
     }
-    commonRunA[58] = {
+    commonRunA[59] = {
         name: "Grim Initiate",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461057&type=card",
+		priority: 54,
         cmc: "R",
         type: "Creature",
         subtype: "Zombie Warrior",
@@ -707,9 +779,10 @@
         power: 1,
         toughness: 1
     }
-    commonRunA[59] = {
+    commonRunA[60] = {
         name: "Makeshift Battalion",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460949&type=card",
+		priority: 72,
         cmc: "2W",
         type: "Creature",
         subtype: "Human Soldier",
@@ -719,9 +792,10 @@
         power: 3,
         toughness: 2
     }
-    commonRunA[60] = {
+    commonRunA[61] = {
         name: "Contentious Plan",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460973&type=card",
+		priority: 62,
         cmc: "1U",
         type: "Sorcery",
         subtype: undefined,
@@ -731,9 +805,10 @@
         power: undefined,
         toughness: undefined
     }
-    commonRunA[61] = {
+    commonRunA[62] = {
         name: "Samut's Sprint",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461069&type=card",
+		priority: 28,
         cmc: "R",
         type: "Instant",
         subtype: undefined,
@@ -743,9 +818,10 @@
         power: undefined,
         toughness: undefined
     }
-    commonRunA[62] = {
+    commonRunA[63] = {
         name: "Martyr for the Cause",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460950&type=card",
+		priority: 108,
         cmc: "1W",
         type: "Creature",
         subtype: "Human Soldier",
@@ -755,9 +831,10 @@
         power: 2,
         toughness: 2
     }
-    commonRunA[63] = {
+    commonRunA[64] = {
         name: "Naga Eternal",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460987&type=card",
+		priority: 56,
         cmc: "2U",
         type: "Creature",
         subtype: "Zombie Naga",
@@ -767,9 +844,10 @@
         power: 3,
         toughness: 2
     }
-    commonRunA[64] = {
+    commonRunA[65] = {
         name: "Goblin Assailant",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461055&type=card",
+		priority: 23,
         cmc: "1R",
         type: "Creature",
         subtype: "Goblin Warrior",
@@ -779,9 +857,10 @@
         power: 2,
         toughness: 2
     }
-    commonRunA[65] = {
+    commonRunA[66] = {
         name: "Loxodon Sergeant",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460948&type=card",
+		priority: 47,
         cmc: "3W",
         type: "Creature",
         subtype: "Elephant Soldier",
