@@ -2,6 +2,7 @@ let uncommonRunPW = new Array();
     uncommonRunPW[0] = {
         name: "Angrath, Captain of Chaos",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461154&type=card",
+		priority: 222,
         cmc: "2 RakdosHybrid RakdosHybrid",
         type: "Legendary Planeswalker",
         subtype: "Angrath",
@@ -15,6 +16,7 @@ let uncommonRunPW = new Array();
     uncommonRunPW[1] = {
         name: "Arlinn, Voice of the Pack",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461077&type=card",
+		priority: 216,
         cmc: "4GG",
         type: "Legendary Planeswalker",
         subtype: "Arlinn",
@@ -28,6 +30,7 @@ let uncommonRunPW = new Array();
     uncommonRunPW[2] = {
         name: "Ashiok, Dream Render",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461155&type=card",
+		priority: 105,
         cmc: "1 DimirHybrid DimirHybrid",
         type: "Legendary Planeswalker",
         subtype: "Ashiok",
@@ -41,6 +44,7 @@ let uncommonRunPW = new Array();
     uncommonRunPW[3] = {
         name: "Davriel, Rogue Shadowmage",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461010&type=card",
+		priority: 155,
         cmc: "2B",
         type: "Legendary Planeswalker",
         subtype: "Davriel",
@@ -54,6 +58,7 @@ let uncommonRunPW = new Array();
     uncommonRunPW[4] = {
         name: "Dovin, Hand of Control",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461156&type=card",
+		priority: 119,
         cmc: "2 AzorHybrid",
         type: "Legendary Planeswalker",
         subtype: "Dovin",
@@ -67,6 +72,7 @@ let uncommonRunPW = new Array();
     uncommonRunPW[5] = {
         name: "Huatli, the Sun's Heart",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461157&type=card",
+		priority: 40,
         cmc: "2 SelesnyaHybrid",
         type: "Legendary Planeswalker",
         subtype: "Huatli",
@@ -80,6 +86,7 @@ let uncommonRunPW = new Array();
     uncommonRunPW[6] = {
         name: "Jaya, Venerated Firemage",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461062&type=card",
+		priority: 181,
         cmc: "4R",
         type: "Legendary Planeswalker",
         subtype: "Jaya",
@@ -93,6 +100,7 @@ let uncommonRunPW = new Array();
     uncommonRunPW[7] = {
         name: "Jiang Yanggu, Wildcrafter",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461091&type=card",
+		priority: 165,
         cmc: "2G",
         type: "Legendary Planeswalker",
         subtype: "Yanggu",
@@ -106,6 +114,7 @@ let uncommonRunPW = new Array();
     uncommonRunPW[8] = {
         name: "Kasmina, Enigmatic Mentor",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460983&type=card",
+		priority: 219,
         cmc: "3U",
         type: "Legendary Planeswalker",
         subtype: "Kasmina",
@@ -119,6 +128,7 @@ let uncommonRunPW = new Array();
     uncommonRunPW[9] = {
         name: "Kaya, Bane of the Dead",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461158&type=card",
+		priority: 217,
         cmc: "3 OrzhovHybrid OrzhovHybrid OrzhovHybrid",
         type: "Legendary Planeswalker",
         subtype: "Kaya",
@@ -132,6 +142,7 @@ let uncommonRunPW = new Array();
     uncommonRunPW[10] = {
         name: "Kiora, Behemoth Beckoner",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461159&type=card",
+		priority: 148,
         cmc: "2 SimicHybrid",
         type: "Legendary Planeswalker",
         subtype: "Kiora",
@@ -145,6 +156,7 @@ let uncommonRunPW = new Array();
     uncommonRunPW[11] = {
         name: "Nahiri, Storm of Stone",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461160&type=card",
+		priority: 206,
         cmc: "2 BorosHybrid BorosHybrid",
         type: "Legendary Planeswalker",
         subtype: "Nahiri",
@@ -158,6 +170,7 @@ let uncommonRunPW = new Array();
     uncommonRunPW[12] = {
         name: "Narset, Parter of Veils",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460988&type=card",
+		priority: 82,
         cmc: "1UU",
         type: "Legendary Planeswalker",
         subtype: "Narset",
@@ -171,6 +184,7 @@ let uncommonRunPW = new Array();
     uncommonRunPW[13] = {
         name: "Ob Nixilis, the Hate-Twisted",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461027&type=card",
+		priority: 173,
         cmc: "3BB",
         type: "Legendary Planeswalker",
         subtype: "Nixilis",
@@ -184,6 +198,7 @@ let uncommonRunPW = new Array();
     uncommonRunPW[14] = {
         name: "Samut, Tyrant Smasher",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461162&type=card",
+		priority: 139,
         cmc: "2 GruulHybrid GruulHybrid",
         type: "Legendary Planeswalker",
         subtype: "Samut",
@@ -197,6 +212,7 @@ let uncommonRunPW = new Array();
     uncommonRunPW[15] = {
         name: "Teyo, the Shieldmage",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460959&type=card",
+		priority: 33,
         cmc: "2W",
         type: "Legendary Planeswalker",
         subtype: "Teyo",
@@ -210,6 +226,7 @@ let uncommonRunPW = new Array();
     uncommonRunPW[16] = {
         name: "The Wanderer",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460964&type=card",
+		priority: 186,
         cmc: "3W",
         type: "Legendary Planeswalker",
         subtype: undefined,
@@ -223,6 +240,7 @@ let uncommonRunPW = new Array();
     uncommonRunPW[17] = {
         name: "Tibalt, Rakish Instigator",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461073&type=card",
+		priority: 167,
         cmc: "2R",
         type: "Legendary Planeswalker",
         subtype: "Tibalt",
@@ -236,6 +254,7 @@ let uncommonRunPW = new Array();
     uncommonRunPW[18] = {
         name: "Vraska, Swarm's Eminence",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461163&type=card",
+		priority: 221,
         cmc: "2 GolgariHybrid GolgariHybrid",
         type: "Legendary Planeswalker",
         subtype: "Vraska",
@@ -249,6 +268,7 @@ let uncommonRunPW = new Array();
     uncommonRunPW[19] = {
         name: "Saheeli, Sublime Artificer",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461161&type=card",
+		priority: 169,
         cmc: "1 IzzetHybrid IzzetHybrid",
         type: "Legendary Planeswalker",
         subtype: "Saheeli",
