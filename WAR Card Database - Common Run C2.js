@@ -1,7 +1,8 @@
-﻿let commonRunC2 = new Array();
+let commonRunC2 = new Array();
     commonRunC2[0] = {
         name: "Spellgorger Weird",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461072&type=card",
+		priority: 157,
         cmc: "2R",
         type: "Creature",
         subtype: "Weird",
@@ -14,6 +15,7 @@
     commonRunC2[1] = {
         name: "Arboreal Grazer",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461076&type=card",
+		priority: 4,
         cmc: "G",
         type: "Creature",
         subtype: "Beast",
@@ -26,6 +28,7 @@
     commonRunC2[2] = {
         name: "Herald of the Dreadhorde",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461020&type=card",
+		priority: 132,
         cmc: "3B",
         type: "Creature",
         subtype: "Zombie Warrior",
@@ -38,6 +41,7 @@
     commonRunC2[3] = {
         name: "Prismite",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461169&type=card",
+		priority: 29,
         cmc: "2",
         type: "Artifact Creature",
         subtype: "Golem",
@@ -50,6 +54,7 @@
     commonRunC2[4] = {
         name: "Giant Growth",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461089&type=card",
+		priority: 120,
         cmc: "G",
         type: "Instant",
         subtype: undefined,
@@ -62,6 +67,7 @@
     commonRunC2[5] = {
         name: "Spark Harvest",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461032&type=card",
+		priority: 178,
         cmc: "B",
         type: "Sorcery",
         subtype: undefined,
@@ -74,6 +80,7 @@
     commonRunC2[6] = {
         name: "Arboreal Grazer",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461076&type=card",
+		priority: 4,
         cmc: "G",
         type: "Creature",
         subtype: "Beast",
@@ -86,6 +93,7 @@
     commonRunC2[7] = {
         name: "Divine Arrow",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460937&type=card",
+		priority: 158,
         cmc: "1W",
         type: "Instant",
         subtype: undefined,
@@ -98,6 +106,7 @@
     commonRunC2[8] = {
         name: "Wall of Runes",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461002&type=card",
+		priority: 10,
         cmc: "U",
         type: "Creature",
         subtype: "Wall",
@@ -110,6 +119,7 @@
     commonRunC2[9] = {
         name: "Arlinn's Wolf",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461078&type=card",
+		priority: 131,
         cmc: "2G",
         type: "Creature",
         subtype: "Wolf",
@@ -122,6 +132,7 @@
     commonRunC2[10] = {
         name: "Iron Bully",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461167&type=card",
+		priority: 52,
         cmc: "3",
         type: "Artifact Creature",
         subtype: "Golem",
@@ -134,6 +145,7 @@
     commonRunC2[11] = {
         name: "Callous Dismissal",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460971&type=card",
+		priority: 129,
         cmc: "1U",
         type: "Sorcery",
         subtype: undefined,
@@ -146,6 +158,7 @@
     commonRunC2[12] = {
         name: "Nahiri's Stoneblades",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461066&type=card",
+		priority: 11,
         cmc: "1R",
         type: "Instant",
         subtype: undefined,
@@ -158,6 +171,7 @@
     commonRunC2[13] = {
         name: "Band Together",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461080&type=card",
+		priority: 197,
         cmc: "2G",
         type: "Instant",
         subtype: undefined,
@@ -170,6 +184,7 @@
     commonRunC2[14] = {
         name: "Prismite",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461169&type=card",
+		priority: 29,
         cmc: "2",
         type: "Artifact Creature",
         subtype: "Golem",
@@ -182,6 +197,7 @@
     commonRunC2[15] = {
         name: "Herald of the Dreadhorde",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461020&type=card",
+		priority: 132,
         cmc: "3B",
         type: "Creature",
         subtype: "Zombie Warrior",
@@ -194,6 +210,7 @@
     commonRunC2[16] = {
         name: "Thundering Ceratok",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461106&type=card",
+		priority: 107,
         cmc: "4G",
         type: "Creature",
         subtype: "Rhino",
@@ -206,6 +223,7 @@
     commonRunC2[17] = {
         name: "Wall of Runes",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461002&type=card",
+		priority: 10,
         cmc: "U",
         type: "Creature",
         subtype: "Wall",
@@ -218,6 +236,7 @@
     commonRunC2[18] = {
         name: "Spark Harvest",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461032&type=card",
+		priority: 178,
         cmc: "B",
         type: "Sorcery",
         subtype: undefined,
@@ -230,6 +249,7 @@
     commonRunC2[19] = {
         name: "Topple the Statue",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460962&type=card",
+		priority: 12,
         cmc: "2W",
         type: "Instant",
         subtype: undefined,
@@ -242,6 +262,7 @@
     commonRunC2[20] = {
         name: "Giant Growth",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461089&type=card",
+		priority: 120,
         cmc: "G",
         type: "Instant",
         subtype: undefined,
@@ -254,6 +275,7 @@
     commonRunC2[21] = {
         name: "Spellgorger Weird",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461072&type=card",
+		priority: 157,
         cmc: "2R",
         type: "Creature",
         subtype: "Weird",
@@ -266,6 +288,7 @@
     commonRunC2[22] = {
         name: "Tamiyo's Epiphany",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460998&type=card",
+		priority: 141,
         cmc: "3U",
         type: "Sorcery",
         subtype: undefined,
@@ -278,6 +301,7 @@
     commonRunC2[23] = {
         name: "Banehound",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461004&type=card",
+		priority: 3,
         cmc: "B",
         type: "Creature",
         subtype: "Nightmare Hound",
@@ -290,6 +314,7 @@
     commonRunC2[24] = {
         name: "Gateway Plaza",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461173&type=card",
+		priority: 88,
         cmc: "0",
         type: "Land",
         subtype: "Gate",
@@ -302,6 +327,7 @@
     commonRunC2[25] = {
         name: "Band Together",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461080&type=card",
+		priority: 197,
         cmc: "2G",
         type: "Instant",
         subtype: undefined,
@@ -314,6 +340,7 @@
     commonRunC2[26] = {
         name: "Trusted Pegasus",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=469867&type=card",
+		priority: 184,
         cmc: "2W",
         type: "Creature",
         subtype: "Pegasus",
@@ -326,6 +353,7 @@
     commonRunC2[27] = {
         name: "Arlinn's Wolf",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461078&type=card",
+		priority: 131,
         cmc: "2G",
         type: "Creature",
         subtype: "Wolf",
@@ -338,6 +366,7 @@
     commonRunC2[28] = {
         name: "Nahiri's Stoneblades",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461066&type=card",
+		priority: 11,
         cmc: "1R",
         type: "Instant",
         subtype: undefined,
@@ -350,6 +379,7 @@
     commonRunC2[29] = {
         name: "Callous Dismissal",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460971&type=card",
+		priority: 129,
         cmc: "1U",
         type: "Sorcery",
         subtype: undefined,
@@ -362,6 +392,7 @@
     commonRunC2[30] = {
         name: "Arboreal Grazer",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461076&type=card",
+		priority: 4,
         cmc: "G",
         type: "Creature",
         subtype: "Beast",
@@ -374,6 +405,7 @@
     commonRunC2[31] = {
         name: "Divine Arrow",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460937&type=card",
+		priority: 158,
         cmc: "1W",
         type: "Instant",
         subtype: undefined,
@@ -386,6 +418,7 @@
     commonRunC2[32] = {
         name: "Thundering Ceratok",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461106&type=card",
+		priority: 107,
         cmc: "4G",
         type: "Creature",
         subtype: "Rhino",
@@ -398,6 +431,7 @@
     commonRunC2[33] = {
         name: "Spellgorger Weird",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461072&type=card",
+		priority: 157,
         cmc: "2R",
         type: "Creature",
         subtype: "Weird",
@@ -410,6 +444,7 @@
     commonRunC2[34] = {
         name: "Topple the Statue",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460962&type=card",
+		priority: 12,
         cmc: "2W",
         type: "Instant",
         subtype: undefined,
@@ -422,6 +457,7 @@
     commonRunC2[35] = {
         name: "Herald of the Dreadhorde",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461020&type=card",
+		priority: 132,
         cmc: "3B",
         type: "Creature",
         subtype: "Zombie Warrior",
@@ -434,6 +470,7 @@
     commonRunC2[36] = {
         name: "Gateway Plaza",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461173&type=card",
+		priority: 88,
         cmc: "0",
         type: "Land",
         subtype: "Gate",
@@ -446,6 +483,7 @@
     commonRunC2[37] = {
         name: "Tamiyo's Epiphany",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460998&type=card",
+		priority: 141,
         cmc: "3U",
         type: "Sorcery",
         subtype: undefined,
@@ -458,6 +496,7 @@
     commonRunC2[38] = {
         name: "Trusted Pegasus",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=469867&type=card",
+		priority: 184,
         cmc: "2W",
         type: "Creature",
         subtype: "Pegasus",
@@ -470,6 +509,7 @@
     commonRunC2[39] = {
         name: "Banehound",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461004&type=card",
+		priority: 3,
         cmc: "B",
         type: "Creature",
         subtype: "Nightmare Hound",
@@ -482,6 +522,7 @@
     commonRunC2[40] = {
         name: "Giant Growth",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461089&type=card",
+		priority: 120,
         cmc: "G",
         type: "Instant",
         subtype: undefined,
@@ -494,6 +535,7 @@
     commonRunC2[41] = {
         name: "Topple the Statue",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460962&type=card",
+		priority: 12,
         cmc: "2W",
         type: "Instant",
         subtype: undefined,
@@ -506,6 +548,7 @@
     commonRunC2[42] = {
         name: "Callous Dismissal",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460971&type=card",
+		priority: 129,
         cmc: "1U",
         type: "Sorcery",
         subtype: undefined,
@@ -518,6 +561,7 @@
     commonRunC2[43] = {
         name: "Gateway Plaza",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461173&type=card",
+		priority: 88,
         cmc: "0",
         type: "Land",
         subtype: "Gate",
@@ -530,6 +574,7 @@
     commonRunC2[44] = {
         name: "Arlinn's Wolf",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461078&type=card",
+		priority: 131,
         cmc: "2G",
         type: "Creature",
         subtype: "Wolf",
@@ -542,6 +587,7 @@
     commonRunC2[45] = {
         name: "Wall of Runes",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461002&type=card",
+		priority: 10,
         cmc: "U",
         type: "Creature",
         subtype: "Wall",
@@ -554,6 +600,7 @@
     commonRunC2[46] = {
         name: "Divine Arrow",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460937&type=card",
+		priority: 158,
         cmc: "1W",
         type: "Instant",
         subtype: undefined,
@@ -566,6 +613,7 @@
     commonRunC2[47] = {
         name: "Prismite",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461169&type=card",
+		priority: 29,
         cmc: "2",
         type: "Artifact Creature",
         subtype: "Golem",
@@ -578,6 +626,7 @@
     commonRunC2[48] = {
         name: "Spark Harvest",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461032&type=card",
+		priority: 178,
         cmc: "B",
         type: "Sorcery",
         subtype: undefined,
@@ -590,6 +639,7 @@
     commonRunC2[49] = {
         name: "Thundering Ceratok",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461106&type=card",
+		priority: 107,
         cmc: "4G",
         type: "Creature",
         subtype: "Rhino",
@@ -602,6 +652,7 @@
     commonRunC2[50] = {
         name: "Nahiri's Stoneblades",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461066&type=card",
+		priority: 11,
         cmc: "1R",
         type: "Instant",
         subtype: undefined,
@@ -614,6 +665,7 @@
     commonRunC2[51] = {
         name: "Tamiyo's Epiphany",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460998&type=card",
+		priority: 141,
         cmc: "3U",
         type: "Sorcery",
         subtype: undefined,
@@ -626,6 +678,7 @@
     commonRunC2[52] = {
         name: "Banehound",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461004&type=card",
+		priority: 3,
         cmc: "B",
         type: "Creature",
         subtype: "Nightmare Hound",
@@ -638,6 +691,7 @@
     commonRunC2[53] = {
         name: "Trusted Pegasus",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=469867&type=card",
+		priority: 184,
         cmc: "2W",
         type: "Creature",
         subtype: "Pegasus",
@@ -650,6 +704,7 @@
     commonRunC2[54] = {
         name: "Band Together",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461080&type=card",
+		priority: 197,
         cmc: "2G",
         type: "Instant",
         subtype: undefined,

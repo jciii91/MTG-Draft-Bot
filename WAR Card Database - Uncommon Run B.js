@@ -2,6 +2,7 @@ let uncommonRunB = new Array();
     uncommonRunB[0] = {
         name: "Emergence Zone",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461172&type=card",
+		priority: 17,
         cmc: 0,
         type: "Land",
         subtype: undefined,
@@ -14,6 +15,7 @@ let uncommonRunB = new Array();
     uncommonRunB[1] = {
         name: "Firemind Vessel",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461164&type=card",
+		priority: 71,
         cmc: 4,
         type: "Artifact",
         subtype: undefined,
@@ -26,6 +28,7 @@ let uncommonRunB = new Array();
     uncommonRunB[2] = {
         name: "Neoform",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461133&type=card",
+		priority: 2,
         cmc: "GU",
         type: "Sorcery",
         subtype: undefined,
@@ -38,6 +41,7 @@ let uncommonRunB = new Array();
     uncommonRunB[3] = {
         name: "Devouring Hellion",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461051&type=card",
+		priority: 112,
         cmc: "2R",
         type: "Creature",
         subtype: "Hellion",
@@ -50,6 +54,7 @@ let uncommonRunB = new Array();
     uncommonRunB[4] = {
         name: "Rally of Wings",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460954&type=card",
+		priority: 16,
         cmc: "1W",
         type: "Instant",
         subtype: undefined,
@@ -62,6 +67,7 @@ let uncommonRunB = new Array();
     uncommonRunB[5] = {
         name: "Gleaming Overseer",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461125&type=card",
+		priority: 185,
         cmc: "1UB",
         type: "Creature",
         subtype: "Zombie Wizard",
@@ -74,6 +80,7 @@ let uncommonRunB = new Array();
     uncommonRunB[6] = {
         name: "Bolt Bend",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461042&type=card",
+		priority: 43,
         cmc: "3R",
         type: "Instant",
         subtype: undefined,
@@ -86,6 +93,7 @@ let uncommonRunB = new Array();
     uncommonRunB[7] = {
         name: "Ugin's Conjurant",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460930&type=card",
+		priority: 143,
         cmc: 0,
         type: "Creature",
         subtype: "Spirit Monk",
@@ -98,6 +106,7 @@ let uncommonRunB = new Array();
     uncommonRunB[8] = {
         name: "Price of Betrayal",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461029&type=card",
+		priority: 93,
         cmc: "B",
         type: "Sorcery",
         subtype: undefined,
@@ -110,6 +119,7 @@ let uncommonRunB = new Array();
     uncommonRunB[9] = {
         name: "Elite Guardmage",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461122&type=card",
+		priority: 195,
         cmc: "2WU",
         type: "Creature",
         subtype: "Human Wizard",
@@ -122,6 +132,7 @@ let uncommonRunB = new Array();
     uncommonRunB[10] = {
         name: "Dreadhorde Twins",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461053&type=card",
+		priority: 177,
         cmc: "3R",
         type: "Creature",
         subtype: "Zombie Jackal Warrior",
@@ -134,6 +145,7 @@ let uncommonRunB = new Array();
     uncommonRunB[11] = {
         name: "Lazotep Plating",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460986&type=card",
+		priority: 57,
         cmc: "1U",
         type: "Instant",
         subtype: undefined,
@@ -146,6 +158,7 @@ let uncommonRunB = new Array();
     uncommonRunB[12] = {
         name: "Tenth District Legionnaire",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461149&type=card",
+		priority: 138,
         cmc: "RW",
         type: "Creature",
         subtype: "Human Soldier",
@@ -158,6 +171,7 @@ let uncommonRunB = new Array();
     uncommonRunB[13] = {
         name: "Challenger Troll",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461084&type=card",
+		priority: 193,
         cmc: "4G",
         type: "Creature",
         subtype: "Troll",
@@ -170,6 +184,7 @@ let uncommonRunB = new Array();
     uncommonRunB[14] = {
         name: "Rescuer Sphinx",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460992&type=card",
+		priority: 201,
         cmc: "2UU",
         type: "Creature",
         subtype: "Sphinx",
@@ -182,6 +197,7 @@ let uncommonRunB = new Array();
     uncommonRunB[15] = {
         name: "Interplanar Beacon",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461174&type=card",
+		priority: 86,
         cmc: 0,
         type: "Land",
         subtype: undefined,
@@ -194,6 +210,7 @@ let uncommonRunB = new Array();
     uncommonRunB[16] = {
         name: "Tyrant's Scorn",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461152&type=card",
+		priority: 171,
         cmc: "UB",
         type: "Instant",
         subtype: undefined,
@@ -206,6 +223,7 @@ let uncommonRunB = new Array();
     uncommonRunB[17] = {
         name: "Eternal Taskmaster",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461017&type=card",
+		priority: 188,
         cmc: "1B",
         type: "Creature",
         subtype: "Zombie",
@@ -218,6 +236,7 @@ let uncommonRunB = new Array();
     uncommonRunB[18] = {
         name: "Mowu, Loyal Companion",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461094&type=card",
+		priority: 168,
         cmc: "3G",
         type: "Legendary Creature",
         subtype: "Hound",
@@ -230,6 +249,7 @@ let uncommonRunB = new Array();
     uncommonRunB[19] = {
         name: "Dovin's Veto",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461120&type=card",
+		priority: 7,
         cmc: "WU",
         type: "Instant",
         subtype: undefined,
@@ -242,6 +262,7 @@ let uncommonRunB = new Array();
     uncommonRunB[20] = {
         name: "Grateful Apparition",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460944&type=card",
+		priority: 183,
         cmc: "1W",
         type: "Creature",
         subtype: "Spirit",
@@ -254,6 +275,7 @@ let uncommonRunB = new Array();
     uncommonRunB[21] = {
         name: "Angrath's Rampage",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461112&type=card",
+		priority: 84,
         cmc: "BR",
         type: "Sorcery",
         subtype: undefined,
@@ -266,6 +288,7 @@ let uncommonRunB = new Array();
     uncommonRunB[22] = {
         name: "Emergence Zone",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461172&type=card",
+		priority: 17,
         cmc: 0,
         type: "Land",
         subtype: undefined,
@@ -278,6 +301,7 @@ let uncommonRunB = new Array();
     uncommonRunB[23] = {
         name: "Liliana's Triumph",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461025&type=card",
+		priority: 94,
         cmc: "1B",
         type: "Instant",
         subtype: undefined,
@@ -290,6 +314,7 @@ let uncommonRunB = new Array();
     uncommonRunB[24] = {
         name: "Bond of Flourishing",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461082&type=card",
+		priority: 74,
         cmc: "1G",
         type: "Sorcery",
         subtype: undefined,
@@ -302,6 +327,7 @@ let uncommonRunB = new Array();
     uncommonRunB[25] = {
         name: "Heartwarming Redemption",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461126&type=card",
+		priority: 13,
         cmc: "2RW",
         type: "Instant",
         subtype: undefined,
@@ -314,6 +340,7 @@ let uncommonRunB = new Array();
     uncommonRunB[26] = {
         name: "Nissa's Triumph",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461097&type=card",
+		priority: 41,
         cmc: "GG",
         type: "Sorcery",
         subtype: undefined,
@@ -326,6 +353,7 @@ let uncommonRunB = new Array();
     uncommonRunB[27] = {
         name: "Bond of Insight",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460970&type=card",
+		priority: 60,
         cmc: "3U",
         type: "Sorcery",
         subtype: undefined,
@@ -338,6 +366,7 @@ let uncommonRunB = new Array();
     uncommonRunB[28] = {
         name: "Pledge of Unity",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461137&type=card",
+		priority: 142,
         cmc: "1GW",
         type: "Instant",
         subtype: undefined,
@@ -350,6 +379,7 @@ let uncommonRunB = new Array();
     uncommonRunB[29] = {
         name: "Firemind Vessel",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461164&type=card",
+		priority: 71,
         cmc: 4,
         type: "Artifact",
         subtype: undefined,
@@ -362,6 +392,7 @@ let uncommonRunB = new Array();
     uncommonRunB[30] = {
         name: "Bond of Revival",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461007&type=card",
+		priority: 66,
         cmc: "4B",
         type: "Sorcery",
         subtype: undefined,
@@ -374,6 +405,7 @@ let uncommonRunB = new Array();
     uncommonRunB[31] = {
         name: "Challenger Troll",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461084&type=card",
+		priority: 193,
         cmc: "4G",
         type: "Creature",
         subtype: "Troll",
@@ -386,6 +418,7 @@ let uncommonRunB = new Array();
     uncommonRunB[32] = {
         name: "Invade the City",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461128&type=card",
+		priority: 46,
         cmc: "1UR",
         type: "Sorcery",
         subtype: undefined,
@@ -398,6 +431,7 @@ let uncommonRunB = new Array();
     uncommonRunB[33] = {
         name: "Flux Channeler",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460979&type=card",
+		priority: 135,
         cmc: "2U",
         type: "Creature",
         subtype: "Human Wizard",
@@ -410,6 +444,7 @@ let uncommonRunB = new Array();
     uncommonRunB[34] = {
         name: "Eternal Taskmaster",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461017&type=card",
+		priority: 188,
         cmc: "1B",
         type: "Creature",
         subtype: "Zombie",
@@ -422,6 +457,7 @@ let uncommonRunB = new Array();
     uncommonRunB[35] = {
         name: "God-Pharaoh's Statue",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461165&type=card",
+		priority: 19,
         cmc: "6",
         type: "Legendary Artifact",
         subtype: undefined,
@@ -434,6 +470,7 @@ let uncommonRunB = new Array();
     uncommonRunB[36] = {
         name: "Gideon's Triumph",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460942&type=card",
+		priority: 134,
         cmc: "1W",
         type: "Instant",
         subtype: undefined,
@@ -446,6 +483,7 @@ let uncommonRunB = new Array();
     uncommonRunB[37] = {
         name: "Neoform",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461133&type=card",
+		priority: 2,
         cmc: "GU",
         type: "Sorcery",
         subtype: undefined,
@@ -458,6 +496,7 @@ let uncommonRunB = new Array();
     uncommonRunB[38] = {
         name: "Devouring Hellion",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461051&type=card",
+		priority: 112,
         cmc: "2R",
         type: "Creature",
         subtype: "Hellion",
@@ -470,6 +509,7 @@ let uncommonRunB = new Array();
     uncommonRunB[39] = {
         name: "Gleaming Overseer",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461125&type=card",
+		priority: 185,
         cmc: "1UB",
         type: "Creature",
         subtype: "Zombie Wizard",
@@ -482,6 +522,7 @@ let uncommonRunB = new Array();
     uncommonRunB[40] = {
         name: "Ugin's Conjurant",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460930&type=card",
+		priority: 143,
         cmc: 0,
         type: "Creature",
         subtype: "Spirit Monk",
@@ -494,6 +535,7 @@ let uncommonRunB = new Array();
     uncommonRunB[41] = {
         name: "Rally of Wings",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460954&type=card",
+		priority: 16,
         cmc: "1W",
         type: "Instant",
         subtype: undefined,
@@ -506,6 +548,7 @@ let uncommonRunB = new Array();
     uncommonRunB[42] = {
         name: "Rescuer Sphinx",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460992&type=card",
+		priority: 201,
         cmc: "2UU",
         type: "Creature",
         subtype: "Sphinx",
@@ -518,6 +561,7 @@ let uncommonRunB = new Array();
     uncommonRunB[43] = {
         name: "Tenth District Legionnaire",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461149&type=card",
+		priority: 138,
         cmc: "RW",
         type: "Creature",
         subtype: "Human Soldier",
@@ -530,6 +574,7 @@ let uncommonRunB = new Array();
     uncommonRunB[44] = {
         name: "Dovin's Veto",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461120&type=card",
+		priority: 7,
         cmc: "WU",
         type: "Instant",
         subtype: undefined,
@@ -542,6 +587,7 @@ let uncommonRunB = new Array();
     uncommonRunB[45] = {
         name: "Mowu, Loyal Companion",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461094&type=card",
+		priority: 168,
         cmc: "3G",
         type: "Legendary Creature",
         subtype: "Hound",
@@ -554,6 +600,7 @@ let uncommonRunB = new Array();
     uncommonRunB[46] = {
         name: "Price of Betrayal",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461029&type=card",
+		priority: 93,
         cmc: "B",
         type: "Sorcery",
         subtype: undefined,
@@ -566,6 +613,7 @@ let uncommonRunB = new Array();
     uncommonRunB[47] = {
         name: "Elite Guardmage",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461122&type=card",
+		priority: 195,
         cmc: "2WU",
         type: "Creature",
         subtype: "Human Wizard",
@@ -578,6 +626,7 @@ let uncommonRunB = new Array();
     uncommonRunB[48] = {
         name: "Lazotep Plating",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460986&type=card",
+		priority: 57,
         cmc: "1U",
         type: "Instant",
         subtype: undefined,
@@ -590,6 +639,7 @@ let uncommonRunB = new Array();
     uncommonRunB[49] = {
         name: "Heartwarming Redemption",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461126&type=card",
+		priority: 13,
         cmc: "2RW",
         type: "Instant",
         subtype: undefined,
@@ -602,6 +652,7 @@ let uncommonRunB = new Array();
     uncommonRunB[50] = {
         name: "Bolt Bend",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461042&type=card",
+		priority: 43,
         cmc: "3R",
         type: "Instant",
         subtype: undefined,
@@ -614,6 +665,7 @@ let uncommonRunB = new Array();
     uncommonRunB[51] = {
         name: "Bond of Insight",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460970&type=card",
+		priority: 60,
         cmc: "3U",
         type: "Sorcery",
         subtype: undefined,
@@ -626,6 +678,7 @@ let uncommonRunB = new Array();
     uncommonRunB[52] = {
         name: "Interplanar Beacon",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461174&type=card",
+		priority: 86,
         cmc: 0,
         type: "Land",
         subtype: undefined,
@@ -638,6 +691,7 @@ let uncommonRunB = new Array();
     uncommonRunB[53] = {
         name: "Tyrant's Scorn",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461152&type=card",
+		priority: 171,
         cmc: "UB",
         type: "Instant",
         subtype: undefined,
@@ -650,6 +704,7 @@ let uncommonRunB = new Array();
     uncommonRunB[54] = {
         name: "Bond of Flourishing",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461082&type=card",
+		priority: 74,
         cmc: "1G",
         type: "Sorcery",
         subtype: undefined,
@@ -662,6 +717,7 @@ let uncommonRunB = new Array();
     uncommonRunB[55] = {
         name: "Bond of Revival",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461007&type=card",
+		priority: 66,
         cmc: "4B",
         type: "Sorcery",
         subtype: undefined,
@@ -674,6 +730,7 @@ let uncommonRunB = new Array();
     uncommonRunB[56] = {
         name: "Grateful Apparition",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460944&type=card",
+		priority: 183,
         cmc: "1W",
         type: "Creature",
         subtype: "Spirit",
@@ -686,6 +743,7 @@ let uncommonRunB = new Array();
     uncommonRunB[57] = {
         name: "Flux Channeler",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460979&type=card",
+		priority: 135,
         cmc: "2U",
         type: "Creature",
         subtype: "Human Wizard",
@@ -698,6 +756,7 @@ let uncommonRunB = new Array();
     uncommonRunB[58] = {
         name: "Dreadhorde Twins",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461053&type=card",
+		priority: 177,
         cmc: "3R",
         type: "Creature",
         subtype: "Zombie Jackal Warrior",
@@ -710,6 +769,7 @@ let uncommonRunB = new Array();
     uncommonRunB[59] = {
         name: "Nissa's Triumph",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461097&type=card",
+		priority: 41,
         cmc: "GG",
         type: "Sorcery",
         subtype: undefined,
@@ -722,6 +782,7 @@ let uncommonRunB = new Array();
     uncommonRunB[60] = {
         name: "Invade the City",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461128&type=card",
+		priority: 46,
         cmc: "1UR",
         type: "Sorcery",
         subtype: undefined,
@@ -734,6 +795,7 @@ let uncommonRunB = new Array();
     uncommonRunB[61] = {
         name: "Liliana's Triumph",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461025&type=card",
+		priority: 94,
         cmc: "1B",
         type: "Instant",
         subtype: undefined,
@@ -746,6 +808,7 @@ let uncommonRunB = new Array();
     uncommonRunB[62] = {
         name: "Angrath's Rampage",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461112&type=card",
+		priority: 84,
         cmc: "BR",
         type: "Sorcery",
         subtype: undefined,
@@ -758,6 +821,7 @@ let uncommonRunB = new Array();
     uncommonRunB[63] = {
         name: "God-Pharaoh's Statue",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461165&type=card",
+		priority: 19,
         cmc: "6",
         type: "Legendary Artifact",
         subtype: undefined,
@@ -770,6 +834,7 @@ let uncommonRunB = new Array();
     uncommonRunB[64] = {
         name: "Gideon's Triumph",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460942&type=card",
+		priority: 134,
         cmc: "1W",
         type: "Instant",
         subtype: undefined,
@@ -782,6 +847,7 @@ let uncommonRunB = new Array();
     uncommonRunB[65] = {
         name: "Pledge of Unity",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461137&type=card",
+		priority: 142,
         cmc: "1GW",
         type: "Instant",
         subtype: undefined,

@@ -2,6 +2,7 @@ let rareRun = new Array();
     rareRun[0] = {
         name: "Ajani, the Greathearted",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461111&type=card",
+		priority: 227,
         cmc: "2GW",
         type: "Legendary Planeswalker",
         subtype: "Ajani",
@@ -15,6 +16,7 @@ let rareRun = new Array();
     rareRun[1] = {
         name: "Awakening of Vitu-Ghazi",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461079&type=card",
+		priority: 235,
         cmc: "3GG",
         type: "Instant",
         subtype: undefined,
@@ -27,6 +29,7 @@ let rareRun = new Array();
     rareRun[2] = {
         name: "Bioessence Hydra",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461113&type=card",
+		priority: 220,
         cmc: "3GU",
         type: "Creature",
         subtype: "Hydra Mutant",
@@ -39,6 +42,7 @@ let rareRun = new Array();
     rareRun[3] = {
         name: "Blast Zone",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461171&type=card",
+		priority: 150,
         cmc: 0,
         type: "Land",
         subtype: undefined,
@@ -51,6 +55,7 @@ let rareRun = new Array();
     rareRun[4] = {
         name: "Bolas's Citadel",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461006&type=card",
+		priority: 89,
         cmc: "3BBB",
         type: "Legendary Artifact",
         subtype: undefined,
@@ -63,6 +68,7 @@ let rareRun = new Array();
     rareRun[5] = {
         name: "Casualties of War",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461114&type=card",
+		priority: 200,
         cmc: "2BBGG",
         type: "Sorcery",
         subtype: undefined,
@@ -75,6 +81,7 @@ let rareRun = new Array();
     rareRun[6] = {
         name: "Chandra, Fire Artisan",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461046&type=card",
+		priority: 231,
         cmc: "2RR",
         type: "Legendary Planeswalker",
         subtype: "Chandra",
@@ -88,6 +95,7 @@ let rareRun = new Array();
     rareRun[7] = {
         name: "Command the Dreadhorde",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461009&type=card",
+		priority: 95,
         cmc: "4BB",
         type: "Sorcery",
         subtype: undefined,
@@ -100,6 +108,7 @@ let rareRun = new Array();
     rareRun[8] = {
         name: "Commence the Endgame",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460972&type=card",
+		priority: 211,
         cmc: "4UU",
         type: "Instant",
         subtype: undefined,
@@ -112,6 +121,7 @@ let rareRun = new Array();
     rareRun[9] = {
         name: "Deliver Unto Evil",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461012&type=card",
+		priority: 37,
         cmc: "2B",
         type: "Sorcery",
         subtype: undefined,
@@ -124,6 +134,7 @@ let rareRun = new Array();
     rareRun[10] = {
         name: "Domri, Anarch of Bolas",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461118&type=card",
+		priority: 194,
         cmc: "1RG",
         type: "Legendary Planeswalker",
         subtype: "Domri",
@@ -137,6 +148,7 @@ let rareRun = new Array();
     rareRun[11] = {
         name: "Dreadhorde Arcanist",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461052&type=card",
+		priority: 127,
         cmc: "1R",
         type: "Creature",
         subtype: "Zombie Wizard",
@@ -149,6 +161,7 @@ let rareRun = new Array();
     rareRun[12] = {
         name: "Dreadhorde Butcher",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461121&type=card",
+		priority: 144,
         cmc: "BR",
         type: "Creature",
         subtype: "Zombie Warrior",
@@ -161,6 +174,7 @@ let rareRun = new Array();
     rareRun[13] = {
         name: "Dreadhorde Invasion",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461013&type=card",
+		priority: 230,
         cmc: "1B",
         type: "Enchantment",
         subtype: undefined,
@@ -173,6 +187,7 @@ let rareRun = new Array();
     rareRun[14] = {
         name: "Enter the God-Eternals",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461123&type=card",
+		priority: 236,
         cmc: "2UUB",
         type: "Sorcery",
         subtype: undefined,
@@ -185,6 +200,7 @@ let rareRun = new Array();
     rareRun[15] = {
         name: "Fblthp, the Lost",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460977&type=card",
+		priority: 128,
         cmc: "1U",
         type: "Legendary Creature",
         subtype: "Homunculus",
@@ -197,6 +213,7 @@ let rareRun = new Array();
     rareRun[16] = {
         name: "Feather, the Redeemed",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461124&type=card",
+		priority: 224,
         cmc: "RWW",
         type: "Legendary Creature",
         subtype: "Angel",
@@ -209,6 +226,7 @@ let rareRun = new Array();
     rareRun[17] = {
         name: "Ignite the Beacon",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460945&type=card",
+		priority: 32,
         cmc: "4W",
         type: "Instant",
         subtype: undefined,
@@ -221,6 +239,7 @@ let rareRun = new Array();
     rareRun[18] = {
         name: "Jace, Wielder of Mysteries",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460981&type=card",
+		priority: 199,
         cmc: "1UUU",
         type: "Legendary Planeswalker",
         subtype: "Jace",
@@ -234,6 +253,7 @@ let rareRun = new Array();
     rareRun[19] = {
         name: "Karn, the Great Creator",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460928&type=card",
+		priority: 34,
         cmc: "4",
         type: "Legendary Planeswalker",
         subtype: "Karn",
@@ -247,6 +267,7 @@ let rareRun = new Array();
     rareRun[20] = {
         name: "Karn's Bastion",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461175&type=card",
+		priority: 170,
         cmc: "0",
         type: "Land",
         subtype: undefined,
@@ -259,6 +280,7 @@ let rareRun = new Array();
     rareRun[21] = {
         name: "Krenko, Tin Street Kingpin",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461064&type=card",
+		priority: 214,
         cmc: "2R",
         type: "Legendary Creature",
         subtype: "Goblin",
@@ -271,6 +293,7 @@ let rareRun = new Array();
     rareRun[22] = {
         name: "Living Twister",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461130&type=card",
+		priority: 204,
         cmc: "RRG",
         type: "Creature",
         subtype: "Elemental",
@@ -283,6 +306,7 @@ let rareRun = new Array();
     rareRun[23] = {
         name: "Massacre Girl",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461026&type=card",
+		priority: 237,
         cmc: "3BB",
         type: "Legendary Creature",
         subtype: "Human Assassin",
@@ -295,6 +319,7 @@ let rareRun = new Array();
     rareRun[24] = {
         name: "Mizzium Tank",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461065&type=card",
+		priority: 180,
         cmc: "1RR",
         type: "Artifact",
         subtype: "Vehicle",
@@ -307,6 +332,7 @@ let rareRun = new Array();
     rareRun[25] = {
         name: "Mobilized District",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461176&type=card",
+		priority: 172,
         cmc: "0",
         type: "Land",
         subtype: undefined,
@@ -319,6 +345,7 @@ let rareRun = new Array();
     rareRun[26] = {
         name: "Narset's Reversal",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460989&type=card",
+		priority: 70,
         cmc: "UU",
         type: "Instant",
         subtype: undefined,
@@ -331,6 +358,7 @@ let rareRun = new Array();
     rareRun[27] = {
         name: "Neheb, Dreadhorde Champion",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461067&type=card",
+		priority: 233,
         cmc: "2RR",
         type: "Legendary Creature",
         subtype: "Zombie Minotair Warrior",
@@ -343,6 +371,7 @@ let rareRun = new Array();
     rareRun[28] = {
         name: "Nissa, Who Shakes the World",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461096&type=card",
+		priority: 234,
         cmc: "3GG",
         type: "Legendary Planeswalker",
         subtype: "Nissa",
@@ -356,6 +385,7 @@ let rareRun = new Array();
     rareRun[29] = {
         name: "Oath of Kaya",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461136&type=card",
+		priority: 207,
         cmc: "1WB",
         type: "Legendary Enchantment",
         subtype: undefined,
@@ -368,6 +398,7 @@ let rareRun = new Array();
     rareRun[30] = {
         name: "Parhelion II",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460951&type=card",
+		priority: 111,
         cmc: "6WW",
         type: "Legendary Artifact",
         subtype: "Vehicle",
@@ -380,6 +411,7 @@ let rareRun = new Array();
     rareRun[31] = {
         name: "Planewide Celebration",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461099&type=card",
+		priority: 163,
         cmc: "5GG",
         type: "Sorcery",
         subtype: undefined,
@@ -392,6 +424,7 @@ let rareRun = new Array();
     rareRun[32] = {
         name: "Ral, Storm Conduit",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461138&type=card",
+		priority: 205,
         cmc: "2UR",
         type: "Legendary Planeswalker",
         subtype: "Ral",
@@ -405,6 +438,7 @@ let rareRun = new Array();
     rareRun[33] = {
         name: "Ravnica at War",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460955&type=card",
+		priority: 48,
         cmc: "3W",
         type: "Sorcery",
         subtype: undefined,
@@ -417,6 +451,7 @@ let rareRun = new Array();
     rareRun[34] = {
         name: "Role Reversal",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461141&type=card",
+		priority: 117,
         cmc: "UUR",
         type: "Sorcery",
         subtype: undefined,
@@ -429,6 +464,7 @@ let rareRun = new Array();
     rareRun[35] = {
         name: "Sarkhan the Masterless",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461070&type=card",
+		priority: 244,
         cmc: "3RR",
         type: "Legendary Planeswalker",
         subtype: "Sarkhan",
@@ -442,6 +478,7 @@ let rareRun = new Array();
     rareRun[36] = {
         name: "Silent Submersible",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460993&type=card",
+		priority: 125,
         cmc: "UU",
         type: "Artifact",
         subtype: "Vehicle",
@@ -454,6 +491,7 @@ let rareRun = new Array();
     rareRun[37] = {
         name: "Single Combat",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460957&type=card",
+		priority: 92,
         cmc: "3WW",
         type: "Sorcery",
         subtype: undefined,
@@ -466,6 +504,7 @@ let rareRun = new Array();
     rareRun[38] = {
         name: "Solar Blaze",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461143&type=card",
+		priority: 174,
         cmc: "2RW",
         type: "Sorcery",
         subtype: undefined,
@@ -478,6 +517,7 @@ let rareRun = new Array();
     rareRun[39] = {
         name: "Sorin, Vengeful Bloodlord",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461144&type=card",
+		priority: 210,
         cmc: "2WB",
         type: "Legendary Planeswalker",
         subtype: "Sorin",
@@ -491,6 +531,7 @@ let rareRun = new Array();
     rareRun[40] = {
         name: "Soul Diviner",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461145&type=card",
+		priority: 189,
         cmc: "UB",
         type: "Creature",
         subtype: "Zombie Wizard",
@@ -503,6 +544,7 @@ let rareRun = new Array();
     rareRun[41] = {
         name: "Spark Double",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460995&type=card",
+		priority: 156,
         cmc: "3U",
         type: "Creature",
         subtype: "Illusion",
@@ -515,6 +557,7 @@ let rareRun = new Array();
     rareRun[42] = {
         name: "Storrev, Devkarin Lich",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461146&type=card",
+		priority: 226,
         cmc: "1BBG",
         type: "Legendary Creature",
         subtype: "Zombie Elf Wizard",
@@ -527,6 +570,7 @@ let rareRun = new Array();
     rareRun[43] = {
         name: "Tamiyo, Collector of Tales",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461147&type=card",
+		priority: 67,
         cmc: "2GU",
         type: "Legendary Planeswalker",
         subtype: "Tamiyo",
@@ -540,6 +584,7 @@ let rareRun = new Array();
     rareRun[44] = {
         name: "Teferi, Time Raveler",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461148&type=card",
+		priority: 161,
         cmc: "1WU",
         type: "Legendary Planeswalker",
         subtype: "Teferi",
@@ -553,6 +598,7 @@ let rareRun = new Array();
     rareRun[45] = {
         name: "The Elderspell",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461016&type=card",
+		priority: 130,
         cmc: "BB",
         type: "Sorcery",
         subtype: undefined,
@@ -565,6 +611,7 @@ let rareRun = new Array();
     rareRun[46] = {
         name: "Time Wipe",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461150&type=card",
+		priority: 228,
         cmc: "2WWU",
         type: "Sorcery",
         subtype: undefined,
@@ -577,6 +624,7 @@ let rareRun = new Array();
     rareRun[47] = {
         name: "Tolsimir, Friend to Wolves",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461151&type=card",
+		priority: 232,
         cmc: "2GGW",
         type: "Legendary Creature",
         subtype: "Elf Scout",
@@ -589,6 +637,7 @@ let rareRun = new Array();
     rareRun[48] = {
         name: "Tomik, Distinguished Advokist",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460961&type=card",
+		priority: 154,
         cmc: "WW",
         type: "Legendary Creature",
         subtype: "Human Advisor",
@@ -601,6 +650,7 @@ let rareRun = new Array();
     rareRun[49] = {
         name: "Ugin, the Ineffable",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460929&type=card",
+		priority: 247,
         cmc: "6",
         type: "Legendary Planeswalker",
         subtype: "Ugin",
@@ -614,6 +664,7 @@ let rareRun = new Array();
     rareRun[50] = {
         name: "Vivien, Champion of the Wilds",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461107&type=card",
+		priority: 223,
         cmc: "2G",
         type: "Legendary Planeswalker",
         subtype: "Vivien",
@@ -627,6 +678,7 @@ let rareRun = new Array();
     rareRun[51] = {
         name: "Vivien's Arkbow",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461108&type=card",
+		priority: 160,
         cmc: "1G",
         type: "Legendary Artifact",
         subtype: undefined,
@@ -639,6 +691,7 @@ let rareRun = new Array();
     rareRun[52] = {
         name: "Widespread Brutality",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461153&type=card",
+		priority: 218,
         cmc: "1BRR",
         type: "Sorcery",
         subtype: undefined,
@@ -651,6 +704,7 @@ let rareRun = new Array();
     rareRun[53] = {
         name: "Finale of Devastation",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461087&type=card",
+		priority: 137,
         cmc: "XGG",
         type: "Sorcery",
         subtype: undefined,
@@ -663,6 +717,7 @@ let rareRun = new Array();
     rareRun[54] = {
         name: "Finale of Eternity",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461018&type=card",
+		priority: 240,
         cmc: "XBB",
         type: "Sorcery",
         subtype: undefined,
@@ -675,6 +730,7 @@ let rareRun = new Array();
     rareRun[55] = {
         name: "Finale of Glory",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460939&type=card",
+		priority: 238,
         cmc: "XWW",
         type: "Sorcery",
         subtype: undefined,
@@ -687,6 +743,7 @@ let rareRun = new Array();
     rareRun[56] = {
         name: "Finale of Promise",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461054&type=card",
+		priority: 114,
         cmc: "XRR",
         type: "Sorcery",
         subtype: undefined,
@@ -699,6 +756,7 @@ let rareRun = new Array();
     rareRun[57] = {
         name: "Finale of Revelation",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460978&type=card",
+		priority: 202,
         cmc: "XUU",
         type: "Sorcery",
         subtype: undefined,
@@ -711,6 +769,7 @@ let rareRun = new Array();
     rareRun[58] = {
         name: "Gideon Blackblade",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460940&type=card",
+		priority: 241,
         cmc: "1WW",
         type: "Legendary Planeswalker",
         subtype: "Gideon",
@@ -724,6 +783,7 @@ let rareRun = new Array();
     rareRun[59] = {
         name: "God-Eternal Bontu",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461019&type=card",
+		priority: 243,
         cmc: "3BB",
         type: "Legendary Creature",
         subtype: "Zombie God",
@@ -736,6 +796,7 @@ let rareRun = new Array();
     rareRun[60] = {
         name: "God-Eternal Kefnet",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460980&type=card",
+		priority: 245,
         cmc: "2UU",
         type: "Legendary Creature",
         subtype: "Zombie God",
@@ -748,6 +809,7 @@ let rareRun = new Array();
     rareRun[61] = {
         name: "God-Eternal Oketra",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460943&type=card",
+		priority: 249,
         cmc: "3WW",
         type: "Legendary Creature",
         subtype: "Zombie God",
@@ -760,6 +822,7 @@ let rareRun = new Array();
     rareRun[62] = {
         name: "God-Eternal Rhonas",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461090&type=card",
+		priority: 242,
         cmc: "3GG",
         type: "Legendary Creature",
         subtype: "Zombie God",
@@ -772,6 +835,7 @@ let rareRun = new Array();
     rareRun[63] = {
         name: "Ilharg, the Raze-Boar",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461060&type=card",
+		priority: 246,
         cmc: "3RR",
         type: "Legendary Creature",
         subtype: "Boar God",
@@ -784,6 +848,7 @@ let rareRun = new Array();
     rareRun[64] = {
         name: "Liliana, Dreadhorde General",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461024&type=card",
+		priority: 248,
         cmc: "4BB",
         type: "Legendary Planeswalker",
         subtype: "Liliana",
@@ -797,6 +862,7 @@ let rareRun = new Array();
     rareRun[65] = {
         name: "Nicol Bolas, Dragon-God",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461134&type=card",
+		priority: 229,
         cmc: "UBBBR",
         type: "Legendary Planeswalker",
         subtype: "Bolas",
@@ -810,6 +876,7 @@ let rareRun = new Array();
     rareRun[66] = {
         name: "Niv-Mizzet Reborn",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461135&type=card",
+		priority: 38,
         cmc: "WUBRG",
         type: "Legendary Creature",
         subtype: "Dragon Avatar",
@@ -822,6 +889,7 @@ let rareRun = new Array();
     rareRun[67] = {
         name: "Roalesk, Apex Hybrid",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461140&type=card",
+		priority: 239,
         cmc: "2GGU",
         type: "Legendary Creature",
         subtype: "Human Mutant",
@@ -834,6 +902,7 @@ let rareRun = new Array();
     rareRun[68] = {
         name: "Ajani, the Greathearted",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461111&type=card",
+		priority: 227,
         cmc: "2GW",
         type: "Legendary Planeswalker",
         subtype: "Ajani",
@@ -847,6 +916,7 @@ let rareRun = new Array();
     rareRun[69] = {
         name: "Awakening of Vitu-Ghazi",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461079&type=card",
+		priority: 235,
         cmc: "3GG",
         type: "Instant",
         subtype: undefined,
@@ -859,6 +929,7 @@ let rareRun = new Array();
     rareRun[70] = {
         name: "Bioessence Hydra",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461113&type=card",
+		priority: 220,
         cmc: "3GU",
         type: "Creature",
         subtype: "Hydra Mutant",
@@ -871,6 +942,7 @@ let rareRun = new Array();
     rareRun[71] = {
         name: "Blast Zone",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461171&type=card",
+		priority: 150,
         cmc: 0,
         type: "Land",
         subtype: undefined,
@@ -883,6 +955,7 @@ let rareRun = new Array();
     rareRun[72] = {
         name: "Bolas's Citadel",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461006&type=card",
+		priority: 89,
         cmc: "3BBB",
         type: "Legendary Artifact",
         subtype: undefined,
@@ -895,6 +968,7 @@ let rareRun = new Array();
     rareRun[73] = {
         name: "Casualties of War",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461114&type=card",
+		priority: 200,
         cmc: "2BBGG",
         type: "Sorcery",
         subtype: undefined,
@@ -907,6 +981,7 @@ let rareRun = new Array();
     rareRun[74] = {
         name: "Chandra, Fire Artisan",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461046&type=card",
+		priority: 231,
         cmc: "2RR",
         type: "Legendary Planeswalker",
         subtype: "Chandra",
@@ -920,6 +995,7 @@ let rareRun = new Array();
     rareRun[75] = {
         name: "Command the Dreadhorde",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461009&type=card",
+		priority: 95,
         cmc: "4BB",
         type: "Sorcery",
         subtype: undefined,
@@ -932,6 +1008,7 @@ let rareRun = new Array();
     rareRun[76] = {
         name: "Commence the Endgame",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460972&type=card",
+		priority: 211,
         cmc: "4UU",
         type: "Instant",
         subtype: undefined,
@@ -944,6 +1021,7 @@ let rareRun = new Array();
     rareRun[77] = {
         name: "Deliver Unto Evil",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461012&type=card",
+		priority: 37,
         cmc: "2B",
         type: "Sorcery",
         subtype: undefined,
@@ -956,6 +1034,7 @@ let rareRun = new Array();
     rareRun[78] = {
         name: "Domri, Anarch of Bolas",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461118&type=card",
+		priority: 213,
         cmc: "1RG",
         type: "Legendary Planeswalker",
         subtype: "Domri",
@@ -969,6 +1048,7 @@ let rareRun = new Array();
     rareRun[79] = {
         name: "Dreadhorde Arcanist",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461052&type=card",
+		priority: 127,
         cmc: "1R",
         type: "Creature",
         subtype: "Zombie Wizard",
@@ -981,6 +1061,7 @@ let rareRun = new Array();
     rareRun[80] = {
         name: "Dreadhorde Butcher",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461121&type=card",
+		priority: 144,
         cmc: "BR",
         type: "Creature",
         subtype: "Zombie Warrior",
@@ -993,6 +1074,7 @@ let rareRun = new Array();
     rareRun[81] = {
         name: "Dreadhorde Invasion",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461013&type=card",
+		priority: 230,
         cmc: "1B",
         type: "Enchantment",
         subtype: undefined,
@@ -1005,6 +1087,7 @@ let rareRun = new Array();
     rareRun[82] = {
         name: "Enter the God-Eternals",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461123&type=card",
+		priority: 236,
         cmc: "2UUB",
         type: "Sorcery",
         subtype: undefined,
@@ -1017,6 +1100,7 @@ let rareRun = new Array();
     rareRun[83] = {
         name: "Fblthp, the Lost",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460977&type=card",
+		priority: 128,
         cmc: "1U",
         type: "Legendary Creature",
         subtype: "Homunculus",
@@ -1029,6 +1113,7 @@ let rareRun = new Array();
     rareRun[84] = {
         name: "Feather, the Redeemed",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461124&type=card",
+		priority: 224,
         cmc: "RWW",
         type: "Legendary Creature",
         subtype: "Angel",
@@ -1041,6 +1126,7 @@ let rareRun = new Array();
     rareRun[85] = {
         name: "Ignite the Beacon",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460945&type=card",
+		priority: 32,
         cmc: "4W",
         type: "Instant",
         subtype: undefined,
@@ -1053,6 +1139,7 @@ let rareRun = new Array();
     rareRun[86] = {
         name: "Jace, Wielder of Mysteries",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460981&type=card",
+		priority: 199,
         cmc: "1UUU",
         type: "Legendary Planeswalker",
         subtype: "Jace",
@@ -1066,6 +1153,7 @@ let rareRun = new Array();
     rareRun[87] = {
         name: "Karn, the Great Creator",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460928&type=card",
+		priority: 34,
         cmc: "4",
         type: "Legendary Planeswalker",
         subtype: "Karn",
@@ -1079,6 +1167,7 @@ let rareRun = new Array();
     rareRun[88] = {
         name: "Karn's Bastion",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461175&type=card",
+		priority: 170,
         cmc: "0",
         type: "Land",
         subtype: undefined,
@@ -1091,6 +1180,7 @@ let rareRun = new Array();
     rareRun[89] = {
         name: "Krenko, Tin Street Kingpin",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461064&type=card",
+		priority: 214,
         cmc: "2R",
         type: "Legendary Creature",
         subtype: "Goblin",
@@ -1103,6 +1193,7 @@ let rareRun = new Array();
     rareRun[90] = {
         name: "Living Twister",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461130&type=card",
+		priority: 204,
         cmc: "RRG",
         type: "Creature",
         subtype: "Elemental",
@@ -1115,6 +1206,7 @@ let rareRun = new Array();
     rareRun[91] = {
         name: "Massacre Girl",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461026&type=card",
+		priority: 237,
         cmc: "3BB",
         type: "Legendary Creature",
         subtype: "Human Assassin",
@@ -1127,6 +1219,7 @@ let rareRun = new Array();
     rareRun[92] = {
         name: "Mizzium Tank",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461065&type=card",
+		priority: 180,
         cmc: "1RR",
         type: "Artifact",
         subtype: "Vehicle",
@@ -1139,6 +1232,7 @@ let rareRun = new Array();
     rareRun[93] = {
         name: "Mobilized District",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461176&type=card",
+		priority: 172,
         cmc: "0",
         type: "Land",
         subtype: undefined,
@@ -1151,6 +1245,7 @@ let rareRun = new Array();
     rareRun[94] = {
         name: "Narset's Reversal",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460989&type=card",
+		priority: 70,
         cmc: "UU",
         type: "Instant",
         subtype: undefined,
@@ -1163,6 +1258,7 @@ let rareRun = new Array();
     rareRun[95] = {
         name: "Neheb, Dreadhorde Champion",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461067&type=card",
+		priority: 233,
         cmc: "2RR",
         type: "Legendary Creature",
         subtype: "Zombie Minotair Warrior",
@@ -1175,6 +1271,7 @@ let rareRun = new Array();
     rareRun[96] = {
         name: "Nissa, Who Shakes the World",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461096&type=card",
+		priority: 234,
         cmc: "3GG",
         type: "Legendary Planeswalker",
         subtype: "Nissa",
@@ -1188,6 +1285,7 @@ let rareRun = new Array();
     rareRun[97] = {
         name: "Oath of Kaya",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461136&type=card",
+		priority: 207,
         cmc: "1WB",
         type: "Legendary Enchantment",
         subtype: undefined,
@@ -1200,6 +1298,7 @@ let rareRun = new Array();
     rareRun[98] = {
         name: "Parhelion II",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460951&type=card",
+		priority: 111,
         cmc: "6WW",
         type: "Legendary Artifact",
         subtype: "Vehicle",
@@ -1212,6 +1311,7 @@ let rareRun = new Array();
     rareRun[99] = {
         name: "Planewide Celebration",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461099&type=card",
+		priority: 163,
         cmc: "5GG",
         type: "Sorcery",
         subtype: undefined,
@@ -1224,6 +1324,7 @@ let rareRun = new Array();
     rareRun[100] = {
         name: "Ral, Storm Conduit",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461138&type=card",
+		priority: 205,
         cmc: "2UR",
         type: "Legendary Planeswalker",
         subtype: "Ral",
@@ -1237,6 +1338,7 @@ let rareRun = new Array();
     rareRun[101] = {
         name: "Ravnica at War",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460955&type=card",
+		priority: 48,
         cmc: "3W",
         type: "Sorcery",
         subtype: undefined,
@@ -1249,6 +1351,7 @@ let rareRun = new Array();
     rareRun[102] = {
         name: "Role Reversal",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461141&type=card",
+		priority: 117,
         cmc: "UUR",
         type: "Sorcery",
         subtype: undefined,
@@ -1261,6 +1364,7 @@ let rareRun = new Array();
     rareRun[103] = {
         name: "Sarkhan the Masterless",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461070&type=card",
+		priority: 244,
         cmc: "3RR",
         type: "Legendary Planeswalker",
         subtype: "Sarkhan",
@@ -1274,6 +1378,7 @@ let rareRun = new Array();
     rareRun[104] = {
         name: "Silent Submersible",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460993&type=card",
+		priority: 125,
         cmc: "UU",
         type: "Artifact",
         subtype: "Vehicle",
@@ -1286,6 +1391,7 @@ let rareRun = new Array();
     rareRun[105] = {
         name: "Single Combat",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460957&type=card",
+		priority: 92,
         cmc: "3WW",
         type: "Sorcery",
         subtype: undefined,
@@ -1298,6 +1404,7 @@ let rareRun = new Array();
     rareRun[106] = {
         name: "Solar Blaze",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461143&type=card",
+		priority: 174,
         cmc: "2RW",
         type: "Sorcery",
         subtype: undefined,
@@ -1310,6 +1417,7 @@ let rareRun = new Array();
     rareRun[107] = {
         name: "Sorin, Vengeful Bloodlord",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461144&type=card",
+		priority: 210,
         cmc: "2WB",
         type: "Legendary Planeswalker",
         subtype: "Sorin",
@@ -1323,6 +1431,7 @@ let rareRun = new Array();
     rareRun[108] = {
         name: "Soul Diviner",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461145&type=card",
+		priority: 189,
         cmc: "UB",
         type: "Creature",
         subtype: "Zombie Wizard",
@@ -1335,6 +1444,7 @@ let rareRun = new Array();
     rareRun[109] = {
         name: "Spark Double",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460995&type=card",
+		priority: 156,
         cmc: "3U",
         type: "Creature",
         subtype: "Illusion",
@@ -1347,6 +1457,7 @@ let rareRun = new Array();
     rareRun[110] = {
         name: "Storrev, Devkarin Lich",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461146&type=card",
+		priority: 226,
         cmc: "1BBG",
         type: "Legendary Creature",
         subtype: "Zombie Elf Wizard",
@@ -1359,6 +1470,7 @@ let rareRun = new Array();
     rareRun[111] = {
         name: "Tamiyo, Collector of Tales",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461147&type=card",
+		priority: 67,
         cmc: "2GU",
         type: "Legendary Planeswalker",
         subtype: "Tamiyo",
@@ -1372,6 +1484,7 @@ let rareRun = new Array();
     rareRun[112] = {
         name: "Teferi, Time Raveler",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461148&type=card",
+		priority: 161,
         cmc: "1WU",
         type: "Legendary Planeswalker",
         subtype: "Teferi",
@@ -1385,6 +1498,7 @@ let rareRun = new Array();
     rareRun[113] = {
         name: "The Elderspell",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461016&type=card",
+		priority: 130,
         cmc: "BB",
         type: "Sorcery",
         subtype: undefined,
@@ -1397,6 +1511,7 @@ let rareRun = new Array();
     rareRun[114] = {
         name: "Time Wipe",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461150&type=card",
+		priority: 228,
         cmc: "2WWU",
         type: "Sorcery",
         subtype: undefined,
@@ -1409,6 +1524,7 @@ let rareRun = new Array();
     rareRun[115] = {
         name: "Tolsimir, Friend to Wolves",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461151&type=card",
+		priority: 232,
         cmc: "2GGW",
         type: "Legendary Creature",
         subtype: "Elf Scout",
@@ -1421,6 +1537,7 @@ let rareRun = new Array();
     rareRun[116] = {
         name: "Tomik, Distinguished Advokist",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460961&type=card",
+		priority: 154,
         cmc: "WW",
         type: "Legendary Creature",
         subtype: "Human Advisor",
@@ -1433,6 +1550,7 @@ let rareRun = new Array();
     rareRun[117] = {
         name: "Ugin, the Ineffable",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460929&type=card",
+		priority: 247,
         cmc: "6",
         type: "Legendary Planeswalker",
         subtype: "Ugin",
@@ -1446,6 +1564,7 @@ let rareRun = new Array();
     rareRun[118] = {
         name: "Vivien, Champion of the Wilds",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461107&type=card",
+		priority: 223,
         cmc: "2G",
         type: "Legendary Planeswalker",
         subtype: "Vivien",
@@ -1459,6 +1578,7 @@ let rareRun = new Array();
     rareRun[119] = {
         name: "Vivien's Arkbow",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461108&type=card",
+		priority: 160,
         cmc: "1G",
         type: "Legendary Artifact",
         subtype: undefined,
@@ -1471,6 +1591,7 @@ let rareRun = new Array();
     rareRun[120] = {
         name: "Widespread Brutality",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461153&type=card",
+		priority: 218,
         cmc: "1BRR",
         type: "Sorcery",
         subtype: undefined,

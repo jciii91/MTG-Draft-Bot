@@ -1,7 +1,8 @@
-﻿let commonRunC1 = new Array();
+let commonRunC1 = new Array();
     commonRunC1[0] = {
         name: "Saheeli's Silverwing",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461170&type=card",
+		priority: 63,
         cmc: "4",
         type: "Artifact Creature",
         subtype: "Drake",
@@ -14,6 +15,7 @@
     commonRunC1[1] = {
         name: "Bloom Hulk",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461081&type=card",
+		priority: 191,
         cmc: "3G",
         type: "Creature",
         subtype: "Plant Elemental",
@@ -26,6 +28,7 @@
     commonRunC1[2] = {
         name: "Charmed Stray",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460935&type=card",
+		priority: 8,
         cmc: "W",
         type: "Creature",
         subtype: "Cat",
@@ -38,6 +41,7 @@
     commonRunC1[3] = {
         name: "Aven Eternal",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460969&type=card",
+		priority: 175,
         cmc: "2U",
         type: "Creature",
         subtype: "Zombie Bird Warrior",
@@ -50,6 +54,7 @@
     commonRunC1[4] = {
         name: "Burning Prophet",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461044&type=card",
+		priority: 109,
         cmc: "1R",
         type: "Creature",
         subtype: "Human Wizard",
@@ -62,6 +67,7 @@
     commonRunC1[5] = {
         name: "Ob Nixilis's Cruelty",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461028&type=card",
+		priority: 215,
         cmc: "2B",
         type: "Instant",
         subtype: undefined,
@@ -74,6 +80,7 @@
     commonRunC1[6] = {
         name: "Jaya's Greeting",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461063&type=card",
+		priority: 212,
         cmc: "1R",
         type: "Instant",
         subtype: undefined,
@@ -86,6 +93,7 @@
     commonRunC1[7] = {
         name: "Totally Lost",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461001&type=card",
+		priority: 20,
         cmc: "4U",
         type: "Instant",
         subtype: undefined,
@@ -98,6 +106,7 @@
     commonRunC1[8] = {
         name: "Centaur Nurturer",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461083&type=card",
+		priority: 126,
         cmc: "3G",
         type: "Creature",
         subtype: "Centaur Druid",
@@ -110,6 +119,7 @@
     commonRunC1[9] = {
         name: "Iron Bully",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461167&type=card",
+		priority: 52,
         cmc: "3",
         type: "Artifact Creature",
         subtype: "Golem",
@@ -122,6 +132,7 @@
     commonRunC1[10] = {
         name: "Erratic Visionary",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460975&type=card",
+		priority: 110,
         cmc: "1U",
         type: "Creature",
         subtype: "Human Wizard",
@@ -134,6 +145,7 @@
     commonRunC1[11] = {
         name: "Enforcer Griffin",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460938&type=card",
+		priority: 133,
         cmc: "4W",
         type: "Creature",
         subtype: "Griffin",
@@ -146,6 +158,7 @@
     commonRunC1[12] = {
         name: "Lazotep Reaver",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461023&type=card",
+		priority: 145,
         cmc: "1B",
         type: "Creature",
         subtype: "Zombie Beast",
@@ -158,6 +171,7 @@
     commonRunC1[13] = {
         name: "Demolish",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461050&type=card",
+		priority: 1,
         cmc: "3R",
         type: "Sorcery",
         subtype: undefined,
@@ -170,6 +184,7 @@
     commonRunC1[14] = {
         name: "Law-Rune Enforcer",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460947&type=card",
+		priority: 182,
         cmc: "W",
         type: "Creature",
         subtype: "Human Soldier",
@@ -182,6 +197,7 @@
     commonRunC1[15] = {
         name: "Defiant Strike",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460936&type=card",
+		priority: 31,
         cmc: "W",
         type: "Instant",
         subtype: undefined,
@@ -194,6 +210,7 @@
     commonRunC1[16] = {
         name: "Mana Geode",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461168&type=card",
+		priority: 53,
         cmc: "3",
         type: "Artifact",
         subtype: undefined,
@@ -206,6 +223,7 @@
     commonRunC1[17] = {
         name: "Thunder Drake",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461000&type=card",
+		priority: 152,
         cmc: "3U",
         type: "Creature",
         subtype: "Elemental Drake",
@@ -218,6 +236,7 @@
     commonRunC1[18] = {
         name: "Charmed Stray",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460935&type=card",
+		priority: 8,
         cmc: "W",
         type: "Creature",
         subtype: "Cat",
@@ -230,6 +249,7 @@
     commonRunC1[19] = {
         name: "Vraska's Finisher",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461039&type=card",
+		priority: 146,
         cmc: "2B",
         type: "Creature",
         subtype: "Gorgon Assassin",
@@ -242,6 +262,7 @@
     commonRunC1[20] = {
         name: "Heartfire",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461058&type=card",
+		priority: 81,
         cmc: "1R",
         type: "Instant",
         subtype: undefined,
@@ -254,6 +275,7 @@
     commonRunC1[21] = {
         name: "Pollenbright Druid",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461100&type=card",
+		priority: 162,
         cmc: "1G",
         type: "Creature",
         subtype: "Elf Druid",
@@ -266,6 +288,7 @@
     commonRunC1[22] = {
         name: "Guild Globe",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461166&type=card",
+		priority: 73,
         cmc: "2",
         type: "Artifact",
         subtype: undefined,
@@ -278,6 +301,7 @@
     commonRunC1[23] = {
         name: "Chandra's Pyrohelix",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461047&type=card",
+		priority: 113,
         cmc: "1R",
         type: "Instant",
         subtype: undefined,
@@ -290,6 +314,7 @@
     commonRunC1[24] = {
         name: "Davriel's Shadowfugue",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461011&type=card",
+		priority: 15,
         cmc: "3B",
         type: "Sorcery",
         subtype: undefined,
@@ -302,6 +327,7 @@
     commonRunC1[25] = {
         name: "Wanderer's Strike",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460965&type=card",
+		priority: 159,
         cmc: "4W",
         type: "Sorcery",
         subtype: undefined,
@@ -314,6 +340,7 @@
     commonRunC1[26] = {
         name: "Relentless Advance",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460991&type=card",
+		priority: 69,
         cmc: "3U",
         type: "Sorcery",
         subtype: undefined,
@@ -326,6 +353,7 @@
     commonRunC1[27] = {
         name: "Enforcer Griffin",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460938&type=card",
+		priority: 133,
         cmc: "4W",
         type: "Creature",
         subtype: "Griffin",
@@ -338,6 +366,7 @@
     commonRunC1[28] = {
         name: "Jaya's Greeting",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461063&type=card",
+		priority: 212,
         cmc: "1R",
         type: "Instant",
         subtype: undefined,
@@ -350,6 +379,7 @@
     commonRunC1[29] = {
         name: "Unlikely Aid",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461036&type=card",
+		priority: 61,
         cmc: "1B",
         type: "Instant",
         subtype: undefined,
@@ -362,6 +392,7 @@
     commonRunC1[30] = {
         name: "Aven Eternal",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460969&type=card",
+		priority: 175,
         cmc: "2U",
         type: "Creature",
         subtype: "Zombie Bird Warrior",
@@ -374,6 +405,7 @@
     commonRunC1[31] = {
         name: "Sarkhan's Catharsis",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461071&type=card",
+		priority: 22,
         cmc: "4R",
         type: "Instant",
         subtype: undefined,
@@ -386,6 +418,7 @@
     commonRunC1[32] = {
         name: "Bloom Hulk",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461081&type=card",
+		priority: 191,
         cmc: "3G",
         type: "Creature",
         subtype: "Plant Elemental",
@@ -398,6 +431,7 @@
     commonRunC1[33] = {
         name: "Saheeli's Silverwing",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461170&type=card",
+		priority: 63,
         cmc: "4",
         type: "Artifact Creature",
         subtype: "Drake",
@@ -410,6 +444,7 @@
     commonRunC1[34] = {
         name: "Ob Nixilis's Cruelty",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461028&type=card",
+		priority: 215,
         cmc: "2B",
         type: "Instant",
         subtype: undefined,
@@ -422,6 +457,7 @@
     commonRunC1[35] = {
         name: "Totally Lost",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461001&type=card",
+		priority: 20,
         cmc: "4U",
         type: "Instant",
         subtype: undefined,
@@ -434,6 +470,7 @@
     commonRunC1[36] = {
         name: "Law-Rune Enforcer",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460947&type=card",
+		priority: 182,
         cmc: "W",
         type: "Creature",
         subtype: "Human Soldier",
@@ -446,6 +483,7 @@
     commonRunC1[37] = {
         name: "Burning Prophet",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461044&type=card",
+		priority: 109,
         cmc: "1R",
         type: "Creature",
         subtype: "Human Wizard",
@@ -458,6 +496,7 @@
     commonRunC1[38] = {
         name: "Relentless Advance",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460991&type=card",
+		priority: 69,
         cmc: "3U",
         type: "Sorcery",
         subtype: undefined,
@@ -470,6 +509,7 @@
     commonRunC1[39] = {
         name: "Centaur Nurturer",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461083&type=card",
+		priority: 126,
         cmc: "3G",
         type: "Creature",
         subtype: "Centaur Druid",
@@ -482,6 +522,7 @@
     commonRunC1[40] = {
         name: "Demolish",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461050&type=card",
+		priority: 1,
         cmc: "3R",
         type: "Sorcery",
         subtype: undefined,
@@ -494,6 +535,7 @@
     commonRunC1[41] = {
         name: "Lazotep Reaver",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461023&type=card",
+		priority: 145,
         cmc: "1B",
         type: "Creature",
         subtype: "Zombie Beast",
@@ -506,6 +548,7 @@
     commonRunC1[42] = {
         name: "Defiant Strike",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460936&type=card",
+		priority: 31,
         cmc: "W",
         type: "Instant",
         subtype: undefined,
@@ -518,6 +561,7 @@
     commonRunC1[43] = {
         name: "Erratic Visionary",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460975&type=card",
+		priority: 110,
         cmc: "1U",
         type: "Creature",
         subtype: "Human Wizard",
@@ -530,6 +574,7 @@
     commonRunC1[44] = {
         name: "Guild Globe",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461166&type=card",
+		priority: 73,
         cmc: "2",
         type: "Artifact",
         subtype: undefined,
@@ -542,6 +587,7 @@
     commonRunC1[45] = {
         name: "Chandra's Pyrohelix",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461047&type=card",
+		priority: 113,
         cmc: "1R",
         type: "Instant",
         subtype: undefined,
@@ -554,6 +600,7 @@
     commonRunC1[46] = {
         name: "Unlikely Aid",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461036&type=card",
+		priority: 61,
         cmc: "1B",
         type: "Instant",
         subtype: undefined,
@@ -566,6 +613,7 @@
     commonRunC1[47] = {
         name: "Wanderer's Strike",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=460965&type=card",
+		priority: 159,
         cmc: "4W",
         type: "Sorcery",
         subtype: undefined,
@@ -578,6 +626,7 @@
     commonRunC1[48] = {
         name: "Heartfire",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461058&type=card",
+		priority: 81,
         cmc: "1R",
         type: "Instant",
         subtype: undefined,
@@ -590,6 +639,7 @@
     commonRunC1[49] = {
         name: "Mana Geode",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461168&type=card",
+		priority: 53,
         cmc: "3",
         type: "Artifact",
         subtype: undefined,
@@ -602,6 +652,7 @@
     commonRunC1[50] = {
         name: "Pollenbright Druid",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461100&type=card",
+		priority: 162,
         cmc: "1G",
         type: "Creature",
         subtype: "Elf Druid",
@@ -614,6 +665,7 @@
     commonRunC1[51] = {
         name: "Davriel's Shadowfugue",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461011&type=card",
+		priority: 15,
         cmc: "3B",
         type: "Sorcery",
         subtype: undefined,
@@ -626,6 +678,7 @@
     commonRunC1[52] = {
         name: "Thunder Drake",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461000&type=card",
+		priority: 152,
         cmc: "3U",
         type: "Creature",
         subtype: "Elemental Drake",
@@ -638,6 +691,7 @@
     commonRunC1[53] = {
         name: "Sarkhan's Catharsis",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461071&type=card",
+		priority: 22,
         cmc: "4R",
         type: "Instant",
         subtype: undefined,
@@ -650,6 +704,7 @@
     commonRunC1[54] = {
         name: "Vraska's Finisher",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461039&type=card",
+		priority: 146,
         cmc: "2B",
         type: "Creature",
         subtype: "Gorgon Assassin",
