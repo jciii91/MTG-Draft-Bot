@@ -196,6 +196,13 @@ function pickCard(cardID) {
 
 function botHand (bp) {
 	let botPick = 0;
+	let botPrio = 0;
+	for (i=0;i<bp.length;i++) {
+		if (bp[i].priority > botPrio) {
+			botPrio = bp[i].priority;
+			botPick = i;
+		}
+	}
 	return botPick;
 }
 
@@ -316,10 +323,10 @@ function makePack() {
 
 	if (packNum === 1) {
 
-		let A1 = rng(66)-1; //Determines the first card selected
+		let A1 = rng(67)-1; //Determines the first card selected
 		randomPack[4] = commonRunA[A1];
 
-		let A2 = (A1 === 65) ? 0 : A1 + 1;
+		let A2 = (A1 === 66) ? 0 : A1 + 1;
 		randomPack[5] = commonRunA[A2];
 
 		let B1 = rng(66)-1; //Determines the first card selected
@@ -348,13 +355,13 @@ function makePack() {
 
 	} else if (packNum === 2) {
 		
-		let A1 = rng(66)-1; //Determines the first card selected
+		let A1 = rng(67)-1; //Determines the first card selected
 		randomPack[4] = commonRunA[A1];
 
-		let A2 = (A1 === 65) ? 0 : A1 + 1;
+		let A2 = (A1 === 66) ? 0 : A1 + 1;
 		randomPack[5] = commonRunA[A2];
 
-		let A3 = (A2 === 65) ? 0 : A2 + 1;
+		let A3 = (A2 === 66) ? 0 : A2 + 1;
 		randomPack[6] = commonRunA[A3];
 
 		let B1 = rng(66)-1; //Determines the first card selected
@@ -380,16 +387,16 @@ function makePack() {
 
 	} else if (packNum === 3) {
 
-		let A1 = rng(66)-1; //Determines the first card selected
+		let A1 = rng(67)-1; //Determines the first card selected
 		randomPack[4] = commonRunA[A1];
 
-		let A2 = (A1 === 65) ? 0 : A1 + 1;
+		let A2 = (A1 === 66) ? 0 : A1 + 1;
 		randomPack[5] = commonRunA[A2];
 
-		let A3 = (A2 === 65) ? 0 : A2 + 1;
+		let A3 = (A2 === 66) ? 0 : A2 + 1;
 		randomPack[6] = commonRunA[A3];
 
-		let A4 = (A3 === 65) ? 0 : A3 + 1;
+		let A4 = (A3 === 66) ? 0 : A3 + 1;
 		randomPack[7] = commonRunA[A4];
 
 		let B1 = rng(66)-1; //Determines the first card selected
@@ -412,16 +419,16 @@ function makePack() {
 
 	} else if (packNum === 4) {
 
-		let A1 = rng(66)-1; //Determines the first card selected
+		let A1 = rng(67)-1; //Determines the first card selected
 		randomPack[4] = commonRunA[A1];
 
-		let A2 = (A1 === 65) ? 0 : A1 + 1;
+		let A2 = (A1 === 66) ? 0 : A1 + 1;
 		randomPack[5] = commonRunA[A2];
 
-		let A3 = (A2 === 65) ? 0 : A2 + 1;
+		let A3 = (A2 === 66) ? 0 : A2 + 1;
 		randomPack[6] = commonRunA[A3];
 
-		let A4 = (A3 === 65) ? 0 : A3 + 1;
+		let A4 = (A3 === 66) ? 0 : A3 + 1;
 		randomPack[7] = commonRunA[A4];
 
 		let B1 = rng(66)-1; //Determines the first card selected
@@ -444,16 +451,16 @@ function makePack() {
 
 	} else if (packNum === 5) {
 
-		let A1 = rng(66); //Determines the first card selected
+		let A1 = rng(67); //Determines the first card selected
 		randomPack[4] = commonRunA[A1];
 
-		let A2 = (A1 === 65) ? 0 : A1 + 1;
+		let A2 = (A1 === 66) ? 0 : A1 + 1;
 		randomPack[5] = commonRunA[A2];
 
-		let A3 = (A2 === 65) ? 0 : A2 + 1;
+		let A3 = (A2 === 66) ? 0 : A2 + 1;
 		randomPack[6] = commonRunA[A3];
 
-		let A4 = (A3 === 65) ? 0 : A3 + 1;
+		let A4 = (A3 === 66) ? 0 : A3 + 1;
 		randomPack[7] = commonRunA[A4];
 
 		let B1 = rng(66)-1; //Determines the first card selected
