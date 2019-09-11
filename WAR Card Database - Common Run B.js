@@ -1,7 +1,8 @@
-﻿let commonRunB = new Array();
+let commonRunB = new Array();
     commonRunB[0] = {
         name: "Return to Nature",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461102&type=card",
+		priority: 9,
         cmc: "1G",
         type: "Instant",
         subtype: undefined,
@@ -14,6 +15,7 @@
     commonRunB[1] = {
         name: "Shriekdiver",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461030&type=card",
+		priority: 101,
         cmc: "2B",
         type: "Creature",
         subtype: "Zombie Bird Warrior",
@@ -26,6 +28,7 @@
     commonRunB[2] = {
         name: "Snarespinner",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461103&type=card",
+		priority: 104,
         cmc: "1G",
         type: "Creature",
         subtype: "Spider",
@@ -38,6 +41,7 @@
     commonRunB[3] = {
         name: "Toll of the Invasion",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461035&type=card",
+		priority: 51,
         cmc: "2B",
         type: "Sorcery",
         subtype: undefined,
@@ -50,6 +54,7 @@
     commonRunB[4] = {
         name: "Kraul Stinger",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461092&type=card",
+		priority: 76,
         cmc: "2G",
         type: "Creature",
         subtype: "Insect Assassin",
@@ -62,6 +67,7 @@
     commonRunB[5] = {
         name: "Lazotep Behemoth",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461022&type=card",
+		priority: 44,
         cmc: "4B",
         type: "Creature",
         subtype: "Zombie Hippo",
@@ -74,6 +80,7 @@
     commonRunB[6] = {
         name: "Wardscale Crocodile",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461110&type=card",
+		priority: 68,
         cmc: "4G",
         type: "Creature",
         subtype: "Crocodile",
@@ -86,6 +93,7 @@
     commonRunB[7] = {
         name: "Duskmantle Operative",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461015&type=card",
+		priority: 55,
         cmc: "1B",
         type: "Creature",
         subtype: "Human Rogue",
@@ -98,6 +106,7 @@
     commonRunB[8] = {
         name: "Vivien's Grizzly",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461109&type=card",
+		priority: 102,
         cmc: "2G",
         type: "Creature",
         subtype: "Bear Spirit",
@@ -110,6 +119,7 @@
     commonRunB[9] = {
         name: "Spark Reaper",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461033&type=card",
+		priority: 100,
         cmc: "2B",
         type: "Creature",
         subtype: "Zombie",
@@ -122,6 +132,7 @@
     commonRunB[10] = {
         name: "Courage in Crisis",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461085&type=card",
+		priority: 27,
         cmc: "2G",
         type: "Sorcery",
         subtype: undefined,
@@ -134,6 +145,7 @@
     commonRunB[11] = {
         name: "Sorin's Thirst",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461031&type=card",
+		priority: 122,
         cmc: "BB",
         type: "Instant",
         subtype: undefined,
@@ -146,6 +158,7 @@
     commonRunB[12] = {
         name: "Forced Landing",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461088&type=card",
+		priority: 14,
         cmc: "1G",
         type: "Instant",
         subtype: undefined,
@@ -158,6 +171,7 @@
     commonRunB[13] = {
         name: "Vampire Opportunist",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461037&type=card",
+		priority: 90,
         cmc: "1B",
         type: "Creature",
         subtype: "Vampire",
@@ -170,6 +184,7 @@
     commonRunB[14] = {
         name: "Steady Aim",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461104&type=card",
+		priority: 25,
         cmc: "1G",
         type: "Instant",
         subtype: undefined,
@@ -182,6 +197,7 @@
     commonRunB[15] = {
         name: "Aid the Fallen",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461003&type=card",
+		priority: 85,
         cmc: "1B",
         type: "Sorcery",
         subtype: undefined,
@@ -194,6 +210,7 @@
     commonRunB[16] = {
         name: "Return to Nature",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461102&type=card",
+		priority: 9,
         cmc: "1G",
         type: "Instant",
         subtype: undefined,
@@ -206,6 +223,7 @@
     commonRunB[17] = {
         name: "Charity Extractor",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461008&type=card",
+		priority: 30,
         cmc: "3B",
         type: "Creature",
         subtype: "Human Knight",
@@ -218,6 +236,7 @@
     commonRunB[18] = {
         name: "New Horizons",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461095&type=card",
+		priority: 80,
         cmc: "2G",
         type: "Enchantment",
         subtype: "Aura",
@@ -230,6 +249,7 @@
     commonRunB[19] = {
         name: "Toll of the Invasion",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461035&type=card",
+		priority: 51,
         cmc: "2B",
         type: "Sorcery",
         subtype: undefined,
@@ -242,6 +262,7 @@
     commonRunB[20] = {
         name: "Primordial Wurm",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461101&type=card",
+		priority: 45,
         cmc: "4GG",
         type: "Creature",
         subtype: "Wurm",
@@ -254,6 +275,7 @@
     commonRunB[21] = {
         name: "Lazotep Behemoth",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461022&type=card",
+		priority: 44,
         cmc: "4B",
         type: "Creature",
         subtype: "Zombie Hippo",
@@ -266,6 +288,7 @@
     commonRunB[22] = {
         name: "Kronch Wrangler",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461093&type=card",
+		priority: 106,
         cmc: "1G",
         type: "Creature",
         subtype: "Human Warrior",
@@ -278,6 +301,7 @@
     commonRunB[23] = {
         name: "Kaya's Ghostform",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461021&type=card",
+		priority: 6,
         cmc: "B",
         type: "Enchantment",
         subtype: "Aura",
@@ -290,6 +314,7 @@
     commonRunB[24] = {
         name: "Snarespinner",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461103&type=card",
+		priority: 104,
         cmc: "1G",
         type: "Creature",
         subtype: "Spider",
@@ -302,6 +327,7 @@
     commonRunB[25] = {
         name: "Tithebearer Giant",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461034&type=card",
+		priority: 75,
         cmc: "5B",
         type: "Creature",
         subtype: "Giant Warrior",
@@ -314,6 +340,7 @@
     commonRunB[26] = {
         name: "Wardscale Crocodile",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461110&type=card",
+		priority: 68,
         cmc: "4G",
         type: "Creature",
         subtype: "Crocodile",
@@ -326,6 +353,7 @@
     commonRunB[27] = {
         name: "Spark Reaper",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461033&type=card",
+		priority: 100,
         cmc: "2B",
         type: "Creature",
         subtype: "Zombie",
@@ -338,6 +366,7 @@
     commonRunB[28] = {
         name: "Forced Landing",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461088&type=card",
+		priority: 14,
         cmc: "1G",
         type: "Instant",
         subtype: undefined,
@@ -350,6 +379,7 @@
     commonRunB[29] = {
         name: "Shriekdiver",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461030&type=card",
+		priority: 101,
         cmc: "2B",
         type: "Creature",
         subtype: "Zombie Bird Warrior",
@@ -362,6 +392,7 @@
     commonRunB[30] = {
         name: "Courage in Crisis",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461085&type=card",
+		priority: 27,
         cmc: "2G",
         type: "Sorcery",
         subtype: undefined,
@@ -374,6 +405,7 @@
     commonRunB[31] = {
         name: "Sorin's Thirst",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461031&type=card",
+		priority: 122,
         cmc: "BB",
         type: "Instant",
         subtype: undefined,
@@ -386,6 +418,7 @@
     commonRunB[32] = {
         name: "Kraul Stinger",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461092&type=card",
+		priority: 76,
         cmc: "2G",
         type: "Creature",
         subtype: "Insect Assassin",
@@ -398,6 +431,7 @@
     commonRunB[33] = {
         name: "Vampire Opportunist",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461037&type=card",
+		priority: 90,
         cmc: "1B",
         type: "Creature",
         subtype: "Vampire",
@@ -410,6 +444,7 @@
     commonRunB[34] = {
         name: "Vivien's Grizzly",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461109&type=card",
+		priority: 102,
         cmc: "2G",
         type: "Creature",
         subtype: "Bear Spirit",
@@ -422,6 +457,7 @@
     commonRunB[35] = {
         name: "Duskmantle Operative",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461015&type=card",
+		priority: 55,
         cmc: "1B",
         type: "Creature",
         subtype: "Human Rogue",
@@ -434,6 +470,7 @@
     commonRunB[36] = {
         name: "Snarespinner",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461103&type=card",
+		priority: 104,
         cmc: "1G",
         type: "Creature",
         subtype: "Spider",
@@ -446,6 +483,7 @@
     commonRunB[37] = {
         name: "Toll of the Invasion",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461035&type=card",
+		priority: 51,
         cmc: "2B",
         type: "Sorcery",
         subtype: undefined,
@@ -458,6 +496,7 @@
     commonRunB[38] = {
         name: "Kronch Wrangler",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461093&type=card",
+		priority: 106,
         cmc: "1G",
         type: "Creature",
         subtype: "Human Warrior",
@@ -470,6 +509,7 @@
     commonRunB[39] = {
         name: "Aid the Fallen",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461003&type=card",
+		priority: 85,
         cmc: "1B",
         type: "Sorcery",
         subtype: undefined,
@@ -482,6 +522,7 @@
     commonRunB[40] = {
         name: "Steady Aim",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461104&type=card",
+		priority: 25,
         cmc: "1G",
         type: "Instant",
         subtype: undefined,
@@ -494,6 +535,7 @@
     commonRunB[41] = {
         name: "Charity Extractor",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461008&type=card",
+		priority: 30,
         cmc: "3B",
         type: "Creature",
         subtype: "Human Knight",
@@ -506,6 +548,7 @@
     commonRunB[42] = {
         name: "Primordial Wurm",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461101&type=card",
+		priority: 45,
         cmc: "4GG",
         type: "Creature",
         subtype: "Wurm",
@@ -518,6 +561,7 @@
     commonRunB[43] = {
         name: "Lazotep Behemoth",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461022&type=card",
+		priority: 44,
         cmc: "4B",
         type: "Creature",
         subtype: "Zombie Hippo",
@@ -530,6 +574,7 @@
     commonRunB[44] = {
         name: "Return to Nature",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461102&type=card",
+		priority: 9,
         cmc: "1G",
         type: "Instant",
         subtype: undefined,
@@ -542,6 +587,7 @@
     commonRunB[45] = {
         name: "Kaya's Ghostform",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461021&type=card",
+		priority: 6,
         cmc: "B",
         type: "Enchantment",
         subtype: "Aura",
@@ -554,6 +600,7 @@
     commonRunB[46] = {
         name: "New Horizons",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461095&type=card",
+		priority: 80,
         cmc: "2G",
         type: "Enchantment",
         subtype: "Aura",
@@ -566,6 +613,7 @@
     commonRunB[47] = {
         name: "Tithebearer Giant",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461034&type=card",
+		priority: 75,
         cmc: "5B",
         type: "Creature",
         subtype: "Giant Warrior",
@@ -578,6 +626,7 @@
     commonRunB[48] = {
         name: "Vivien's Grizzly",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461109&type=card",
+		priority: 102,
         cmc: "2G",
         type: "Creature",
         subtype: "Bear Spirit",
@@ -590,6 +639,7 @@
     commonRunB[49] = {
         name: "Spark Reaper",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461033&type=card",
+		priority: 100,
         cmc: "2B",
         type: "Creature",
         subtype: "Zombie",
@@ -602,6 +652,7 @@
     commonRunB[50] = {
         name: "Courage in Crisis",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461085&type=card",
+		priority: 27,
         cmc: "2G",
         type: "Sorcery",
         subtype: undefined,
@@ -614,6 +665,7 @@
     commonRunB[51] = {
         name: "Shriekdiver",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461030&type=card",
+		priority: 101,
         cmc: "2B",
         type: "Creature",
         subtype: "Zombie Bird Warrior",
@@ -626,6 +678,7 @@
     commonRunB[52] = {
         name: "Wardscale Crocodile",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461110&type=card",
+		priority: 68,
         cmc: "4G",
         type: "Creature",
         subtype: "Crocodile",
@@ -638,6 +691,7 @@
     commonRunB[53] = {
         name: "Duskmantle Operative",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461015&type=card",
+		priority: 55,
         cmc: "1B",
         type: "Creature",
         subtype: "Human Rogue",
@@ -650,6 +704,7 @@
     commonRunB[54] = {
         name: "Forced Landing",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461088&type=card",
+		priority: 14,
         cmc: "1G",
         type: "Instant",
         subtype: undefined,
@@ -662,6 +717,7 @@
     commonRunB[55] = {
         name: "Sorin's Thirst",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461031&type=card",
+		priority: 122,
         cmc: "BB",
         type: "Instant",
         subtype: undefined,
@@ -674,6 +730,7 @@
     commonRunB[56] = {
         name: "Kraul Stinger",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461092&type=card",
+		priority: 76,
         cmc: "2G",
         type: "Creature",
         subtype: "Insect Assassin",
@@ -686,6 +743,7 @@
     commonRunB[57] = {
         name: "Vampire Opportunist",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461037&type=card",
+		priority: 90,
         cmc: "1B",
         type: "Creature",
         subtype: "Vampire",
@@ -698,6 +756,7 @@
     commonRunB[58] = {
         name: "Steady Aim",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461104&type=card",
+		priority: 25,
         cmc: "1G",
         type: "Instant",
         subtype: undefined,
@@ -710,6 +769,7 @@
     commonRunB[59] = {
         name: "Charity Extractor",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461008&type=card",
+		priority: 30,
         cmc: "3B",
         type: "Creature",
         subtype: "Human Knight",
@@ -722,6 +782,7 @@
     commonRunB[60] = {
         name: "Kronch Wrangler",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461093&type=card",
+		priority: 106,
         cmc: "1G",
         type: "Creature",
         subtype: "Human Warrior",
@@ -734,6 +795,7 @@
     commonRunB[61] = {
         name: "Tithebearer Giant",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461034&type=card",
+		priority: 75,
         cmc: "5B",
         type: "Creature",
         subtype: "Giant Warrior",
@@ -746,6 +808,7 @@
     commonRunB[62] = {
         name: "New Horizons",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461095&type=card",
+		priority: 80,
         cmc: "2G",
         type: "Enchantment",
         subtype: "Aura",
@@ -758,6 +821,7 @@
     commonRunB[63] = {
         name: "Aid the Fallen",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461003&type=card",
+		priority: 85,
         cmc: "1B",
         type: "Sorcery",
         subtype: undefined,
@@ -770,6 +834,7 @@
     commonRunB[64] = {
         name: "Primordial Wurm",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461101&type=card",
+		priority: 45,
         cmc: "4GG",
         type: "Creature",
         subtype: "Wurm",
@@ -782,6 +847,7 @@
     commonRunB[65] = {
         name: "Kaya's Ghostform",
         img: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=461021&type=card",
+		priority: 6,
         cmc: "B",
         type: "Enchantment",
         subtype: "Aura",
