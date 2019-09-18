@@ -2,6 +2,13 @@
 let pack = new Array(); //Current pack seen on screen
 let randomPack = new Array();
 let userCardPool = new Array();
+let botZeroCardPool = new Array();
+let botOneCardPool = new Array();
+let botTwoCardPool = new Array();
+let botThreeCardPool = new Array();
+let botFourCardPool = new Array();
+let botFiveCardPool = new Array();
+let botSixCardPool = new Array();
 let packPool = new Array(); //Holds the 8 packs, index rotates through for initial pack construction and passing during draft
 let pickCounter = 1; //Tracks which pack needs to be displayed
 let packOne = new Array();
@@ -29,12 +36,19 @@ function pickCard(cardID) {
 	if (pickCounter === 1 || pickCounter === 9) {
 		userCardPool.push(packOne[x]);
 		packOne.splice(x,1);
+		botZeroCardPool.push(packTwo[botHand(packTwo,0)]);
 		packTwo.splice(botHand(packTwo),1);
+		botOneCardPool.push(packThree[botHand(packThree,1)]);
 		packThree.splice(botHand(packThree),1);
+		botTwoCardPool.push(packFour[botHand(packFour,2)]);
 		packFour.splice(botHand(packFour),1);
+		botThreeCardPool.push(packFive[botHand(packFive,3)]);
 		packFive.splice(botHand(packFive),1);
+		botFourCardPool.push(packSix[botHand(packSix,4)]);
 		packSix.splice(botHand(packSix),1);
+		botFiveCardPool.push(packSeven[botHand(packSeven,5)]);
 		packSeven.splice(botHand(packSeven),1);
+		botSixCardPool.push(packEight[botHand(packEight,6)]);
 		packEight.splice(botHand(packEight),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
@@ -46,12 +60,19 @@ function pickCard(cardID) {
 	} else if (pickCounter === 2 || pickCounter === 10) {
 		userCardPool.push(packTwo[x]);
 		packTwo.splice(x,1);
+		botZeroCardPool.push(packThree[botHand(packThree,0)]);
 		packThree.splice(botHand(packThree),1);
+		botOneCardPool.push(packFour[botHand(packFour,1)]);
 		packFour.splice(botHand(packFour),1);
+		botTwoCardPool.push(packFive[botHand(packFive,2)]);
 		packFive.splice(botHand(packFive),1);
+		botThreeCardPool.push(packSix[botHand(packSix,3)]);
 		packSix.splice(botHand(packSix),1);
+		botFourCardPool.push(packSeven[botHand(packSeven,4)]);
 		packSeven.splice(botHand(packSeven),1);
+		botFiveCardPool.push(packEight[botHand(packEight,5)]);
 		packEight.splice(botHand(packEight),1);
+		botSixCardPool.push(packOne[botHand(packOne,6)]);
 		packOne.splice(botHand(packOne),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
@@ -63,12 +84,19 @@ function pickCard(cardID) {
 	} else if (pickCounter === 3 || pickCounter === 11) {
 		userCardPool.push(packThree[x]);
 		packThree.splice(x,1);
+		botZeroCardPool.push(packFour[botHand(packFour,0)]);
 		packFour.splice(botHand(packFour),1);
+		botOneCardPool.push(packFive[botHand(packFive,1)]);
 		packFive.splice(botHand(packFive),1);
+		botTwoCardPool.push(packSix[botHand(packSix,2)]);
 		packSix.splice(botHand(packSix),1);
+		botThreeCardPool.push(packSeven[botHand(packSeven,3)]);
 		packSeven.splice(botHand(packSeven),1);
+		botFourCardPool.push(packEight[botHand(packEight,4)]);
 		packEight.splice(botHand(packEight),1);
+		botFiveCardPool.push(packOne[botHand(packOne,5)]);
 		packOne.splice(botHand(packOne),1);
+		botSixCardPool.push(packTwo[botHand(packTwo,6)]);
 		packTwo.splice(botHand(packTwo),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
@@ -80,12 +108,19 @@ function pickCard(cardID) {
 	} else if (pickCounter === 4 || pickCounter === 12) {
 		userCardPool.push(packFour[x]);
 		packFour.splice(x,1);
+		botZeroCardPool.push(packFive[botHand(packFive,0)]);
 		packFive.splice(botHand(packFive),1);
+		botOneCardPool.push(packSix[botHand(packSix,1)]);
 		packSix.splice(botHand(packSix),1);
+		botTwoCardPool.push(packSeven[botHand(packSeven,2)]);
 		packSeven.splice(botHand(packSeven),1);
+		botThreeCardPool.push(packEight[botHand(packEight,3)]);
 		packEight.splice(botHand(packEight),1);
+		botFourCardPool.push(packOne[botHand(packOne,4)]);
 		packOne.splice(botHand(packOne),1);
+		botFiveCardPool.push(packTwo[botHand(packTwo,5)]);
 		packTwo.splice(botHand(packTwo),1);
+		botSixCardPool.push(packThree[botHand(packThree,6)]);
 		packThree.splice(botHand(packThree),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
@@ -97,12 +132,19 @@ function pickCard(cardID) {
 	} else if (pickCounter === 5 || pickCounter === 13) {
 		userCardPool.push(packFive[x]);
 		packFive.splice(x,1);
+		botZeroCardPool.push(packSix[botHand(packSix,0)]);
 		packSix.splice(botHand(packSix),1);
+		botOneCardPool.push(packSeven[botHand(packSeven,1)]);
 		packSeven.splice(botHand(packSeven),1);
+		botTwoCardPool.push(packEight[botHand(packEight,2)]);
 		packEight.splice(botHand(packEight),1);
+		botThreeCardPool.push(packOne[botHand(packOne,3)]);
 		packOne.splice(botHand(packOne),1);
+		botFourCardPool.push(packTwo[botHand(packTwo,4)]);
 		packTwo.splice(botHand(packTwo),1);
+		botFiveCardPool.push(packThree[botHand(packThree,5)]);
 		packThree.splice(botHand(packThree),1);
+		botSixCardPool.push(packFour[botHand(packFour,6)]);
 		packFour.splice(botHand(packFour),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
@@ -114,12 +156,19 @@ function pickCard(cardID) {
 	} else if (pickCounter === 6) {
 		userCardPool.push(packSix[x]);
 		packSix.splice(x,1);
+		botZeroCardPool.push(packSeven[botHand(packSeven,0)]);
 		packSeven.splice(botHand(packSeven),1);
+		botOneCardPool.push(packEight[botHand(packEight,1)]);
 		packEight.splice(botHand(packEight),1);
+		botTwoCardPool.push(packOne[botHand(packOne,2)]);
 		packOne.splice(botHand(packOne),1);
+		botThreeCardPool.push(packTwo[botHand(packTwo,3)]);
 		packTwo.splice(botHand(packTwo),1);
+		botFourCardPool.push(packThree[botHand(packThree,4)]);
 		packThree.splice(botHand(packThree),1);
+		botFiveCardPool.push(packFour[botHand(packFour,5)]);
 		packFour.splice(botHand(packFour),1);
+		botSixCardPool.push(packFive[botHand(packFive,6)]);
 		packFive.splice(botHand(packFive),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
@@ -131,12 +180,19 @@ function pickCard(cardID) {
 	} else if (pickCounter === 7) {
 		userCardPool.push(packSeven[x]);
 		packSeven.splice(x,1);
+		botZeroCardPool.push(packEight[botHand(packEight,0)]);
 		packEight.splice(botHand(packEight),1);
+		botOneCardPool.push(packOne[botHand(packOne,1)]);
 		packOne.splice(botHand(packOne),1);
+		botTwoCardPool.push(packTwo[botHand(packTwo,2)]);
 		packTwo.splice(botHand(packTwo),1);
+		botThreeCardPool.push(packThree[botHand(packThree,3)]);
 		packThree.splice(botHand(packThree),1);
+		botFourCardPool.push(packFour[botHand(packFour,4)]);
 		packFour.splice(botHand(packFour),1);
+		botFiveCardPool.push(packFive[botHand(packFive,5)]);
 		packFive.splice(botHand(packFive),1);
+		botSixCardPool.push(packSix[botHand(packSix,6)]);
 		packSix.splice(botHand(packSix),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
@@ -148,12 +204,19 @@ function pickCard(cardID) {
 	} else if (pickCounter === 8) {
 		userCardPool.push(packEight[x]);
 		packEight.splice(x,1);
+		botZeroCardPool.push(packOne[botHand(packOne,0)]);
 		packOne.splice(botHand(packOne),1);
+		botOneCardPool.push(packTwo[botHand(packTwo,1)]);
 		packTwo.splice(botHand(packTwo),1);
+		botTwoCardPool.push(packThree[botHand(packThree,2)]);
 		packThree.splice(botHand(packThree),1);
+		botThreeCardPool.push(packFour[botHand(packFour,3)]);
 		packFour.splice(botHand(packFour),1);
+		botFourCardPool.push(packFive[botHand(packFive,4)]);
 		packFive.splice(botHand(packFive),1);
+		botFiveCardPool.push(packSix[botHand(packSix,5)]);
 		packSix.splice(botHand(packSix),1);
+		botSixCardPool.push(packSeven[botHand(packSeven,6)]);
 		packSeven.splice(botHand(packSeven),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
@@ -165,12 +228,19 @@ function pickCard(cardID) {
 	} else if (pickCounter === 14) {
 		userCardPool.push(packSix[x]);
 		packSix.splice(x,1);
+		botZeroCardPool.push(packSeven[botHand(packSeven,0)]);
 		packSeven.splice(botHand(packSeven),1);
+		botOneCardPool.push(packEight[botHand(packEight,1)]);
 		packEight.splice(botHand(packEight),1);
+		botTwoCardPool.push(packOne[botHand(packOne,2)]);
 		packOne.splice(botHand(packOne),1);
+		botThreeCardPool.push(packTwo[botHand(packTwo,3)]);
 		packTwo.splice(botHand(packTwo),1);
+		botFourCardPool.push(packThree[botHand(packThree,4)]);
 		packThree.splice(botHand(packThree),1);
+		botFiveCardPool.push(packFour[botHand(packFour,5)]);
 		packFour.splice(botHand(packFour),1);
+		botSixCardPool.push(packFive[botHand(packFive,6)]);
 		packFive.splice(botHand(packFive),1);
 		pickCounter = 1;
 		roundCounter++;
@@ -181,8 +251,8 @@ function pickCard(cardID) {
 		}
 		alert("Round over.");
 		if (roundCounter === 3) {
-			for (i=0;i<userCardPool.length;i++) {
-				show_userCardPool(userCardPool[i].img);
+			for (i=0;i<botZeroCardPool.length;i++) {
+				show_userCardPool(botZeroCardPool[i].img);
 			}
 			alert("Draft complete.");
 			return;
@@ -194,16 +264,81 @@ function pickCard(cardID) {
 //Bot Hand
 //Selection function used by the bots
 
-function botHand (bp) {
+function botHand(bp,ID) {
 	let botPick = 0;
 	let botPrio = 0;
+	let tempPrio = 0;
+	let devotion = 0;
 	for (i=0;i<bp.length;i++) {
-		if (bp[i].priority > botPrio) {
-			botPrio = bp[i].priority;
+		tempPrio = bp[i].priority + 5*colorCount(bp[i],ID);
+		if (tempPrio > botPrio) {
+			botPrio = tempPrio;
 			botPick = i;
 		}
 	}
 	return botPick;
+}
+
+//Color Count
+//Gets color ID of card, checks how much of that color shows up in the bot's pile
+
+function colorCount(card,ID) {
+	let colorWeight = 0;
+	let castingCost = card.cmc.toString();
+	let colorArray = [0,0,0,0,0] //[W,U,B,R,G]
+	for (j=0;j<castingCost.length;j++) {
+		switch (castingCost[j]) {
+			case "W":
+				colorArray[0] += 1;
+				break;
+			case "U":
+				colorArray[1] += 1;
+				break;
+			case "B":
+				colorArray[2] += 1;
+				break;
+			case "R":
+				colorArray[3] += 1;
+				break;
+			case "G":
+				colorArray[4] += 1;
+				break;
+		}
+	}
+	let botArray = [0,0,0,0,0];
+	let cCard = 0;
+	switch (ID) {
+		case 0:
+			for (k=0;k<botZeroCardPool.length;k++) {
+				cCard = botZeroCardPool[k].cmc;
+				for (h=0;h<cCard.length;h++) {
+					switch (cCard[h]) {
+						case "W":
+							botArray[0] += 1;
+							break;
+						case "U":
+							botArray[1] += 1;
+							break;
+						case "B":
+							botArray[2] += 1;
+							break;
+						case "R":
+							botArray[3] += 1;
+							break;
+						case "G":
+							botArray[4] += 1;
+							break;
+					}
+				}
+			}
+			break;
+	}
+	for (w=0;w<botArray.length;w++) {
+		if (colorArray[w] > 0) {
+			colorWeight = botArray[w] + colorArray[w];
+		}
+	}
+	return colorWeight;
 }
 
 //Image display
@@ -253,7 +388,7 @@ function startDraft() {
 	packSeven = randomPack;
 	makePack();
 	packEight = randomPack;
-	for (i=0; i<=packOne.length; i++) {
+	for (i=0; i<packOne.length; i++) {
 		show_image(packOne[i].img,i);
 	}
 	pack = packOne;
@@ -336,22 +471,22 @@ function makePack() {
 		randomPack[7] = commonRunB[B2];
 
 		let C1 = rng(55)-1; //Determines the first card selected
-		randomPack[8] = commonRunC1[C1].img;
+		randomPack[8] = commonRunC1[C1];
 
 		let C2 = (C1 === 54) ? 0 : C1 + 1;
-		randomPack[9] = commonRunC1[C2].img;
+		randomPack[9] = commonRunC1[C2];
 
 		let C3 = (C2 === 54) ? 0 : C2 + 1;
-		randomPack[10] = commonRunC1[C3].img;
+		randomPack[10] = commonRunC1[C3];
 
 		let C4 = (C3 === 54) ? 0 : C3 + 1;
-		randomPack[11] = commonRunC1[C4].img;
+		randomPack[11] = commonRunC1[C4];
 
 		let C5 = (C4 === 54) ? 0 : C4 + 1;
-		randomPack[12] = commonRunC1[C5].img;
+		randomPack[12] = commonRunC1[C5];
 
 		let C6 = (C5 === 54) ? 0 : C5 + 1;
-		randomPack[13] = commonRunC1[C6].img;
+		randomPack[13] = commonRunC1[C6];
 
 	} else if (packNum === 2) {
 		
