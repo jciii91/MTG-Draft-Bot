@@ -58,8 +58,9 @@ function pickCard(cardID) {
 		packEight.splice(botHand(packEight),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
-		for (i=0; i<=packOne.length; i++) {
-			element.removeChild(element.firstChild);
+		var cNode = element.cloneNode(false);
+		element.parentNode.replaceChild(cNode, element);
+		for (i=0; i<packTwo.length; i++) {
 			show_image(packTwo[i].img, i);
 		}
 	} else if (pickCounter === 2 || pickCounter === 10) {
@@ -80,8 +81,9 @@ function pickCard(cardID) {
 		packOne.splice(botHand(packOne),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
-		for (i=0; i<=packTwo.length; i++) {
-			element.removeChild(element.firstChild);
+		var cNode = element.cloneNode(false);
+		element.parentNode.replaceChild(cNode, element);
+		for (i=0; i<packThree.length; i++) {
 			show_image(packThree[i].img, i);
 		}
 	} else if (pickCounter === 3 || pickCounter === 11) {
@@ -102,8 +104,9 @@ function pickCard(cardID) {
 		packTwo.splice(botHand(packTwo),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
-		for (i=0; i<=packThree.length; i++) {
-			element.removeChild(element.firstChild);
+		var cNode = element.cloneNode(false);
+		element.parentNode.replaceChild(cNode, element);
+		for (i=0; i<packFour.length; i++) {
 			show_image(packFour[i].img, i);
 		}
 	} else if (pickCounter === 4 || pickCounter === 12) {
@@ -124,8 +127,9 @@ function pickCard(cardID) {
 		packThree.splice(botHand(packThree),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
-		for (i=0; i<=packFour.length; i++) {
-			element.removeChild(element.firstChild);
+		var cNode = element.cloneNode(false);
+		element.parentNode.replaceChild(cNode, element);
+		for (i=0; i<packFive.length; i++) {
 			show_image(packFive[i].img, i);
 		}
 	} else if (pickCounter === 5 || pickCounter === 13) {
@@ -146,8 +150,9 @@ function pickCard(cardID) {
 		packFour.splice(botHand(packFour),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
-		for (i=0; i<=packFive.length; i++) {
-			element.removeChild(element.firstChild);
+		var cNode = element.cloneNode(false);
+		element.parentNode.replaceChild(cNode, element);
+		for (i=0; i<packSix.length; i++) {
 			show_image(packSix[i].img, i);
 		}
 	} else if (pickCounter === 6) {
@@ -168,8 +173,9 @@ function pickCard(cardID) {
 		packFive.splice(botHand(packFive),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
-		for (i=0; i<=packSix.length; i++) {
-			element.removeChild(element.firstChild);
+		var cNode = element.cloneNode(false);
+		element.parentNode.replaceChild(cNode, element);
+		for (i=0; i<packSeven.length; i++) {
 			show_image(packSeven[i].img, i);
 		}
 	} else if (pickCounter === 7) {
@@ -190,8 +196,9 @@ function pickCard(cardID) {
 		packSix.splice(botHand(packSix),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
-		for (i=0; i<=packSeven.length; i++) {
-			element.removeChild(element.firstChild);
+		var cNode = element.cloneNode(false);
+		element.parentNode.replaceChild(cNode, element);
+		for (i=0; i<packEight.length; i++) {
 			show_image(packEight[i].img, i);
 		}
 	} else if (pickCounter === 8) {
@@ -212,8 +219,9 @@ function pickCard(cardID) {
 		packSeven.splice(botHand(packSeven),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
-		for (i=0; i<=packEight.length; i++) {
-			element.removeChild(element.firstChild);
+		var cNode = element.cloneNode(false);
+		element.parentNode.replaceChild(cNode, element);
+		for (i=0; i<packOne.length; i++) {
 			show_image(packOne[i].img, i);
 		}
 	} else if (pickCounter === 14) {
@@ -235,9 +243,8 @@ function pickCard(cardID) {
 		pickCounter = 1;
 		roundCounter++;
 		var element = document.getElementById("currentPack");
-		while (element.hasChildNodes()) {
-			element.removeChild(element.firstChild);
-		}
+		var cNode = element.cloneNode(false);
+		element.parentNode.replaceChild(cNode, element);
 		alert("Round over.");
 		if (roundCounter === 3) {
 			alert("Draft complete.");
