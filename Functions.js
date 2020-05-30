@@ -2,6 +2,7 @@
 let pack = new Array(); //Current pack seen on screen
 let randomPack = new Array();
 let userCardPool = new Array();
+let sideBoard = new Array();
 let botZeroCardPool = new Array();
 let botOneCardPool = new Array();
 let botTwoCardPool = new Array();
@@ -27,6 +28,27 @@ let verticalOffset3 = 0;
 let verticalOffset4 = 0;
 let verticalOffset5 = 0;
 let verticalOffsetOther = 0;
+let verticalOffsetSB = 0;
+let isDetails = 1;
+let isSideboard = 0;
+let userPoolCounter = 0;
+let mouseStart = 0;
+let mouseEnd = 0;
+let motionCard = 0;
+let fillerObject = {
+    name: "filler",
+    img: "filler",
+	priority: "filler",
+    cmc: "filler",
+    type: "filler",
+    subtype: "filler",
+    set: "filler",
+    rules: "filler",
+    flavor: "filler",
+    power: "filler",
+    toughness: "filler",
+    loyalty: "filler"
+}
 
 //Random number generator
 
@@ -58,9 +80,8 @@ function pickCard(cardID) {
 		packEight.splice(botHand(packEight),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
-		var cNode = element.cloneNode(false);
-		element.parentNode.replaceChild(cNode, element);
-		for (i=0; i<packTwo.length; i++) {
+		for (i=0; i<=packOne.length; i++) {
+			element.removeChild(element.firstChild);
 			show_image(packTwo[i].img, i);
 		}
 	} else if (pickCounter === 2 || pickCounter === 10) {
@@ -81,9 +102,8 @@ function pickCard(cardID) {
 		packOne.splice(botHand(packOne),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
-		var cNode = element.cloneNode(false);
-		element.parentNode.replaceChild(cNode, element);
-		for (i=0; i<packThree.length; i++) {
+		for (i=0; i<=packTwo.length; i++) {
+			element.removeChild(element.firstChild);
 			show_image(packThree[i].img, i);
 		}
 	} else if (pickCounter === 3 || pickCounter === 11) {
@@ -104,9 +124,8 @@ function pickCard(cardID) {
 		packTwo.splice(botHand(packTwo),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
-		var cNode = element.cloneNode(false);
-		element.parentNode.replaceChild(cNode, element);
-		for (i=0; i<packFour.length; i++) {
+		for (i=0; i<=packThree.length; i++) {
+			element.removeChild(element.firstChild);
 			show_image(packFour[i].img, i);
 		}
 	} else if (pickCounter === 4 || pickCounter === 12) {
@@ -127,9 +146,8 @@ function pickCard(cardID) {
 		packThree.splice(botHand(packThree),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
-		var cNode = element.cloneNode(false);
-		element.parentNode.replaceChild(cNode, element);
-		for (i=0; i<packFive.length; i++) {
+		for (i=0; i<=packFour.length; i++) {
+			element.removeChild(element.firstChild);
 			show_image(packFive[i].img, i);
 		}
 	} else if (pickCounter === 5 || pickCounter === 13) {
@@ -150,9 +168,8 @@ function pickCard(cardID) {
 		packFour.splice(botHand(packFour),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
-		var cNode = element.cloneNode(false);
-		element.parentNode.replaceChild(cNode, element);
-		for (i=0; i<packSix.length; i++) {
+		for (i=0; i<=packFive.length; i++) {
+			element.removeChild(element.firstChild);
 			show_image(packSix[i].img, i);
 		}
 	} else if (pickCounter === 6) {
@@ -173,9 +190,8 @@ function pickCard(cardID) {
 		packFive.splice(botHand(packFive),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
-		var cNode = element.cloneNode(false);
-		element.parentNode.replaceChild(cNode, element);
-		for (i=0; i<packSeven.length; i++) {
+		for (i=0; i<=packSix.length; i++) {
+			element.removeChild(element.firstChild);
 			show_image(packSeven[i].img, i);
 		}
 	} else if (pickCounter === 7) {
@@ -196,9 +212,8 @@ function pickCard(cardID) {
 		packSix.splice(botHand(packSix),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
-		var cNode = element.cloneNode(false);
-		element.parentNode.replaceChild(cNode, element);
-		for (i=0; i<packEight.length; i++) {
+		for (i=0; i<=packSeven.length; i++) {
+			element.removeChild(element.firstChild);
 			show_image(packEight[i].img, i);
 		}
 	} else if (pickCounter === 8) {
@@ -219,9 +234,8 @@ function pickCard(cardID) {
 		packSeven.splice(botHand(packSeven),1);
 		pickCounter++;
 		var element = document.getElementById("currentPack");
-		var cNode = element.cloneNode(false);
-		element.parentNode.replaceChild(cNode, element);
-		for (i=0; i<packOne.length; i++) {
+		for (i=0; i<=packEight.length; i++) {
+			element.removeChild(element.firstChild);
 			show_image(packOne[i].img, i);
 		}
 	} else if (pickCounter === 14) {
@@ -243,8 +257,9 @@ function pickCard(cardID) {
 		pickCounter = 1;
 		roundCounter++;
 		var element = document.getElementById("currentPack");
-		var cNode = element.cloneNode(false);
-		element.parentNode.replaceChild(cNode, element);
+		while (element.hasChildNodes()) {
+			element.removeChild(element.firstChild);
+		}
 		alert("Round over.");
 		if (roundCounter === 3) {
 			alert("Draft complete.");
@@ -261,45 +276,62 @@ function userHand(x,packID) {
 	switch (packID) {
 		case 1:
 			userCardPool.push(packOne[x]);
+			userCardPool[userCardPool.length-1].UPID = "card" + userPoolCounter +"CP";
+			userPoolCounter++;
 			packOne.splice(x,1);
-			show_userCardPool(userCardPool[userCardPool.length-1].img,userCardPool[userCardPool.length-1]);
+			show_userCardPool(userCardPool[userCardPool.length-1].img,userCardPool[userCardPool.length-1],userCardPool[userCardPool.length-1].UPID);
 		break;
 		case 2:
 			userCardPool.push(packTwo[x]);
+			userCardPool[userCardPool.length-1].UPID = "card" + userPoolCounter +"CP";
+			userPoolCounter++;
 			packTwo.splice(x,1);
-			show_userCardPool(userCardPool[userCardPool.length-1].img,userCardPool[userCardPool.length-1]);
+			show_userCardPool(userCardPool[userCardPool.length-1].img,userCardPool[userCardPool.length-1],userCardPool[userCardPool.length-1].UPID);
 		break;
 		case 3:
 			userCardPool.push(packThree[x]);
+			userCardPool[userCardPool.length-1].UPID = "card" + userPoolCounter +"CP";
+			userPoolCounter++;
 			packThree.splice(x,1);
-			show_userCardPool(userCardPool[userCardPool.length-1].img,userCardPool[userCardPool.length-1]);
+			show_userCardPool(userCardPool[userCardPool.length-1].img,userCardPool[userCardPool.length-1],userCardPool[userCardPool.length-1].UPID);
 		break;
 		case 4:
 			userCardPool.push(packFour[x]);
+			userCardPool[userCardPool.length-1].UPID = "card" + userPoolCounter +"CP";
+			userPoolCounter++;
 			packFour.splice(x,1);
-			show_userCardPool(userCardPool[userCardPool.length-1].img,userCardPool[userCardPool.length-1]);
+			show_userCardPool(userCardPool[userCardPool.length-1].img,userCardPool[userCardPool.length-1],userCardPool[userCardPool.length-1].UPID);
 		break;
 		case 5:
 			userCardPool.push(packFive[x]);
+			userCardPool[userCardPool.length-1].UPID = "card" + userPoolCounter +"CP";
+			userPoolCounter++;
 			packFive.splice(x,1);
-			show_userCardPool(userCardPool[userCardPool.length-1].img,userCardPool[userCardPool.length-1]);
+			show_userCardPool(userCardPool[userCardPool.length-1].img,userCardPool[userCardPool.length-1],userCardPool[userCardPool.length-1].UPID);
 		break;
 		case 6:
 			userCardPool.push(packSix[x]);
+			userCardPool[userCardPool.length-1].UPID = "card" + userPoolCounter +"CP";
+			userPoolCounter++;
 			packSix.splice(x,1);
-			show_userCardPool(userCardPool[userCardPool.length-1].img,userCardPool[userCardPool.length-1]);
+			show_userCardPool(userCardPool[userCardPool.length-1].img,userCardPool[userCardPool.length-1],userCardPool[userCardPool.length-1].UPID);
 		break;
 		case 7:
 			userCardPool.push(packSeven[x]);
+			userCardPool[userCardPool.length-1].UPID = "card" + userPoolCounter +"CP";
+			userPoolCounter++;
 			packSeven.splice(x,1);
-			show_userCardPool(userCardPool[userCardPool.length-1].img,userCardPool[userCardPool.length-1]);
+			show_userCardPool(userCardPool[userCardPool.length-1].img,userCardPool[userCardPool.length-1],userCardPool[userCardPool.length-1].UPID);
 		break;
 		case 8:
 			userCardPool.push(packEight[x]);
+			userCardPool[userCardPool.length-1].UPID = "card" + userPoolCounter +"CP";
+			userPoolCounter++;
 			packEight.splice(x,1);
-			show_userCardPool(userCardPool[userCardPool.length-1].img,userCardPool[userCardPool.length-1]);
+			show_userCardPool(userCardPool[userCardPool.length-1].img,userCardPool[userCardPool.length-1],userCardPool[userCardPool.length-1].UPID);
 		break;
 	}
+	drawColorPie();
 }
 
 //Bot Hand
@@ -640,6 +672,226 @@ function cANDnc(card,ID) {
 	}
 }
 
+//moveToSideboard
+//Remove card from the mainboard and add it to the sideboard
+
+function moveToSideboard(cardID) {
+	show_sideBoard(cardID);
+	var elem = document.getElementById(cardID);
+	elem.parentNode.removeChild(elem);
+	var pos1 = cardID.indexOf("d");
+	var pos2 = cardID.lastIndexOf("M");
+	var mbIndex = (pos2 - pos1 === 2) ? cardID[4] : cardID[4] + cardID[5];
+	fixVerticalAlignment(userCardPool[mbIndex]);
+	sideBoard.push(userCardPool[mbIndex]);
+	userCardPool[mbIndex] = fillerObject;
+	drawColorPie();
+}
+
+//moveToMainboard
+//Remove card from the sideboard and add it to the mainboard
+
+function moveToMainboard(cardID) {
+	var elem = document.getElementById(cardID);
+	elem.parentNode.removeChild(elem);
+	var pos1 = cardID.indexOf("d");
+	var pos2 = cardID.lastIndexOf("S");
+	var sbIndex = (pos2 - pos1 === 2) ? cardID[4] : cardID[4] + cardID[5];
+	var oldID = cardID.slice(0,pos2) + "CP";
+	show_userCardPool(sideBoard[sbIndex].img,sideBoard[sbIndex],oldID); //Need to fix something here
+	fixVerticalAlignmentSB();
+}
+
+//fixVerticalAlignment
+//Make piles look nice when cards are moved from one board to another
+
+function fixVerticalAlignment(card) {
+	let numCMC = "cmc" + getCMC(card);
+	var div = document.getElementById(numCMC);
+	var nodelist = div.getElementsByTagName("img");
+	var offset = 0;
+	for (i = 0; i < nodelist.length; i++) {
+		nodelist[i].style.top = offset++*35 + "px";
+	}
+	switch (getCMC(card)) {
+		case 0:
+			verticalOffset0 = offset;
+			break;
+		case 1:
+			verticalOffset1 = offset;
+			break;
+		case 2:
+			verticalOffset2 = offset;
+			break;
+		case 3:
+			verticalOffset3 = offset;
+			break;
+		case 4:
+			verticalOffset4 = offset;
+			break;
+		case 5:
+			verticalOffset5 = offset;
+			break;
+		default:
+			verticalOffsetOther = offset;
+	}
+}
+
+//fixVerticalAlignmentSB
+//Make piles look nice when cards are moved from one board to another
+
+function fixVerticalAlignmentSB() {
+	var div = document.getElementById("sideboardColumn");
+	var nodelist = div.getElementsByTagName("img");
+	var offset = 0;
+	for (i = 0; i < nodelist.length; i++) {
+		nodelist[i].style.top = offset++*35 + "px";
+	}
+	verticalOffsetSB = offset;
+}
+
+//showSideboard
+//Display cards in the sideboard, enable moving them to the mainboard
+
+function showSideboard(ISB) {
+	if (ISB) { 
+		return; 
+	}
+	document.getElementById("sideboardColumn").style.display = "block";
+	document.getElementById("poolDetails").style.display = "none";
+	isSideboard = 1;
+	isDetails = 0;
+}
+
+//showDetails
+//Display details of the mainboard
+
+function showDetails(ID) {
+	if (ID) { 
+		console.log(isDetails);
+		return; 
+	}
+	document.getElementById("poolDetails").style.display = "block";
+	document.getElementById("sideboardColumn").style.display = "none";
+	isDetails = 1;
+	isSideboard = 0;
+}
+
+//drawColorPie
+//Call drawWedge five times, draw a wedge for each color proportional to its appearence in the user's pool
+function drawColorPie() {
+	let colorArray = [0,0,0,0,0];
+	let theCard = 0;
+	for (k=0;k<userCardPool.length;k++) {
+		theCard = userCardPool[k].cmc;
+		for (h=0;h<theCard.length;h++) {
+			switch (theCard[h]) {
+				case "W":
+					colorArray[0] += 1;
+					break;
+				case "U":
+					colorArray[1] += 1;
+					break;
+				case "B":
+					colorArray[2] += 1;
+					break;
+				case "R":
+					colorArray[3] += 1;
+					break;
+				case "G":
+					colorArray[4] += 1;
+					break;
+			}
+		}
+	}
+	let colorTotal = colorArray[0] + colorArray[1] + colorArray[2] + colorArray[3] + colorArray[4];
+	let endW = 2*(colorArray[0]/colorTotal);
+	let endU = endW + 2*(colorArray[1]/colorTotal);
+	let endB = endU + 2*(colorArray[2]/colorTotal);
+	let endR = endB + 2*(colorArray[3]/colorTotal);
+	let endG = endR + 2*(colorArray[4]/colorTotal);
+	var canvas=document.getElementById("poolDetails");
+	var ctx=canvas.getContext("2d");
+	// clear canvas
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	drawWedge(0,endW,"white");
+	drawWedge(endW,endU,"blue");
+	drawWedge(endU,endB,"black");
+	drawWedge(endB,endR,"red");
+	drawWedge(endR,endG,"green");
+	drawTypeStats("Creature",250);
+	drawTypeStats("Instant",265);
+	drawTypeStats("Sorcery",280);
+	drawTypeStats("Enchantment",295);
+	drawTypeStats("Artifact",310);
+	drawTypeStats("Planeswalker",325);
+	drawTypeStats("Land",340);
+	return;
+}
+
+//drawWedge
+//Draws the wedges for pie charts
+
+function drawWedge(start,end,fillColor) {
+	// canvas references
+	var canvas=document.getElementById("poolDetails");
+	var ctx=canvas.getContext("2d");
+	// the centerpoint of the wedge
+	var cx=175;
+	var cy=125;
+	// radius
+	var radius=100;
+	// the beginning and ending angles 
+	var beginningAngle = start*Math.PI;
+	var endingAngle = end*Math.PI;
+	// set the path style
+	ctx.strokeStyle="#000000";
+	ctx.fillStyle=fillColor;
+	ctx.lineWidth=2;
+	// begin the path
+	ctx.beginPath();
+	// top-arc: sweeping from top-left to top-right
+	ctx.arc(cx,cy,radius,beginningAngle,endingAngle);
+	// right-line: from the end of top-arc to the center
+	ctx.lineTo(cx,cy);
+	// left-line: from the end of the top-arc to the center
+	ctx.closePath();
+	// fill & stroke the path
+	ctx.fill();
+	ctx.stroke();
+}
+
+//drawTypeStats
+//Add up card types and display the amounts
+
+function drawTypeStats(theType,lineBreak) {
+	let typeCounter = 0;
+	for (k=0;k<userCardPool.length;k++) {
+		cardType = userCardPool[k].type;
+		if (cardType.includes(theType)) {
+			typeCounter++;
+		}
+	}
+	drawText(theType,typeCounter,lineBreak);
+}
+
+//drawText
+//Draws the stats that are written out
+
+function drawText(type,amount,lineBreak) {
+	// canvas references
+	var canvas=document.getElementById("poolDetails");
+	var ctx=canvas.getContext("2d");
+	// origin of the text
+	var cx=75;
+	var cy=lineBreak;
+	ctx.font = "15px Arial";
+	var lineOfText = type+": "+amount;
+	ctx.lineWidth=1;
+	ctx.fillStyle="black";
+	ctx.fillText(lineOfText, cx, cy);
+}
+
 //Image display
 
 function show_image(src, num) {
@@ -658,14 +910,16 @@ function show_image(src, num) {
 //Show User Card Pool
 //Same as image display function but no onclick is added
 
-function show_userCardPool(src,card) {
+function show_userCardPool(src,card,imgID) {
     var img = document.createElement("img");
     img.src = src;
-    img.width = 255;
-    img.height = 360;
+    img.width = 204;
+    img.height = 288;
 	img.className = "cards";
+	var pos2 = imgID.indexOf("C");
+	img.id = imgID.slice(0,pos2) + "MB";
     let numCMC = "cmc" + getCMC(card);
-    img.setAttribute("onclick", "pickCard(id)");
+	img.setAttribute("ondblclick", "moveToSideboard(this.id)");
     img.setAttribute("onmouseenter", "showCard(this)");
 	img.setAttribute("onmouseleave", "hideCard(this)");
 	
@@ -705,6 +959,28 @@ function show_userCardPool(src,card) {
     document.getElementById(numCMC).appendChild(img);
 }
 
+//showSideboard
+//Same as display function but ondblclick moves card back to mainbaord
+
+function show_sideBoard(cardID) {
+	let x = parseFloat(cardID[4]+cardID[5]);
+	var img = document.createElement("img");
+	img.src = userCardPool[x].img;
+    img.width = 204;
+    img.height = 288;
+	var pos2 = cardID.indexOf("M");
+	img.id = cardID.slice(0,pos2) + "SB";
+	userCardPool[x].UPID = img.id;
+	img.className = "cards";
+	img.setAttribute("ondblclick", "moveToMainboard(this.id)");
+    img.setAttribute("onmouseenter", "showCard(this)");
+	img.setAttribute("onmouseleave", "hideCard(this)");
+	verticalOffset = 35*verticalOffsetSB;
+	verticalOffsetSB++;
+	img.style.top = verticalOffset + "px";
+	document.getElementById("sideboardColumn").appendChild(img);
+}
+
 //showCard
 //Brings hovered card to front, lets user look through stached piles
 
@@ -730,13 +1006,6 @@ function getCMC(card) {
 	let cmc = firstPosition + (cmcString.length - 1);	
 	
 	return cmc;
-}
-
-//setTopPosition
-//Offset function for cmc columns
-
-function setTopPosition() {
-	return verticalOffset*35;
 }
 
 //Show Bot Card Pool
