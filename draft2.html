@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+  <script src="Functions.js"></script>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+
+  <div id="currentPack"></div>
+  <!--
+  <button type="button" onclick="changePile(100)">User</button>
+  <button type="button" onclick="changePile(0)">Bot Zero</button>
+  <button type="button" onclick="changePile(1)">Bot One</button>
+  <button type="button" onclick="changePile(2)">Bot Two</button>
+  <button type="button" onclick="changePile(3)">Bot Three</button>
+  <button type="button" onclick="changePile(4)">Bot Four</button>
+  <button type="button" onclick="changePile(5)">Bot Five</button>
+  <button type="button" onclick="changePile(6)">Bot Six</button>
+  -->  
+  <div id="userPool">
+	<div class="cmcColumn" id="cmc0"></div>
+	<div class="cmcColumn" id="cmc1"></div>
+	<div class="cmcColumn" id="cmc2"></div>
+	<div class="cmcColumn" id="cmc3"></div>
+	<div class="cmcColumn" id="cmc4"></div>
+	<div class="cmcColumn" id="cmc5"></div>
+	<div class="cmcColumn" id="cmc6"></div>
+  </div>
+  
+  <div id="canvasContainer" onmouseup="moveToSideboard(motionCard)">
+	<div class="cmcColumn" id="sideboardColumn"></div>
+	<canvas id="poolDetails" width="350" height="400">Your browser does not support the HTML5 canvas tag.</canvas>
+  </div>
+  
+  <div id="buttonContainer">
+	<button id="sideboard" type="button" onclick="showSideboard(isSideboard)">Side Board</button>
+	<button id="details" type="button" onclick="showDetails(isDetails)">Details</button>
+  </div>
+  
+  <script>
+	makePack();
+	<!--drawWedge(0,2,"gray");-->
+  </script>
+
+</body>
+  
+</html>
