@@ -1,2 +1,4 @@
 # MTG-Draft-Bot
 MTG draft simulator
+
+The MTG Draft Bot project is the main application for a website designed to be a practice tool for Magic the Gathering players. One of the formats for the card game Magic the Gathering involves picking cards from a rotating pool of cards over three rounds, and this application is being designed to give players a chance to practice this phase of the game. The Draft Bot generates packs of cards, using the same colation that the actual packs of cards use, and distributes them to seven players controlled by the program and the single user. The program makes its selections based on an algorithm, and adjusts future picks based on the selections the user makes. The user also sees data points for their pool of cards they have selected, which updates with each card that is added after a pick.
