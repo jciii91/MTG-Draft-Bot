@@ -53,6 +53,10 @@
 	}
 
 	fillPlayerPacks(cardPool);
+
+	for (card=0;card<cardPool[0][0].length;card++) {
+		show_image(cardPool[0][0][card].imgURL,card);
+	}
 	
 	//drawWedge(0,2,"gray");
 	</script>
