@@ -5,9 +5,7 @@ function rng(max) {
   return Math.floor(rand);
 }
 
-function startDraft() {
-	let cardPool = [];
-	
+function startDraft() {	
 	for (h=0; h<8; h++) {
 		let pack1 = makePack();
 		let pack2 = makePack();
@@ -206,13 +204,75 @@ function findCard(cardName) {
 }
 
 //Image display
-
 function show_image(src) {
     var img = document.createElement("img");
     img.src = src;
 	img.className = "packCard";
-    img.setAttribute("onclick", "pickCard()");
+    img.setAttribute("onclick", "pickCard(this)");
 
     //Append image to currentPack <div>
     document.getElementById("currentPack").appendChild(img);
+}
+
+//User card selector function
+function pickCard(card) {
+	imgSRC = card.getAttribute("src");
+	pack = cardPool[currentRound][currentPack];
+	for (i=0;i<pack.length;i++) {
+		if (pack[i].imgURL == imgSRC) {
+			userPool.push(pack[i]);
+			pack.splice(i,1);
+			currentRound++;
+			show_userCardPool();
+			return nextPack();
+		}
+	}
+}
+
+//Update and display user's cards, sorted into columns according to mana value.
+function show_userCardPool() {
+	for (h=0;h<7;h++) {
+		colID = "cmc" + h;
+		counter = 0;
+		clearDIV(colID);
+		for (i=0;i<userPool.length;i++) {
+			mV = (userPool[i].manaValue > 6) ? 6 : userPool[i].manaValue;
+			if (mV == h) {
+				var img = document.createElement("img");
+				img.src = userPool[i].imgURL;
+				img.className = "userCard";
+				img.style.top = 35*counter + "px";
+				document.getElementById(colID).appendChild(img);
+				counter++;
+			}
+		}
+	}
+}
+
+//Clear <div> of all child nodes.
+function clearDIV(elementID) {
+	var element = document.getElementById(elementID);
+	var cNode = element.cloneNode(false);
+	element.parentNode.replaceChild(cNode, element);
+}
+
+//Shows (passes) user the next pack.
+function nextPack() {
+	clearDIV("currentPack");
+	if(currentRound > 7) {
+		currentRound = 0;
+	}
+	pack = cardPool[currentRound][currentPack];
+	if (pack.length < 1) {
+		alert("Round complete.");
+		currentRound = 0;
+		currentPack++;
+		if (currentPack > 2) {
+			alert("Draft complete.");
+		}
+		pack = cardPool[currentRound][currentPack];
+	}
+	for (i=0;i<pack.length;i++) {
+		show_image(pack[i].imgURL);
+	}
 }

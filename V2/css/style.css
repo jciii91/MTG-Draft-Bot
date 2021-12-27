@@ -1,35 +1,40 @@
-img.packCard {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#currentPack {
+	border-bottom: 3px solid black;
+}
+
+.packCard {
 	width: 255px;
     height: 360px;
 	margin: 2px 5px;
 }
 	
-img.packCard:hover {
+.packCard:hover {
 	opacity: 0.5;
 }
 
-img.cards {
-	display:inline-block;
-	position:absolute;
+#userPool {
+	margin: 5px auto;
 }
 
-div.cmcColumn {
+.cmcColumn {
+	width: 204px;
+	vertical-align: top;
 	display: inline-block;
 	position: relative;
-	width: 204px;
-}
-	
-#currentPack {
-	margin-bottom: 4px;
-	border-bottom: 1px solid;
-	border-width: 3px;
 }
 
-#userPool {
-	display: inline-block;
-	width: 80%;
-	float: left;
-	height: 510px;
+.userCard {
+	width: 204px;
+    height: 288px;
+	margin: 0px;
+	display: inline;
+	position: absolute;
 }
 
 #poolDetails {
@@ -37,8 +42,6 @@ div.cmcColumn {
 	border-bottom: 3px solid;
 	border-left: 3px solid;
 	border-right: 3px solid;
-	float: right;
-	margin-bottom: 4px;
 }
 
 #sideboardColumn {
@@ -46,24 +49,10 @@ div.cmcColumn {
 	border-bottom: 3px solid;
 	border-left: 3px solid;
 	border-right: 3px solid;
-	float: right;
 	margin-bottom: 4px;
-	width: 350px;
-	height: 400px;
+	display: none;
 }
-
 
 #canvasContainer {
 	display: inline-block;
-	float: right;
-}
-
-#buttonContainer {
-	display: inline-block;
-	float: right;	
-	margin-bottom: 4px;
-}
-
-#sideboardColumn {
-	display: none;
 }
