@@ -6,7 +6,7 @@
 	<script src="./scripts/Functions2.js"></script>
 	<script src="./scripts/cardRuns.js"></script>
 	<script src="./scripts/myWAR.js"></script>
-	<!--<link rel="stylesheet" href="style.css">-->
+	<link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -42,23 +42,9 @@
 	<button id="details" type="button" onclick="showDetails(isDetails)">Details</button>
   </div>
   
-	<script>	
-	let cardPool = [];
-	
-	for (h=0; h<8; h++) {
-		let pack1 = makePack();
-		let pack2 = makePack();
-		let pack3 = makePack();
-		cardPool[h] = [pack1,pack2,pack3];
-	}
-
-	fillPlayerPacks(cardPool);
-
-	for (card=0;card<cardPool[0][0].length;card++) {
-		show_image(cardPool[0][0][card].imgURL,card);
-	}
-	
-	//drawWedge(0,2,"gray");
+	<script>
+		startDraft();
+		//drawWedge(0,2,"gray");
 	</script>
 
 </body>

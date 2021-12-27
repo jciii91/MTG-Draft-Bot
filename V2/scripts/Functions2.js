@@ -5,6 +5,23 @@ function rng(max) {
   return Math.floor(rand);
 }
 
+function startDraft() {
+	let cardPool = [];
+	
+	for (h=0; h<8; h++) {
+		let pack1 = makePack();
+		let pack2 = makePack();
+		let pack3 = makePack();
+		cardPool[h] = [pack1,pack2,pack3];
+	}
+
+	fillPlayerPacks(cardPool);
+
+	for (card=0;card<cardPool[0][0].length;card++) {
+		show_image(cardPool[0][0][card].imgURL);
+	}
+}
+
 function makePack() {													//Function to generate a pack. Typically called 8 times in a single session.
 
 	randomPack = new Array();
@@ -190,15 +207,12 @@ function findCard(cardName) {
 
 //Image display
 
-function show_image(src, num) {
+function show_image(src) {
     var img = document.createElement("img");
     img.src = src;
-    img.width = 255;
-    img.height = 360;
-    img.id = "card" + num;
 	img.className = "packCard";
-    img.setAttribute("onclick", "pickCard(id)");
+    img.setAttribute("onclick", "pickCard()");
 
-    // This next line will just add it to the <body> tag
+    //Append image to currentPack <div>
     document.getElementById("currentPack").appendChild(img);
 }

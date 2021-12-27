@@ -1,8 +1,7 @@
 img.packCard {
-	margin-top: 2px;
-	margin-bottom: 2px;
-	margin-right: 5px;
-	margin-left: 5px;
+	width: 255px;
+    height: 360px;
+	margin: 2px 5px;
 }
 	
 img.packCard:hover {
