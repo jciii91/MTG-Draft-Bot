@@ -222,6 +222,7 @@ function pickCard(card) {
 		if (pack[i].imgURL == imgSRC) {
 			userPool.push(pack[i]);
 			pack.splice(i,1);
+			botsPick();
 			currentRound++;
 			show_userCardPool();
 			return nextPack();
@@ -269,10 +270,31 @@ function nextPack() {
 		currentPack++;
 		if (currentPack > 2) {
 			alert("Draft complete.");
+			console.log(botPool);
 		}
 		pack = cardPool[currentRound][currentPack];
 	}
 	for (i=0;i<pack.length;i++) {
 		show_image(pack[i].imgURL);
+	}
+}
+
+//Bot card selection
+function botsPick() {
+	for (bot=0;bot<7;bot++) {
+		roundNum = (currentRound + bot - 7 < 0 ) ? currentRound + bot + 1 : currentRound + bot - 7;
+		pack = cardPool[roundNum][currentPack]
+		tempPrio = 0;
+		botPrio = 0;
+		botPick = 0;
+		for (bp=0;bp<pack.length;bp++) {
+			tempPrio = pack[bp].rank*(pack[bp].manaValue/*-0.025*cANDnc(bp[i],ID)*/)/* + 5*(roundCounter/2)*colorCount(bp[i],ID)*/;
+			if (tempPrio > botPrio) {
+				botPrio = tempPrio;
+				botPick = bp;
+			}
+		}
+		botPool[bot].push(pack[botPick]);
+		pack.splice(botPick,1);
 	}
 }
