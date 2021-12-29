@@ -288,7 +288,7 @@ function botsPick() {
 		botPrio = 0;
 		botPick = 0;
 		for (bp=0;bp<pack.length;bp++) {
-			tempPrio = pack[bp].rank*(pack[bp].manaValue/*-0.025*cANDnc(bp[i],ID)*/)/* + 5*(roundCounter/2)*colorCount(bp[i],ID)*/;
+			tempPrio = pack[bp].rank*pack[bp].manaValue/*need a function here to adjust prio according to manaValue*/*cAndNc(bot,pack[bp])/* + 5*(roundCounter/2)*colorCount(bp[i],ID)*/;
 			if (tempPrio > botPrio) {
 				botPrio = tempPrio;
 				botPick = bp;
@@ -296,5 +296,21 @@ function botsPick() {
 		}
 		botPool[bot].push(pack[botPick]);
 		pack.splice(botPick,1);
+	}
+}
+
+//count creature and noncreature cards in bot pool
+function cAndNc(bot,card) {
+	creatureCount = 0;
+	nonCreatureCount = 0;
+	for (i_canc=0;i_canc<botPool[bot].length;i_canc++) {
+		(botPool[bot][i_canc].types[0] == "Creature") ? creatureCount++ : nonCreatureCount++;
+	}
+	creatureCount = creatureCount/botPool[bot].length;
+	nonCreatureCount = nonCreatureCount/botPool[bot].length;
+	if (card.types[0] == "Creature" && creatureCount < .66) {
+		return 1 + creatureCount;
+	} else {
+		return 1;
 	}
 }
