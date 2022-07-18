@@ -12,6 +12,11 @@ const typeDefs = gql`
     user: User
   }
 
+  type mtgSet {
+    name: String
+    code: String
+  }
+
   type Card {
     setNumber: Int
     name: String
@@ -21,6 +26,7 @@ const typeDefs = gql`
     me: User
     users: [User]
     user(username: String!): User
+    sets: [mtgSet]
     pack: [Card]
     card(setNumber: Int!): Card
   }
@@ -29,6 +35,7 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
     addCard(setNumber: Int!, name: String!): Card
+    addSet(name: String!, code: String!): mtgSet
   }
 `;
 
