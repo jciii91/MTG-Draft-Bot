@@ -12,15 +12,23 @@ const typeDefs = gql`
     user: User
   }
 
+  type Card {
+    setNumber: Int
+    name: String
+  }
+
   type Query {
     me: User
     users: [User]
     user(username: String!): User
+    pack: [Card]
+    card(setNumber: Int!): Card
   }
 
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
+    addCard(setNumber: Int!, name: String!): Card
   }
 `;
 

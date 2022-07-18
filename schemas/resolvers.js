@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User } = require('../models');
+const { User, Card } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -13,6 +13,12 @@ const resolvers = {
       }
     
       throw new AuthenticationError('Not logged in');
+    },
+    pack: async (parent, args) => {
+      const pack = await Card.find()
+        .select('-__v')
+
+      return pack;
     }
   },
   Mutation: {
@@ -37,6 +43,11 @@ const resolvers = {
     
       const token = signToken(user);
       return { token, user };
+    },
+    addCard: async (parent, args) => {
+      const card = await Card.create(args);
+
+      return card;
     }
   }
 };
