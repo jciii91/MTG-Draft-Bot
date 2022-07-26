@@ -9,6 +9,16 @@ export const QUERY_SETS = gql`
   }
 `;
 
+export const QUERY_CARDS = gql`
+  query cards {
+    cards {
+      setNumber
+      name
+      multiverseId
+    }
+  }
+`
+
 export const QUERY_ME = gql`
   {
     me {

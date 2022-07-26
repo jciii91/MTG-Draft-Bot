@@ -11,6 +11,11 @@ const cardSchema = new Schema(
             type: String,
             required: true,
             unique: true,
+        },
+        multiverseId: {
+            type: Number,
+            required: true,
+            unique: true,
         }
     },
 );

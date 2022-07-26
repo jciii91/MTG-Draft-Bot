@@ -16,7 +16,8 @@ db.once('open', async () => {
 
     let tempCard = {
       "setNumber" : setNumber,
-      "name" : card.name
+      "name" : card.name,
+      "multiverseId" : card.identifiers.multiverseId
     }
     seedArray.push(tempCard);
   })

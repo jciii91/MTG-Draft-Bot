@@ -20,6 +20,7 @@ const typeDefs = gql`
   type Card {
     setNumber: Int
     name: String
+    multiverseId: Int
   }
 
   type Query {
