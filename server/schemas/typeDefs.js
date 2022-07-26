@@ -30,7 +30,7 @@ const typeDefs = gql`
     sets: [mtgSet]
     pack: [Card]
     card(setNumber: Int!): Card
-    cards: [Card]
+    cards(names: [String]!): [Card]
   }
 
   type Mutation {

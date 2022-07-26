@@ -34,9 +34,9 @@ const resolvers = {
     },
     cards: async (parent, args) => {
       const cards = await Card.find()
-        .select('-__v')
+        .select('-__v');
 
-      return cards;
+      return cards.filter(card => args.names.includes(card.name));
     },
   },
   Mutation: {
