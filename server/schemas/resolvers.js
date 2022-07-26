@@ -31,7 +31,13 @@ const resolvers = {
         .select('-__v')
 
       return sets;
-    }
+    },
+    cards: async (parent, args) => {
+      const cards = await Card.find()
+        .select('-__v')
+
+      return cards;
+    },
   },
   Mutation: {
     addUser: async (parent, args) => {

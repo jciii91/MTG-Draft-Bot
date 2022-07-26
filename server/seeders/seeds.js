@@ -1,22 +1,27 @@
-const faker = require('faker');
-
 const db = require('../config/connection');
 const { Card } = require('../models');
+
+const json = require('./WAR.json');
+const WAR = json.data.cards;
 
 db.once('open', async () => {
   await Card.deleteMany({});
 
-  // create card data
-  const cardData = [];
+  let seedArray = [];
+  WAR.forEach(card => {
+    if (card.number.indexOf('★') != -1 || card.number.indexOf('-') != -1 || card.type.includes('Basic Land')) {
+      return;
+    }
+    let setNumber = card.number;
 
-  for (let i = 0; i < 50; i += 1) {
-    const setNumber = faker.random.number();
-    const name = faker.name.title();
+    let tempCard = {
+      "setNumber" : setNumber,
+      "name" : card.name
+    }
+    seedArray.push(tempCard);
+  })
 
-    cardData.push({ setNumber, name });
-  }
-
-  Card.collection.insertMany(cardData);
+  await Card.create(seedArray);
 
   console.log('all done!');
   process.exit(0);
