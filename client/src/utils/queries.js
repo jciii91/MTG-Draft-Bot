@@ -10,8 +10,8 @@ export const QUERY_SETS = gql`
 `;
 
 export const QUERY_CARDS = gql`
-  query cards {
-    cards {
+  query cards($names: [String]!) {
+    cards(names: $names) {
       setNumber
       name
       multiverseId

@@ -6,7 +6,9 @@ import { QUERY_CARDS } from '../utils/queries';
 
 const Draft = () => {
   // use useQuery hook to make query request
-  const { loading, data } = useQuery(QUERY_CARDS);
+  const { loading, data } = useQuery(QUERY_CARDS, {
+    variables: {names: ["Karn, the Great Creator", "Ugin, the Ineffable", "Ugin's Conjurant"]}
+  });
 
   const cards = data?.cards || [];
 
