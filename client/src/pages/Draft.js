@@ -1,31 +1,16 @@
 import React from 'react';
 
-import { useQuery } from '@apollo/client';
-
-import { QUERY_CARDS } from '../utils/queries';
+import boosterMaker from '../utils/boosterMaker';
+import CardPool from '../components/CardPool';
 
 const Draft = () => {
-  // use useQuery hook to make query request
-  const { loading, data } = useQuery(QUERY_CARDS, {
-    variables: {names: ["Karn, the Great Creator", "Ugin, the Ineffable", "Ugin's Conjurant"]}
-  });
-
-  const cards = data?.cards || [];
-
-  console.log(cards);
+  const randomNames = boosterMaker.makePack();
 
   return (
     <main>
       <div className='flex-row justify-space-between'>
         <div className='col-12 mb-3'>
-        {loading ? (
-            <div>Loading...</div>
-          ) : (
-            <div>
-              <span>Check console log.</span>
-            </div>
-          )
-        }
+          < CardPool randomNames={randomNames} />
         </div>
       </div>
     </main>

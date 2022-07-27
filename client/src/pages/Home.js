@@ -2,15 +2,12 @@ import React from 'react';
 
 import { useQuery } from '@apollo/client';
 
-import { QUERY_SETS, QUERY_ME_BASIC } from '../utils/queries';
+import { QUERY_SETS } from '../utils/queries';
 import SetList from '../components/SetList';
-import Auth from '../utils/auth';
 
 const Home = () => {
   // use useQuery hook to make query request
   const { loading, data } = useQuery(QUERY_SETS);
-
-  const loggedIn = Auth.loggedIn();
 
   const sets = data?.sets || [];
 
