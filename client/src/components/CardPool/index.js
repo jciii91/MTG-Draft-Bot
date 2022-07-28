@@ -4,15 +4,16 @@ import { useQuery } from '@apollo/client';
 
 import { QUERY_CARDS } from '../../utils/queries';
 
-const CardPool = ({ randomNames }) => {
+const CardPool = ({ cardNames, draftPod }) => {
   // use useQuery hook to make query request
   const { loading, data } = useQuery(QUERY_CARDS, {
-    variables: {names: randomNames}
+    variables: {names: cardNames}
   });
 
   const cards = data?.cards || [];
 
   console.log(cards);
+  console.log(draftPod);
 
   return (
     <div>
