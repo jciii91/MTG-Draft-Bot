@@ -12,15 +12,10 @@ const CardPool = ({ cardNames, podNames }) => {
 
   const cards = data?.cards || [];
 
-  console.log(cards);
-
   let cardDict = {};
   for (let i=0; i<cards.length; i++) {
     cardDict[cards[i].name] = cards[i];
   }
-
-  console.log(cardDict);
-  console.log(podNames);
 
   let draftPod = [
     [
@@ -56,13 +51,19 @@ const CardPool = ({ cardNames, podNames }) => {
     }
   }
 
-  console.log(draftPod);
-
   return (
-    <div>
-      <h3>
-        Check console log.
-      </h3>
+    <div className='flex-row justify-space-around'>
+      {loading ? (
+        <div>Loading...</div>
+      ) : (
+        draftPod[0][0].map(card => 
+          <img 
+            src={`https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=${card.multiverseId}&type=card`} 
+            alt={card.name}
+            key={card.name}
+          />
+        )
+      )}
     </div>
   );
 };
