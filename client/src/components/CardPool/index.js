@@ -51,16 +51,40 @@ const CardPool = ({ cardNames, podNames }) => {
     }
   }
 
+  let pickCounter = 0;
+  let roundCounter = 0;
+
+  function userPick() {
+    const booster = document.getElementById('draftBooster');
+    while (booster.firstChild) {
+      booster.removeChild(booster.firstChild);
+    }
+    pickCounter > 6 ? pickCounter = 0 : pickCounter++;
+    draftPod[pickCounter][roundCounter].map(card => {
+        let img = new Image();
+        img.src = 'https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=' + card.multiverseId + '&type=card';
+        img.alt = card.name;
+        img.key = card.name;
+        img.ondblclick = userPick;
+        booster.appendChild(img);
+
+        return card;
+      }
+    )
+    return;
+  }
+
   return (
-    <div className='flex-row justify-space-around'>
+    <div id='draftBooster' className='flex-row justify-space-around'>
       {loading ? (
         <div>Loading...</div>
       ) : (
-        draftPod[0][0].map(card => 
+        draftPod[roundCounter][pickCounter].map(card => 
           <img 
             src={`https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=${card.multiverseId}&type=card`} 
             alt={card.name}
             key={card.name}
+            onDoubleClick={userPick}
           />
         )
       )}
