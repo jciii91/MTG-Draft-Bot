@@ -56,7 +56,13 @@ const CardPool = ({ cardNames, podNames }) => {
   let mainDeck = [];
 
   function userPick(event) {
-    console.log(cardDict[event.target.alt]);
+    const targetCard = cardDict[event.target.alt];
+    mainDeck.push(targetCard);
+    const namesArray = draftPod[pickCounter][roundCounter].map(card => card.name);
+    const targetIndex = namesArray.indexOf(event.target.alt);
+    draftPod[pickCounter][roundCounter].splice(targetIndex,1);
+
+    console.log(mainDeck);
 
     const booster = document.getElementById('draftBooster');
     while (booster.firstChild) {
@@ -68,7 +74,7 @@ const CardPool = ({ cardNames, podNames }) => {
         img.src = 'https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=' + card.multiverseId + '&type=card';
         img.alt = card.name;
         img.key = card.name;
-        img.ondblclick = 'userPick(this)';
+        img.ondblclick = userPick;
         booster.appendChild(img);
 
         return card;
