@@ -53,8 +53,11 @@ const CardPool = ({ cardNames, podNames }) => {
 
   let pickCounter = 0;
   let roundCounter = 0;
+  let mainDeck = [];
 
-  function userPick() {
+  function userPick(event) {
+    console.log(cardDict[event.target.alt]);
+
     const booster = document.getElementById('draftBooster');
     while (booster.firstChild) {
       booster.removeChild(booster.firstChild);
@@ -65,7 +68,7 @@ const CardPool = ({ cardNames, podNames }) => {
         img.src = 'https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=' + card.multiverseId + '&type=card';
         img.alt = card.name;
         img.key = card.name;
-        img.ondblclick = userPick;
+        img.ondblclick = 'userPick(this)';
         booster.appendChild(img);
 
         return card;
