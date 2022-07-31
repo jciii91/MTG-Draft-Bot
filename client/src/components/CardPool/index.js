@@ -54,6 +54,9 @@ const CardPool = ({ cardNames, podNames }) => {
   let pickCounter = 0;
   let roundCounter = 0;
   let mainDeck = [];
+  let botDecks = [
+    [],[],[],[],[],[],[]
+  ]
 
   function userPick(event) {
     const targetCard = cardDict[event.target.alt];
@@ -62,7 +65,21 @@ const CardPool = ({ cardNames, podNames }) => {
     const targetIndex = namesArray.indexOf(event.target.alt);
     draftPod[pickCounter][roundCounter].splice(targetIndex,1);
 
-    console.log(mainDeck);
+    console.log(draftPod);
+
+    if (roundCounter !== 2) {
+      for (let i=1; i<8; i++) {
+        const pack = i + pickCounter > 7 ? i + pickCounter - 8 : i + pickCounter;
+        const botTarget = cardDict[draftPod[pack][roundCounter][0].name];
+        console.log(botTarget.name);
+        botDecks[i-1].push(botTarget);
+        const loopArray = draftPod[pack][roundCounter].map(card => card.name);
+        const botTargetIndex = loopArray.indexOf(draftPod[pack][roundCounter][0].name);
+        draftPod[pack][roundCounter].splice(botTargetIndex,1);
+      }
+    }
+
+    console.log(draftPod);
 
     const booster = document.getElementById('draftBooster');
     while (booster.firstChild) {
