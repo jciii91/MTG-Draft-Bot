@@ -132,20 +132,55 @@ const CardPool = ({ cardNames, podNames }) => {
   }
 
   return (
-    <div id='draftBooster' className='flex-row justify-space-around'>
-      {loading ? (
-        <div>Loading...</div>
-      ) : (
-        draftPod[roundCounter][pickCounter].map(card => 
-          <img 
-            src={`https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=${card.multiverseId}&type=card`} 
-            alt={card.name}
-            key={card.name}
-            onDoubleClick={userPick}
-          />
-        )
-      )}
-    </div>
+    <>
+      <div id='draftBooster' className='flex-row justify-space-around'>
+        {loading ? (
+          <div>Loading...</div>
+        ) : (
+          draftPod[roundCounter][pickCounter].map(card => 
+            <img 
+              src={`https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=${card.multiverseId}&type=card`} 
+              alt={card.name}
+              key={card.name}
+              onDoubleClick={userPick}
+            />
+          )
+        )}
+      </div>
+
+      <div  className='flex-row'>
+        <div id='mainBoard' className='col-9'>
+          <div id='cmc0' className='flex-column'>
+
+          </div>
+          <div id='cmc1' className='flex-column'>
+
+          </div>
+          <div id='cmc2' className='flex-column'>
+
+          </div>
+          <div id='cmc3' className='flex-column'>
+
+          </div>
+          <div id='cmc4' className='flex-column'>
+
+          </div>
+          <div id='cmc5' className='flex-column'>
+
+          </div>
+          <div id='cmc6' className='flex-column'>
+
+          </div>
+          <div id='cmc7+' className='flex-column'>
+
+          </div>
+        </div>
+
+        <div id='sideBoard' className='col-3'>
+
+        </div>
+      </div>
+    </>
   );
 };
 
