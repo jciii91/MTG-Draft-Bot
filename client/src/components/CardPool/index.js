@@ -79,6 +79,35 @@ const CardPool = ({ cardNames, podNames }) => {
     flag++;
   }
 
+  function drawMainBoard() {
+    const cmcColumns = [
+      document.getElementById('cmc0'),
+      document.getElementById('cmc1'),
+      document.getElementById('cmc2'),
+      document.getElementById('cmc3'),
+      document.getElementById('cmc4'),
+      document.getElementById('cmc5'),
+      document.getElementById('cmc6'),
+      document.getElementById('cmc7+')
+    ]
+
+    cmcColumns.forEach(columns => {
+      while (columns.firstChild) {
+        columns.removeChild(columns.firstChild);
+      }
+    })
+
+    mainDeck.map(card => {
+        let img = new Image();
+        img.src = 'https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=' + card.multiverseId + '&type=card';
+        img.alt = card.name;
+        img.key = card.name;
+
+        return card;
+      }
+    )
+  }
+
   function userPick(event) {
     if (roundCounter !== 1) {
       const targetCard = cardDict[event.target.alt];
