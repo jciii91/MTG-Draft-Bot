@@ -11,6 +11,7 @@ const CardPool = ({ cardNames, podNames }) => {
   });
 
   const cards = data?.cards || [];
+  console.log(cards);
 
   let cardDict = {};
   for (let i=0; i<cards.length; i++) {
