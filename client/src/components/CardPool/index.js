@@ -64,7 +64,6 @@ const CardPool = ({ cardNames, podNames }) => {
     while (booster.firstChild) {
       booster.removeChild(booster.firstChild);
     }
-    pickCounter > 6 ? pickCounter = 0 : pickCounter++;
 
     draftPod[pickCounter][roundCounter].map(card => {
         let img = new Image();
@@ -81,13 +80,13 @@ const CardPool = ({ cardNames, podNames }) => {
   }
 
   function userPick(event) {
-    const targetCard = cardDict[event.target.alt];
-    mainDeck.push(targetCard);
-    const namesArray = draftPod[pickCounter][roundCounter].map(card => card.name);
-    const targetIndex = namesArray.indexOf(event.target.alt);
-    draftPod[pickCounter][roundCounter].splice(targetIndex,1);
+    if (roundCounter !== 1) {
+      const targetCard = cardDict[event.target.alt];
+      mainDeck.push(targetCard);
+      const namesArray = draftPod[pickCounter][roundCounter].map(card => card.name);
+      const targetIndex = namesArray.indexOf(event.target.alt);
+      draftPod[pickCounter][roundCounter].splice(targetIndex,1);
 
-    if (roundCounter !== 2) {
       for (let i=1; i<8; i++) {
         const pack = i + pickCounter > 7 ? i + pickCounter - 8 : i + pickCounter;
         const botTarget = cardDict[draftPod[pack][roundCounter][0].name];
@@ -96,7 +95,16 @@ const CardPool = ({ cardNames, podNames }) => {
         const botTargetIndex = loopArray.indexOf(draftPod[pack][roundCounter][0].name);
         draftPod[pack][roundCounter].splice(botTargetIndex,1);
       }
+
+      pickCounter > 6 ? pickCounter = 0 : pickCounter++;
+
     } else {
+      const targetCard = cardDict[event.target.alt];
+      mainDeck.push(targetCard);
+      const namesArray = draftPod[pickCounter][roundCounter].map(card => card.name);
+      const targetIndex = namesArray.indexOf(event.target.alt);
+      draftPod[pickCounter][roundCounter].splice(targetIndex,1);
+
       for (let i=1; i<8; i++) {
         const pack = i + pickCounter > 7 ? i + pickCounter - 8 : i + pickCounter;
         const botTarget = cardDict[draftPod[pack][roundCounter][0].name];
@@ -105,6 +113,9 @@ const CardPool = ({ cardNames, podNames }) => {
         const botTargetIndex = loopArray.indexOf(draftPod[pack][roundCounter][0].name);
         draftPod[pack][roundCounter].splice(botTargetIndex,1);
       }
+
+      pickCounter < 1 ? pickCounter = 7 : pickCounter--;
+
     }
 
     console.log(mainDeck);
