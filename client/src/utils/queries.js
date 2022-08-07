@@ -15,6 +15,11 @@ export const QUERY_CARDS = gql`
       setNumber
       name
       multiverseId
+      rank
+      cmc
+      manaCost
+      colors
+      types
     }
   }
 `

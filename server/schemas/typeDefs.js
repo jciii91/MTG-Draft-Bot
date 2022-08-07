@@ -21,6 +21,11 @@ const typeDefs = gql`
     setNumber: Int
     name: String
     multiverseId: Int
+    rank: Int
+    cmc: Int
+    manaCost: String
+    colors: [String]
+    types: [String]
   }
 
   type Query {

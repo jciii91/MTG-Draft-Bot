@@ -16,7 +16,27 @@ const cardSchema = new Schema(
             type: Number,
             required: true,
             unique: true,
-        }
+        },
+        rank: {
+            type: Number,
+            required: true,
+        },
+        cmc: {
+            type: Number,
+            required: true,
+        },
+        manaCost: {
+            type: String,
+            required: true,
+        },
+        colors: {
+            type: Array,
+            required: true
+        },
+        types: {
+            type: Array,
+            required: true,
+        },
     },
 );
 
