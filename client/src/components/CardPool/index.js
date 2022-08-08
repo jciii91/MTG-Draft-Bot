@@ -70,7 +70,7 @@ const CardPool = ({ cardNames, podNames }) => {
         img.src = 'https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=' + card.multiverseId + '&type=card';
         img.alt = card.name;
         img.key = card.name;
-        img.className = 'w-15';
+        img.className = 'w-15 draft';
         img.ondblclick = userPick;
         booster.appendChild(img);
 
@@ -103,7 +103,7 @@ const CardPool = ({ cardNames, podNames }) => {
         img.alt = card.name;
         img.key = card.name;
         img.style.position = 'absolute';
-        img.className = 'w-95';
+        img.className = 'w-95 main';
 
         if (card.cmc < 5) {
           img.style.top = cardIncs[card.cmc] * 30 + 'px';
@@ -184,7 +184,7 @@ const CardPool = ({ cardNames, podNames }) => {
               alt={card.name}
               key={card.name}
               onDoubleClick={userPick}
-              className='w-15'
+              className='w-15 draft'
             />
           )
         )}

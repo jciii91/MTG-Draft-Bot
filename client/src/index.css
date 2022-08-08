@@ -907,6 +907,14 @@ nav a:hover {
   position: relative;
 }
 
+.draft:hover {
+  opacity: 0.5;
+}
+
+.main:hover {
+  z-index: 999 !important;
+}
+
 /* col-sm */
 @media screen and (min-width: 640px) {
   .col-sm-auto {
