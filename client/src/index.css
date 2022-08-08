@@ -230,8 +230,8 @@ nav a:hover {
 
 /* LAYOUT */
 .container {
-  width: 85%;
-  max-width: 1200px;
+  width: 90%;
+  max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -262,6 +262,10 @@ nav a:hover {
   width: 100%;
 }
 
+.w-95 {
+  width: 95%;
+}
+
 .w-75 {
   width: 75%;
 }
@@ -272,6 +276,10 @@ nav a:hover {
 
 .w-25 {
   width: 25%;
+}
+
+.w-15 {
+  width: 15%;
 }
 
 .min-100-vh {

@@ -11,7 +11,6 @@ const CardPool = ({ cardNames, podNames }) => {
   });
 
   const cards = data?.cards || [];
-  console.log(cards);
 
   let cardDict = {};
   for (let i=0; i<cards.length; i++) {
@@ -71,6 +70,7 @@ const CardPool = ({ cardNames, podNames }) => {
         img.src = 'https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=' + card.multiverseId + '&type=card';
         img.alt = card.name;
         img.key = card.name;
+        img.className = 'w-15';
         img.ondblclick = userPick;
         booster.appendChild(img);
 
@@ -87,9 +87,7 @@ const CardPool = ({ cardNames, podNames }) => {
       document.getElementById('cmc2'),
       document.getElementById('cmc3'),
       document.getElementById('cmc4'),
-      document.getElementById('cmc5'),
-      document.getElementById('cmc6'),
-      document.getElementById('cmc7+')
+      document.getElementById('cmc5')
     ]
 
     cmcColumns.forEach(columns => {
@@ -103,6 +101,13 @@ const CardPool = ({ cardNames, podNames }) => {
         img.src = 'https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=' + card.multiverseId + '&type=card';
         img.alt = card.name;
         img.key = card.name;
+        img.className = 'w-100';
+
+        if (card.cmc < 5) {
+          cmcColumns[card.cmc].appendChild(img);
+        } else {
+          cmcColumns[5].appendChild(img);
+        }
 
         return card;
       }
@@ -148,8 +153,7 @@ const CardPool = ({ cardNames, podNames }) => {
 
     }
 
-    console.log(mainDeck);
-    console.log(botDecks);
+    drawMainBoard();
     drawPack();
 
     if (!(flag % 14)) {
@@ -173,40 +177,35 @@ const CardPool = ({ cardNames, podNames }) => {
               alt={card.name}
               key={card.name}
               onDoubleClick={userPick}
+              className='w-15'
             />
           )
         )}
       </div>
 
       <div  className='flex-row'>
-        <div id='mainBoard' className='col-9'>
-          <div id='cmc0' className='flex-column'>
+        <div id='mainBoard' className='flex-row col-10'>
+          <div id='cmc0' className='col-2'>
 
           </div>
-          <div id='cmc1' className='flex-column'>
+          <div id='cmc1' className='col-2'>
 
           </div>
-          <div id='cmc2' className='flex-column'>
+          <div id='cmc2' className='col-2'>
 
           </div>
-          <div id='cmc3' className='flex-column'>
+          <div id='cmc3' className='col-2'>
 
           </div>
-          <div id='cmc4' className='flex-column'>
+          <div id='cmc4' className='col-2'>
 
           </div>
-          <div id='cmc5' className='flex-column'>
-
-          </div>
-          <div id='cmc6' className='flex-column'>
-
-          </div>
-          <div id='cmc7+' className='flex-column'>
+          <div id='cmc5' className='col-2'>
 
           </div>
         </div>
 
-        <div id='sideBoard' className='col-3'>
+        <div id='sideBoard' className='col-2'>
 
         </div>
       </div>
