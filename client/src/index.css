@@ -911,7 +911,7 @@ nav a:hover {
   opacity: 0.5;
 }
 
-.main:hover {
+.main:hover, .side:hover {
   z-index: 999 !important;
 }
 

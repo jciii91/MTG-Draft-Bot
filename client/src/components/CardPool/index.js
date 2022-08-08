@@ -124,6 +124,33 @@ const CardPool = ({ cardNames, podNames }) => {
     )
   }
 
+  function drawSideBoard() {
+    const sideBoardColumn = document.getElementById('sideDeck');
+    let cardIncs = 0;
+
+    while (sideBoardColumn.firstChild) {
+      sideBoardColumn.removeChild(sideBoardColumn.firstChild);
+    }
+
+    sideDeck.map(card => {
+        let img = new Image();
+        img.src = 'https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=' + card.multiverseId + '&type=card';
+        img.alt = card.name;
+        img.key = card.name;
+        img.ondblclick = changeBoards;
+        img.style.position = 'absolute';
+        img.className = 'w-95 side';
+
+        img.style.top = cardIncs * 30 + 'px';
+        img.style.zIndex = cardIncs;
+        cardIncs++;
+        sideBoardColumn.appendChild(img);
+
+        return card;
+      }
+    )
+  }
+
   function userPick(event) {
     if (roundCounter !== 1) {
       const targetCard = cardDict[event.target.alt];
@@ -177,14 +204,28 @@ const CardPool = ({ cardNames, podNames }) => {
 
   function changeBoards(event) {
     const cardName = event.target.key;
-    let targetIndex = -1;
-    mainDeck.forEach(card => {
-      if (card.name === cardName) {
-        targetIndex = mainDeck.indexOf(card);
-      }
-    })
-    sideDeck = mainDeck.splice(targetIndex, 1);
+
+    if (event.target.className.includes('main')){
+      let targetIndex = -1;
+      mainDeck.forEach(card => {
+        if (card.name === cardName) {
+          targetIndex = mainDeck.indexOf(card);
+        }
+      })
+      sideDeck.push(mainDeck[targetIndex]);
+      mainDeck.splice(targetIndex, 1);
+    } else {
+      let targetIndex = -1;
+      sideDeck.forEach(card => {
+        if (card.name === cardName) {
+          targetIndex = sideDeck.indexOf(card);
+        }
+      })
+      mainDeck.push(sideDeck[targetIndex]);
+      sideDeck.splice(targetIndex, 1);
+    }
     drawMainBoard();
+    drawSideBoard();
   }
 
   return (
@@ -227,8 +268,10 @@ const CardPool = ({ cardNames, podNames }) => {
           </div>
         </div>
 
-        <div id='sideBoard' className='flex-column pos-rel col-2'>
+        <div id='sideBoard' className='flex-row col-2'>
+          <div id='sideDeck' className='flex-column pos-rel col-12'>
 
+          </div>
         </div>
       </div>
     </>
