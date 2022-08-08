@@ -901,6 +901,12 @@ nav a:hover {
   flex: 0 0 100%;
 }
 
+/* POSITION UTILITIES */
+
+.pos-rel {
+  position: relative;
+}
+
 /* col-sm */
 @media screen and (min-width: 640px) {
   .col-sm-auto {

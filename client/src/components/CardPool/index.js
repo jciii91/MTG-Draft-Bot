@@ -89,6 +89,7 @@ const CardPool = ({ cardNames, podNames }) => {
       document.getElementById('cmc4'),
       document.getElementById('cmc5')
     ]
+    let cardIncs = [0,0,0,0,0,0];
 
     cmcColumns.forEach(columns => {
       while (columns.firstChild) {
@@ -101,11 +102,17 @@ const CardPool = ({ cardNames, podNames }) => {
         img.src = 'https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=' + card.multiverseId + '&type=card';
         img.alt = card.name;
         img.key = card.name;
-        img.className = 'w-100';
+        img.style.position = 'absolute';
+        img.className = 'w-95';
 
         if (card.cmc < 5) {
+          img.style.top = cardIncs[card.cmc] * 30 + 'px';
+          img.style.zIndex = cardIncs[card.cmc];
+          cardIncs[card.cmc]++;
           cmcColumns[card.cmc].appendChild(img);
         } else {
+          img.style.zIndex = cardIncs[5];
+          cardIncs[5]++;
           cmcColumns[5].appendChild(img);
         }
 
@@ -185,22 +192,22 @@ const CardPool = ({ cardNames, podNames }) => {
 
       <div  className='flex-row'>
         <div id='mainBoard' className='flex-row col-10'>
-          <div id='cmc0' className='col-2'>
+          <div id='cmc0' className='flex-column pos-rel col-2'>
 
           </div>
-          <div id='cmc1' className='col-2'>
+          <div id='cmc1' className='flex-column pos-rel col-2'>
 
           </div>
-          <div id='cmc2' className='col-2'>
+          <div id='cmc2' className='flex-column pos-rel col-2'>
 
           </div>
-          <div id='cmc3' className='col-2'>
+          <div id='cmc3' className='flex-column pos-rel col-2'>
 
           </div>
-          <div id='cmc4' className='col-2'>
+          <div id='cmc4' className='flex-column pos-rel col-2'>
 
           </div>
-          <div id='cmc5' className='col-2'>
+          <div id='cmc5' className='flex-column pos-rel col-2'>
 
           </div>
         </div>
