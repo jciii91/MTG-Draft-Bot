@@ -55,6 +55,7 @@ const CardPool = ({ cardNames, podNames }) => {
   let pickCounter = 0;
   let roundCounter = 0;
   let mainDeck = [];
+  let sideDeck = [];
   let botDecks = [
     [],[],[],[],[],[],[]
   ]
@@ -102,6 +103,7 @@ const CardPool = ({ cardNames, podNames }) => {
         img.src = 'https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=' + card.multiverseId + '&type=card';
         img.alt = card.name;
         img.key = card.name;
+        img.ondblclick = changeBoards;
         img.style.position = 'absolute';
         img.className = 'w-95 main';
 
@@ -111,6 +113,7 @@ const CardPool = ({ cardNames, podNames }) => {
           cardIncs[card.cmc]++;
           cmcColumns[card.cmc].appendChild(img);
         } else {
+          img.style.top = cardIncs[5] * 30 + 'px';
           img.style.zIndex = cardIncs[5];
           cardIncs[5]++;
           cmcColumns[5].appendChild(img);
@@ -172,6 +175,18 @@ const CardPool = ({ cardNames, podNames }) => {
     return;
   }
 
+  function changeBoards(event) {
+    const cardName = event.target.key;
+    let targetIndex = -1;
+    mainDeck.forEach(card => {
+      if (card.name === cardName) {
+        targetIndex = mainDeck.indexOf(card);
+      }
+    })
+    sideDeck = mainDeck.splice(targetIndex, 1);
+    drawMainBoard();
+  }
+
   return (
     <>
       <div id='draftBooster' className='flex-row justify-space-around'>
@@ -212,7 +227,7 @@ const CardPool = ({ cardNames, podNames }) => {
           </div>
         </div>
 
-        <div id='sideBoard' className='col-2'>
+        <div id='sideBoard' className='flex-column pos-rel col-2'>
 
         </div>
       </div>
