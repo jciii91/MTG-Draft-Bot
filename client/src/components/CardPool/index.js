@@ -55,6 +55,7 @@ const CardPool = ({ cardNames, podNames }) => {
   let pickCounter = 0;
   let roundCounter = 0;
   let mainDeck = [];
+  let mainDeckColors = [0,0,0,0,0,0]; // White, Blue, Black, Red, Green, Colorless
   let sideDeck = [];
   let botDecks = [
     [],[],[],[],[],[],[]
@@ -124,12 +125,12 @@ const CardPool = ({ cardNames, podNames }) => {
     )
   }
 
-  function drawSideBoard() {
-    const sideBoardColumn = document.getElementById('sideDeck');
+  function drawSideDeck() {
+    const sideDeckColumn = document.getElementById('sideDeck');
     let cardIncs = 0;
 
-    while (sideBoardColumn.firstChild) {
-      sideBoardColumn.removeChild(sideBoardColumn.firstChild);
+    while (sideDeckColumn.firstChild) {
+      sideDeckColumn.removeChild(sideDeckColumn.firstChild);
     }
 
     sideDeck.map(card => {
@@ -144,11 +145,90 @@ const CardPool = ({ cardNames, podNames }) => {
         img.style.top = cardIncs * 30 + 'px';
         img.style.zIndex = cardIncs;
         cardIncs++;
-        sideBoardColumn.appendChild(img);
+        sideDeckColumn.appendChild(img);
 
         return card;
       }
     )
+  }
+
+  function getMainDeckDetails() {
+    mainDeckColors = [0,0,0,0,0,0]; // White, Blue, Black, Red, Green, Colorless
+    mainDeck.forEach(card => {
+      const cardColors = card.colors;
+      if (cardColors.length === 0) {
+        mainDeckColors[5]++;
+      }
+      cardColors.forEach(color => {
+        switch (color) {
+          case 'W':
+            mainDeckColors[0]++;
+            break;
+          case 'U':
+            mainDeckColors[1]++;
+            break;
+          case 'B':
+            mainDeckColors[2]++;
+            break;
+          case 'R':
+            mainDeckColors[3]++;
+            break;
+          case 'G':
+            mainDeckColors[4]++;
+            break;
+          default:
+            console.log('Color logging error.')
+            break;
+        }
+      })
+    })
+  }
+
+  function drawPieSlice(ctx,centerX, centerY, radius, startAngle, endAngle, color ){
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.moveTo(centerX,centerY);
+    ctx.arc(centerX, centerY, radius, startAngle, endAngle);
+    ctx.closePath();
+    ctx.fill();
+  }
+
+  function drawPieChart() {
+    let canvas = document.createElement('canvas');
+    canvas.id = "pieCanvas";
+    canvas.width = 300;
+    canvas.height = 300;
+
+    const ctx = canvas.getContext("2d");
+    const colors = ['#FFFFFF','#0000FF','#000000','#FF0000','#228B22','#808080'];
+    const colorCount = mainDeckColors;
+
+    let total_value = 0;
+    let color_index = 0;
+
+    colorCount.forEach(color => {
+      total_value += color;
+    })
+
+    let start_angle = 0;
+    colorCount.forEach(color => {
+      let slice_angle = 2 * Math.PI * color / total_value;
+
+      drawPieSlice(
+        ctx,
+        canvas.width/2,
+        canvas.height/2,
+        Math.min(canvas.width/2,canvas.height/2),
+        start_angle,
+        start_angle+slice_angle,
+        colors[color_index]
+      );
+
+      start_angle += slice_angle;
+      color_index++;
+    })
+
+    document.getElementById('sideBoard').appendChild(canvas);
   }
 
   function userPick(event) {
@@ -191,6 +271,8 @@ const CardPool = ({ cardNames, podNames }) => {
     }
 
     drawMainBoard();
+    getMainDeckDetails();
+    drawPieChart();
     drawPack();
 
     if (!(flag % 14)) {
@@ -225,7 +307,9 @@ const CardPool = ({ cardNames, podNames }) => {
       sideDeck.splice(targetIndex, 1);
     }
     drawMainBoard();
-    drawSideBoard();
+    getMainDeckDetails();
+    drawPieChart();
+    drawSideDeck();
   }
 
   return (
