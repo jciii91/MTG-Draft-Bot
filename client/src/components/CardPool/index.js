@@ -52,6 +52,7 @@ const CardPool = ({ cardNames, podNames }) => {
   }
 
   let flag = 0;
+  let viewToggle = 'side';
   let pickCounter = 0;
   let roundCounter = 0;
   let mainDeck = [];
@@ -194,6 +195,12 @@ const CardPool = ({ cardNames, podNames }) => {
   }
 
   function drawPieChart() {
+    const detailsColumn = document.getElementById('details');
+
+    while (detailsColumn.firstChild) {
+      detailsColumn.removeChild(detailsColumn.firstChild);
+    }
+
     let canvas = document.createElement('canvas');
     canvas.id = "pieCanvas";
     canvas.width = 300;
@@ -228,7 +235,7 @@ const CardPool = ({ cardNames, podNames }) => {
       color_index++;
     })
 
-    document.getElementById('sideBoard').appendChild(canvas);
+    document.getElementById('details').appendChild(canvas);
   }
 
   function userPick(event) {
@@ -272,7 +279,6 @@ const CardPool = ({ cardNames, podNames }) => {
 
     drawMainBoard();
     getMainDeckDetails();
-    drawPieChart();
     drawPack();
 
     if (!(flag % 14)) {
@@ -308,8 +314,32 @@ const CardPool = ({ cardNames, podNames }) => {
     }
     drawMainBoard();
     getMainDeckDetails();
-    drawPieChart();
     drawSideDeck();
+  }
+
+  function toggleView() {
+    if (viewToggle === 'side') {
+      const sideDeckColumn = document.getElementById('sideDeck');
+
+      while (sideDeckColumn.firstChild) {
+        sideDeckColumn.removeChild(sideDeckColumn.firstChild);
+      }
+
+      drawPieChart();
+
+      viewToggle = 'details';
+    } else {
+      const detailsColumn = document.getElementById('details');
+
+      while (detailsColumn.firstChild) {
+        detailsColumn.removeChild(detailsColumn.firstChild);
+      }
+
+      drawSideDeck();
+
+      viewToggle = 'side';
+    }
+
   }
 
   return (
@@ -352,8 +382,14 @@ const CardPool = ({ cardNames, podNames }) => {
           </div>
         </div>
 
-        <div id='sideBoard' className='flex-row col-2'>
+        <div id='sideBoard' className='flex-row col-2 justify-space-around'>
+          <button onClick={toggleView}>View Sideboard</button>
+          <button onClick={toggleView}>View Details</button>
           <div id='sideDeck' className='flex-column pos-rel col-12'>
+
+          </div>
+
+          <div id='details' className='flex-column pos-rel col-12'>
 
           </div>
         </div>
