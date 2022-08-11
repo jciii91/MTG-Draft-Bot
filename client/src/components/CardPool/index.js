@@ -297,6 +297,19 @@ const CardPool = ({ cardNames, podNames }) => {
     document.getElementById('breakdown').appendChild(breakdown);
   }
 
+  function botHand(pack) {
+    let botPrio = 0;
+    let botPick = 0;
+    pack.forEach((card, index) => {
+      let tempPrio = card.rank;
+      if (tempPrio > botPrio) { 
+        botPrio = tempPrio;
+        botPick = index;
+      }
+    })
+    return cardDict[pack[botPick].name];
+  }
+
   function userPick(event) {
     if (roundCounter !== 1) {
       const targetCard = cardDict[event.target.alt];
@@ -307,10 +320,11 @@ const CardPool = ({ cardNames, podNames }) => {
 
       for (let i=1; i<8; i++) {
         const pack = i + pickCounter > 7 ? i + pickCounter - 8 : i + pickCounter;
-        const botTarget = cardDict[draftPod[pack][roundCounter][0].name];
+        const botTarget = botHand(draftPod[pack][roundCounter]);
+        console.log(draftPod[pack][roundCounter]);
         botDecks[i-1].push(botTarget);
         const loopArray = draftPod[pack][roundCounter].map(card => card.name);
-        const botTargetIndex = loopArray.indexOf(draftPod[pack][roundCounter][0].name);
+        const botTargetIndex = loopArray.indexOf(botTarget.name);
         draftPod[pack][roundCounter].splice(botTargetIndex,1);
       }
 
@@ -325,10 +339,11 @@ const CardPool = ({ cardNames, podNames }) => {
 
       for (let i=1; i<8; i++) {
         const pack = i + pickCounter > 7 ? i + pickCounter - 8 : i + pickCounter;
-        const botTarget = cardDict[draftPod[pack][roundCounter][0].name];
+        const botTarget = botHand(draftPod[pack][roundCounter]);
+        console.log(botTarget);
         botDecks[i-1].push(botTarget);
         const loopArray = draftPod[pack][roundCounter].map(card => card.name);
-        const botTargetIndex = loopArray.indexOf(draftPod[pack][roundCounter][0].name);
+        const botTargetIndex = loopArray.indexOf(botTarget.name);
         draftPod[pack][roundCounter].splice(botTargetIndex,1);
       }
 
