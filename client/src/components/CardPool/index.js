@@ -56,6 +56,8 @@ const CardPool = ({ cardNames, podNames }) => {
   let roundCounter = 0;
   let mainDeck = [];
   let mainDeckColors = [0,0,0,0,0]; // White, Blue, Black, Red, Green
+  let mainDeckTypes = [0,0]; // Creature vs Non Creature/Non Land
+  let mainDeckcmcAvg = 0;
   let sideDeck = [];
   let botDecks = [
     [],[],[],[],[],[],[]
@@ -165,6 +167,8 @@ const CardPool = ({ cardNames, podNames }) => {
 
   function getMainDeckDetails() {
     mainDeckColors = [0,0,0,0,0]; // White, Blue, Black, Red, Green
+    mainDeckTypes = [0,0] // C vs nC / nL
+    mainDeckcmcAvg = 0;
     mainDeck.forEach(card => {
       const cardCost = card.manaCost;
       for (let i=0; i<cardCost.length; i++) {
@@ -189,7 +193,18 @@ const CardPool = ({ cardNames, podNames }) => {
             break;
         }
       }
+      
+      const cardType = card.types[0];
+      if (cardType === 'Creature') { 
+        mainDeckTypes[0]++;
+      } else if (!(cardType === 'Creature') && !(cardType === 'Land')) {
+        mainDeckTypes[1]++;
+      }
+
+      const cmc = card.cmc;
+      mainDeckcmcAvg += cmc;
     })
+    mainDeckcmcAvg = (mainDeckcmcAvg /= mainDeck.length).toFixed(1);
   }
 
   function drawPieSlice(ctx,centerX, centerY, radius, startAngle, endAngle, color ){
@@ -257,6 +272,31 @@ const CardPool = ({ cardNames, podNames }) => {
     document.getElementById('details').appendChild(canvas);
   }
 
+  function writeBreakdown() {
+    const breakdownColumn = document.getElementById('breakdown');
+
+    while (breakdownColumn.firstChild) {
+      breakdownColumn.removeChild(breakdownColumn.firstChild);
+    }
+
+    let breakdown = document.createElement('ul');
+    let detailsArray = [
+      'Creatures: ' + mainDeckTypes[0],
+      'Noncreatures: ' + mainDeckTypes[1],
+      'Average CMC: ' + mainDeckcmcAvg,
+    ]
+
+    detailsArray.forEach(text => {
+      let listEL = document.createElement('li');
+      let spanEL = document.createElement('span');
+      spanEL.innerText = text;
+      listEL.appendChild(spanEL);
+      breakdown.appendChild(listEL);
+    })
+
+    document.getElementById('breakdown').appendChild(breakdown);
+  }
+
   function userPick(event) {
     if (roundCounter !== 1) {
       const targetCard = cardDict[event.target.alt];
@@ -299,6 +339,7 @@ const CardPool = ({ cardNames, podNames }) => {
     drawMainBoard();
     getMainDeckDetails();
     drawPieChart();
+    writeBreakdown()
     drawPack();
 
     if (!(flag % 14)) {
@@ -335,6 +376,7 @@ const CardPool = ({ cardNames, podNames }) => {
     drawMainBoard();
     getMainDeckDetails();
     drawPieChart();
+    writeBreakdown()
     drawSideDeck();
   }
 
@@ -386,6 +428,10 @@ const CardPool = ({ cardNames, podNames }) => {
           </div>
 
           <div id='details' className='flex-column pos-rel col-2'>
+
+          </div>
+
+          <div id='breakdown' className='flex-column pos-rel col-2'>
 
           </div>
         </div>
