@@ -52,11 +52,10 @@ const CardPool = ({ cardNames, podNames }) => {
   }
 
   let flag = 0;
-  let viewToggle = 'side';
   let pickCounter = 0;
   let roundCounter = 0;
   let mainDeck = [];
-  let mainDeckColors = [0,0,0,0,0,0]; // White, Blue, Black, Red, Green, Colorless
+  let mainDeckColors = [0,0,0,0,0]; // White, Blue, Black, Red, Green
   let sideDeck = [];
   let botDecks = [
     [],[],[],[],[],[],[]
@@ -154,13 +153,11 @@ const CardPool = ({ cardNames, podNames }) => {
   }
 
   function getMainDeckDetails() {
-    mainDeckColors = [0,0,0,0,0,0]; // White, Blue, Black, Red, Green, Colorless
+    mainDeckColors = [0,0,0,0,0]; // White, Blue, Black, Red, Green
     mainDeck.forEach(card => {
-      const cardColors = card.colors;
-      if (cardColors.length === 0) {
-        mainDeckColors[5]++;
-      }
-      cardColors.forEach(color => {
+      const cardCost = card.manaCost;
+      for (let i=0; i<cardCost.length; i++) {
+        const color = cardCost[i];
         switch (color) {
           case 'W':
             mainDeckColors[0]++;
@@ -178,10 +175,9 @@ const CardPool = ({ cardNames, podNames }) => {
             mainDeckColors[4]++;
             break;
           default:
-            console.log('Color logging error.')
             break;
         }
-      })
+      }
     })
   }
 
@@ -203,8 +199,8 @@ const CardPool = ({ cardNames, podNames }) => {
 
     let canvas = document.createElement('canvas');
     canvas.id = "pieCanvas";
-    canvas.width = 300;
-    canvas.height = 300;
+    canvas.width = 200;
+    canvas.height = 200;
 
     const ctx = canvas.getContext("2d");
     const colors = ['#FFFFFF','#0000FF','#000000','#FF0000','#228B22','#808080'];
@@ -216,6 +212,18 @@ const CardPool = ({ cardNames, podNames }) => {
     colorCount.forEach(color => {
       total_value += color;
     })
+
+    if (total_value === 0) {
+      drawPieSlice(
+        ctx,
+        canvas.width/2,
+        canvas.height/2,
+        Math.min(canvas.width/2,canvas.height/2),
+        0,
+        2 * Math.PI,
+        '#808080'
+      );
+    }
 
     let start_angle = 0;
     colorCount.forEach(color => {
@@ -279,6 +287,7 @@ const CardPool = ({ cardNames, podNames }) => {
 
     drawMainBoard();
     getMainDeckDetails();
+    drawPieChart();
     drawPack();
 
     if (!(flag % 14)) {
@@ -314,32 +323,8 @@ const CardPool = ({ cardNames, podNames }) => {
     }
     drawMainBoard();
     getMainDeckDetails();
+    drawPieChart();
     drawSideDeck();
-  }
-
-  function toggleView() {
-    if (viewToggle === 'side') {
-      const sideDeckColumn = document.getElementById('sideDeck');
-
-      while (sideDeckColumn.firstChild) {
-        sideDeckColumn.removeChild(sideDeckColumn.firstChild);
-      }
-
-      drawPieChart();
-
-      viewToggle = 'details';
-    } else {
-      const detailsColumn = document.getElementById('details');
-
-      while (detailsColumn.firstChild) {
-        detailsColumn.removeChild(detailsColumn.firstChild);
-      }
-
-      drawSideDeck();
-
-      viewToggle = 'side';
-    }
-
   }
 
   return (
@@ -360,7 +345,7 @@ const CardPool = ({ cardNames, podNames }) => {
         )}
       </div>
 
-      <div  className='flex-row'>
+      <div className='flex-row'>
         <div id='mainBoard' className='flex-row col-10'>
           <div id='cmc0' className='flex-column pos-rel col-2'>
 
@@ -381,15 +366,15 @@ const CardPool = ({ cardNames, podNames }) => {
 
           </div>
         </div>
+      </div>
 
-        <div id='sideBoard' className='flex-row col-2 justify-space-around'>
-          <button onClick={toggleView}>View Sideboard</button>
-          <button onClick={toggleView}>View Details</button>
-          <div id='sideDeck' className='flex-column pos-rel col-12'>
+      <div className='flex-row'>
+        <div id='sideBoard' className='flex-row col-12 justify-space-around'>
+          <div id='sideDeck' className='flex-column pos-rel col-2'>
 
           </div>
 
-          <div id='details' className='flex-column pos-rel col-12'>
+          <div id='details' className='flex-column pos-rel col-2'>
 
           </div>
         </div>

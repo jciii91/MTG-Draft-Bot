@@ -131,6 +131,12 @@ nav a:hover {
   display: inline;
 }
 
+/* PROJECT CSS */
+
+#mainBoard, #sideBoard {
+  min-height: 300px;
+}
+
 /* CARDS */
 .card {
   margin: 0 0 20px 0;
@@ -855,6 +861,10 @@ nav a:hover {
 
 .col-1 {
   flex: 0 0 calc(100% * 1 / 12 - 0.5%);
+}
+
+.col-1_5 {
+  flex: 0 0 calc(100% * 3 / 12 / 2 - 0.5%);
 }
 
 .col-2 {
