@@ -120,6 +120,15 @@ const CardPool = ({ cardNames, podNames }) => {
           cmcColumns[5].appendChild(img);
         }
 
+        let maxInc = 0;
+        cardIncs.forEach(i => {
+          if (i > maxInc) {
+            maxInc = i;
+          }
+        })
+
+        document.getElementById('mainBoard').style.minHeight = (300 + maxInc * 30) + 'px';
+
         return card;
       }
     )
@@ -150,6 +159,8 @@ const CardPool = ({ cardNames, podNames }) => {
         return card;
       }
     )
+
+    document.getElementById('sideBoard').style.minHeight = (300 + sideDeck.length * 30) + 'px';
   }
 
   function getMainDeckDetails() {

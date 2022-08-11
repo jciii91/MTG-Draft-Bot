@@ -133,7 +133,11 @@ nav a:hover {
 
 /* PROJECT CSS */
 
-#mainBoard, #sideBoard {
+#mainBoard {
+  min-height: 300px;
+}
+
+#sideBoard {
   min-height: 300px;
 }
 
