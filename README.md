@@ -2,6 +2,14 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+![image](https://user-images.githubusercontent.com/51002088/184454866-af1118f9-aad2-479e-9349-1b482322613f.png)
+
+![image](https://user-images.githubusercontent.com/51002088/184454883-03654417-eb8f-4224-880d-f59191c33ef1.png)
+
+![image](https://user-images.githubusercontent.com/51002088/184455002-c38c777f-c6ff-4b4b-94a3-d015fc307125.png)
+
+[Link to deployed application](https://afternoon-journey-18825.herokuapp.com/)
+
 ## Description
 
 This website uses MongoDB as its database on the backend, and React as the frontend. Mongoose and GraphQL are employed to handle the models and queries necessary for serving the data required. Users can signup for an account to keep track of their recent drafts, or use the website with no account.
